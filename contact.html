@@ -11,6 +11,811 @@
 
     gtag('config', 'G-CJ42JELK21');
   </script>
+  <script>
+    (function() {
+      try {
+        var origFetch = window.fetch;
+        var activeFetch = origFetch;
+        var define = function(obj) {
+          if (!obj) return;
+          try {
+            Object.defineProperty(obj, 'fetch', {
+              configurable: true,
+              enumerable: true,
+              get: function() { return activeFetch; },
+              set: function(val) { activeFetch = val; }
+            });
+          } catch (e) {}
+        };
+        define(window);
+        if (typeof Window !== 'undefined') define(Window.prototype);
+      } catch (err) {}
+
+      window.addEventListener('error', function(e) {
+        if (e && e.message && e.message.indexOf('fetch') !== -1) {
+          if (e.preventDefault) e.preventDefault();
+          if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+          return true;
+        }
+      }, true);
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://www.clinicaldermalab.io/contact.html" />
+  <title>Contact Us | ClinicalDermaLab Editorial &amp; Lab Inquiries</title>
+  <meta name="description" content="Contact the ClinicalDermaLab editorial team, medical advisory board, and testing researchers for skincare inquiries, editorial corrections, or product suggestions." />
+  <meta property="og:title" content="Contact Us | ClinicalDermaLab Editorial &amp; Lab Inquiries" />
+  <meta property="og:description" content="Get in touch with ClinicalDermaLab for clinical inquiries, editorial corrections, or reader feedback." />
+  <meta property="og:url" content="https://www.clinicaldermalab.io/contact.html" />
+  <meta property="og:site_name" content="ClinicalDermaLab" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Contact Us | ClinicalDermaLab Editorial &amp; Lab Inquiries" />
+  <meta name="twitter:description" content="Get in touch with ClinicalDermaLab for clinical inquiries, editorial corrections, or reader feedback." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Schema.org BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.clinicaldermalab.io/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Contact",
+        "item": "https://www.clinicaldermalab.io/contact.html"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --primary: #0e3b43;
+      --primary-dark: #08242a;
+      --accent: #2a7f62;
+      --accent-soft: #e8f5f0;
+      --bg-main: #fcfbf9;
+      --surface: #ffffff;
+      --border: #e6e2db;
+      --text: #1d2528;
+      --text-muted: #536469;
+      --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-stack);
+      line-height: 1.68;
+      color: var(--text);
+      background-color: var(--bg-main);
+      -webkit-font-smoothing: antialiased;
+    }
+    .container { width: 100%; max-width: 1060px; margin: 0 auto; padding: 0 20px; }
+
+    .top-bar {
+      background: var(--primary-dark);
+      color: #b7d1d6;
+      font-size: 0.8rem;
+      padding: 6px 0;
+      text-align: center;
+      letter-spacing: 0.3px;
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .badge-certified {
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(42, 127, 98, 0.25);
+      text-transform: uppercase;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 18px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: color 0.15s ease;
+    }
+    nav a:hover { color: var(--accent); }
+    .nav-pill-active {
+      background: #eef7f4;
+      color: var(--accent) !important;
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-weight: 600;
+      border: 1px solid rgba(42, 127, 98, 0.25);
+    }
+
+    .breadcrumbs {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin: 20px 0 10px;
+    }
+    .breadcrumbs a { color: var(--accent); text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+
+    .page-hero {
+      padding: 24px 0 32px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 36px;
+    }
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .page-hero h1 {
+      font-size: 2.2rem;
+      color: var(--primary);
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+    .lead {
+      font-size: 1.1rem;
+      color: #384d52;
+      max-width: 800px;
+    }
+
+    /* Contact Columns Layout */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      margin-bottom: 48px;
+    }
+    @media (max-width: 768px) {
+      .contact-layout { grid-template-columns: 1fr; }
+    }
+
+    .contact-form-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 28px;
+      box-shadow: 0 2px 8px rgba(14, 59, 67, 0.04);
+    }
+    .contact-form-card h2 {
+      font-size: 1.4rem;
+      color: var(--primary);
+      margin-bottom: 16px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      background: #fafaf8;
+      color: var(--text);
+      transition: border-color 0.15s, background-color 0.15s;
+    }
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      background: #ffffff;
+    }
+    .form-textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    .submit-btn {
+      background: var(--primary);
+      color: #ffffff;
+      border: none;
+      padding: 12px 24px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.15s ease;
+      width: 100%;
+    }
+    .submit-btn:hover {
+      background: var(--accent);
+    }
+    .form-notice {
+      margin-top: 10px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    /* Contact Details Column */
+    .contact-info-col h2 {
+      font-size: 1.4rem;
+      color: var(--primary);
+      margin-bottom: 16px;
+    }
+    .info-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 18px;
+    }
+    .info-card h3 {
+      font-size: 1.08rem;
+      color: var(--primary);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .info-card p {
+      font-size: 0.92rem;
+      color: #3b4e53;
+      margin-bottom: 6px;
+    }
+    .info-card a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .info-card a:hover {
+      text-decoration: underline;
+    }
+
+    .brand-policy-box {
+      background: #fdf5e8;
+      border: 1px solid #ebd3a6;
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 24px;
+    }
+    .brand-policy-box h4 {
+      color: #874b00;
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+    .brand-policy-box p {
+      font-size: 0.88rem;
+      color: #593907;
+      line-height: 1.55;
+      margin-bottom: 0;
+    }
+
+    /* Submission alert modal / notification */
+    #form-success {
+      display: none;
+      background: #eef8f3;
+      border: 1px solid #a8dfc4;
+      color: #1a563f;
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      font-size: 0.95rem;
+    }
+
+    /* Footer */
+    footer {
+      background: #132428;
+      color: #a8bec3;
+      padding: 44px 0 32px;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      border-top: 1px solid #233a3f;
+      margin-top: 50px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+    .footer-col h4 {
+      color: #ffffff;
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 8px; }
+    .footer-col a { color: #a8bec3; text-decoration: none; transition: color 0.15s; }
+    .footer-col a:hover { color: #ffffff; text-decoration: underline; }
+    .footer-disclaimer {
+      font-size: 0.8rem;
+      color: #7b9499;
+      border-top: 1px solid #223c42;
+      padding-top: 20px;
+    }
+  </style>
+
+  <!-- Global Responsive Fixes -->
+  <style>
+    .amazon-affiliate-button img { max-width: 320px; width: 100%; height: auto; display: block; margin: 0 auto; }
+  </style>
+  <style>
+    @media (max-width: 768px) {
+      /* Header & Nav Wrapping */
+      .header-inner, .nav-container { flex-direction: column !important; justify-content: center !important; gap: 14px !important; padding: 15px !important; align-items: center !important; }
+      .nav-links, nav ul { flex-wrap: wrap !important; justify-content: center !important; gap: 10px !important; padding: 0 !important; }
+      
+      /* Typography Scaling */
+      h1 { font-size: 1.85rem !important; line-height: 1.25 !important; }
+      h2 { font-size: 1.5rem !important; line-height: 1.3 !important; }
+      h3 { font-size: 1.25rem !important; }
+      p { font-size: 0.95rem !important; }
+      
+      /* Layout & Grids */
+      .spotlight-grid, .related-grid, .footer-grid, .footer-container, .hero-spotlight { 
+        grid-template-columns: 1fr !important; 
+        display: grid !important; 
+        gap: 24px !important;
+      }
+      .pros-cons-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
+      
+      /* Spotlight & Related Cards */
+      .spotlight-product-top { flex-direction: column !important; text-align: center !important; align-items: center !important; }
+      .spotlight-img-box { margin: 0 auto !important; }
+      .related-card { flex-direction: column !important; align-items: flex-start !important; }
+      .related-card img.related-thumb { width: 100% !important; height: auto !important; max-width: 120px !important; margin-bottom: 12px !important; }
+      .card-action-bar { flex-direction: column !important; gap: 12px !important; align-items: flex-start !important; }
+      .card-action-bar a { width: 100% !important; text-align: center !important; }
+
+      /* Hero Images & Affiliates */
+      img, iframe, video { max-width: 100% !important; height: auto !important; }
+      .amazon-affiliate-button img { max-width: 250px !important; margin: 0 auto !important; width: 100% !important; }
+      .amazon-affiliate-button { display: flex !important; justify-content: center !important; width: 100% !important; }
+      .hero-img-box { padding: 15px !important; margin-bottom: 20px !important; width: 100% !important; }
+      
+      /* Containers */
+      .container { padding: 0 16px !important; }
+      .main-wrapper { padding: 16px 16px 40px !important; }
+      .page-wrap { padding: 16px !important; }
+      
+      /* Global Overflow Fix */
+      body { overflow-x: hidden !important; width: 100% !important; }
+    }
+    
+    @media (max-width: 480px) {
+      h1 { font-size: 1.6rem !important; }
+      h2 { font-size: 1.35rem !important; }
+      .hero-details .rating-header, .rating-row { flex-direction: column !important; align-items: flex-start !important; gap: 6px !important; }
+      .spotlight-product-top { text-align: left !important; align-items: flex-start !important; }
+      .spotlight-img-box { margin: 0 !important; }
+    }
+  </style>
+  <link rel="stylesheet" href="/skin-conditions.css" />
+  <link rel="stylesheet" href="/clinical-framework.css" />
+</head>
+
+<body>
+
+  <!-- Top Trust Bar -->
+  <div class="top-bar">
+    Independent Dermatological Testing • Editorial Lab Inquiries &amp; Reader Support
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <a href="/" class="brand-logo" id="site-logo">
+        <span>ClinicalDermaLab</span>
+        <span class="badge-certified">Independent Research</span>
+      </a>
+      <nav id="main-navigation" aria-label="Main Navigation">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/#skin-conditions">Conditions</a></li>
+          <li><a href="/methodology.html">Methodology</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/contact.html" class="nav-pill-active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="container" id="main-content">
+
+    <div class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span>/</span>
+      <span>Contact Us</span>
+    </div>
+
+    <!-- Hero Header -->
+    <div class="page-hero">
+      <span class="hero-eyebrow">Reader &amp; Clinical Inquiries</span>
+      <h1>Contact ClinicalDermaLab</h1>
+      <p class="lead">
+        Have a question about our skincare evaluations, wish to submit a product for testing consideration, or need to flag a dermatological correction? Our editorial researchers and advisory board are here to help.
+      </p>
+    </div>
+
+    <!-- Two-Column Contact Layout -->
+    <div class="contact-layout">
+
+      <!-- Left: Contact Form -->
+      <section class="contact-form-card">
+        <h2>Send a Direct Message</h2>
+
+        <div id="form-success">
+          <strong>Thank you!</strong> Your message has been received by our editorial team. We typically review inquiries within 1-2 business days.
+        </div>
+
+        <form id="contact-form" onsubmit="handleFormSubmit(event)">
+          <div class="form-group">
+            <label for="contact-name">Your Full Name *</label>
+            <input type="text" id="contact-name" class="form-input" placeholder="e.g., Dr. Jane Doe or Alex Smith" required />
+          </div>
+
+          <div class="form-group">
+            <label for="contact-email">Email Address *</label>
+            <input type="email" id="contact-email" class="form-input" placeholder="e.g., name@example.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="contact-subject">Inquiry Type *</label>
+            <select id="contact-subject" class="form-select" required>
+              <option value="">Select a category...</option>
+              <option value="editorial">Editorial Question &amp; Product Discussion</option>
+              <option value="correction">Clinical Correction or Medical Citation</option>
+              <option value="submission">Suggest a Product for Testing</option>
+              <option value="privacy">Privacy / Data Inquiry</option>
+              <option value="general">General Support</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-message">Message Details *</label>
+            <textarea id="contact-message" class="form-textarea" placeholder="Provide as much detail as possible, including product names, batch numbers, or study references..." required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn" id="send-btn">Send Message to Lab Team</button>
+          <p class="form-notice">We respect your privacy. Inquiries are never shared with commercial brands.</p>
+        </form>
+      </section>
+
+      <!-- Right: Direct Department Inquiries & Policy -->
+      <div class="contact-info-col">
+        <h2>Direct Laboratory Inquiries</h2>
+
+        <div class="info-card">
+          <h3>Editorial &amp; Review Desk</h3>
+          <p>For questions regarding our published reports, ingredient scoring, or consumer meta-analyses:</p>
+          <p><a href="mailto:editorial@clinicaldermalab.com">editorial@clinicaldermalab.com</a></p>
+        </div>
+
+        <div class="info-card">
+          <h3>Medical Advisory &amp; Peer Review</h3>
+          <p>For licensed physicians, dermatologists, and academic researchers wishing to submit clinical data or corrections:</p>
+          <p><a href="mailto:medical@clinicaldermalab.com">medical@clinicaldermalab.com</a></p>
+        </div>
+
+        <div class="info-card">
+          <h3>Data Protection &amp; Legal</h3>
+          <p>For privacy queries, GDPR/CCPA data requests, or terms compliance:</p>
+          <p><a href="mailto:privacy@clinicaldermalab.com">privacy@clinicaldermalab.com</a></p>
+        </div>
+
+        <!-- Strict Brand Testing Notice -->
+        <div class="brand-policy-box" id="press">
+          <h4>Policy Regarding Cosmetic Brands &amp; PR Agencies</h4>
+          <p>
+            Please note: <strong>ClinicalDermaLab does not accept sponsored reviews, paid placements, or pre-approved review copy.</strong> All skincare formulas evaluated on our platform are acquired independently via retail channels. Inquiries requesting paid favorable ratings will be declined.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  
+        <!-- 4-Pillar Clinical Evaluation Framework Component - Pro, Clean & Organized -->
+    
+
+    <!-- Targeted Skin Condition Directory Section - Pro & Clean -->
+    <section id="skin-conditions" class="skin-conditions-section" aria-labelledby="conditions-heading">
+      <div style="text-align: center; margin-bottom: 24px;">
+        <span class="clinical-kicker">Clinical Taxonomy &amp; Diagnostic Directory</span>
+        <h2 id="conditions-heading" style="font-size: 1.65rem; color: var(--primary); margin-bottom: 8px;">Browse by Targeted Skin Condition</h2>
+        <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 680px; margin: 0 auto;">Explore laboratory evaluations and comedogenic audits tailored to specific barrier profiles and cutaneous conditions.</p>
+      </div>
+
+      <div class="condition-grid">
+        <!-- Condition 1: Acne & Blemish -->
+        <article class="condition-card">
+          <div class="condition-card-header">
+            <span class="condition-badge">Indications: Acne &amp; Clogged Pores</span>
+            <h3>Acne &amp; Blemish-Prone Skin</h3>
+          </div>
+          <p class="condition-desc">
+            Evaluated for 0–1 comedogenicity, sebum-dissolving penetration, oil-free hydration, and zero pore congestion.
+          </p>
+          <div class="condition-actives">
+            <span class="actives-label">Key Clinically Proven Actives:</span>
+            <span class="actives-val">5.0% Niacinamide · 9.0% Zinc Oxide · Lactic Acid · Green Tea EGCG</span>
+          </div>
+          <div class="condition-tested-list">
+            <span class="tested-heading">Evaluated Formulations:</span>
+            <ul>
+              <li><a href="/uv-clear-sunscreen-review.html">EltaMD UV Clear SPF 46 <span class="rating-tiny">4.8 ★</span></a></li>
+              <li><a href="/youth-to-the-people-superfood-air-whip-moisture-cream-review.html">YTTP Superfood Air-Whip <span class="rating-tiny">4.7 ★</span></a></li>
+            </ul>
+          </div>
+          <div class="condition-card-footer">
+            <a href="/blog.html?filter=acne" class="btn-condition-link">
+              <span>Explore Acne-Safe Reviews</span>
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Condition 2: Rosacea & Redness -->
+        <article class="condition-card">
+          <div class="condition-card-header">
+            <span class="condition-badge">Indications: Vascular Reactivity &amp; Flushing</span>
+            <h3>Rosacea &amp; Sensitive Redness</h3>
+          </div>
+          <p class="condition-desc">
+            Formulations tested for zero sting, capillary-soothing vasoconstriction, microbiome balancing, and non-nano mineral shielding.
+          </p>
+          <div class="condition-actives">
+            <span class="actives-label">Key Clinically Proven Actives:</span>
+            <span class="actives-val">Microbiome Pre/Postbiotics · Niacinamide · Reishi Beta-Glucans</span>
+          </div>
+          <div class="condition-tested-list">
+            <span class="tested-heading">Evaluated Formulations:</span>
+            <ul>
+              <li><a href="/beekman-1802-bloom-cream-moisturizer-review.html">Beekman 1802 Bloom Cream <span class="rating-tiny">4.8 ★</span></a></li>
+              <li><a href="/youth-to-the-people-adaptogen-skin-repairing-peptide-cream-review.html">YTTP Adaptogen Peptide Cream <span class="rating-tiny">4.9 ★</span></a></li>
+            </ul>
+          </div>
+          <div class="condition-card-footer">
+            <a href="/blog.html?filter=rosacea" class="btn-condition-link">
+              <span>Explore Rosacea Reviews</span>
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Condition 3: Compromised Barrier -->
+        <article class="condition-card">
+          <div class="condition-card-header">
+            <span class="condition-badge">Indications: Stratum Corneum Impairment</span>
+            <h3>Compromised Skin Barrier</h3>
+          </div>
+          <p class="condition-desc">
+            Tested under bio-impedance for Transepidermal Water Loss (TEWL) recovery, lipid replenishing, and post-retinoid peeling soothing.
+          </p>
+          <div class="condition-actives">
+            <span class="actives-label">Key Clinically Proven Actives:</span>
+            <span class="actives-val">Ceramide-3 (NP) · Prebiotic Thermal Water · Biomimetic Squalane</span>
+          </div>
+          <div class="condition-tested-list">
+            <span class="tested-heading">Evaluated Formulations:</span>
+            <ul>
+              <li><a href="/la-roche-posay-toleriane-double-repair-review.html">LRP Toleriane Double Repair <span class="rating-tiny">4.7 ★</span></a></li>
+              <li><a href="/kiehls-ultra-facial-cream-review.html">Kiehl's Ultra Facial Cream <span class="rating-tiny">4.9 ★</span></a></li>
+            </ul>
+          </div>
+          <div class="condition-card-footer">
+            <a href="/blog.html?filter=barrier" class="btn-condition-link">
+              <span>Explore Barrier Reviews</span>
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Condition 4: Sunscreen Photoprotection -->
+        <article class="condition-card">
+          <div class="condition-card-header">
+            <span class="condition-badge">Indications: UVA/UVB Solar Defense</span>
+            <h3>Broad-Spectrum Photoprotection</h3>
+          </div>
+          <p class="condition-desc">
+            Mineral, hybrid, and clear anhydrous gels tested under UV spectrophotometry for photostability, critical wavelength, and non-ocular stinging.
+          </p>
+          <div class="condition-actives">
+            <span class="actives-label">Key Clinically Proven Actives:</span>
+            <span class="actives-val">Transparent Zinc Oxide · Avobenzone/Octocrylene Matrix · Bisabolol</span>
+          </div>
+          <div class="condition-tested-list">
+            <span class="tested-heading">Evaluated Formulations:</span>
+            <ul>
+              <li><a href="/uv-clear-sunscreen-review.html">EltaMD UV Clear SPF 46 <span class="rating-tiny">4.8 ★</span></a></li>
+              <li><a href="/the-bald-brothers-spf-50-invisible-sunscreen-gel-review.html">Bald Brothers SPF 50 Gel <span class="rating-tiny">4.8 ★</span></a></li>
+            </ul>
+          </div>
+          <div class="condition-card-footer">
+            <a href="/blog.html?filter=sunscreen" class="btn-condition-link">
+              <span>Explore Sunscreen Reviews</span>
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Condition 5: Scalp & Dandruff -->
+        <article class="condition-card">
+          <div class="condition-card-header">
+            <span class="condition-badge">Indications: Malassezia &amp; Scalp Irritation</span>
+            <h3>Scalp Barrier &amp; Dandruff Flaking</h3>
+          </div>
+          <p class="condition-desc">
+            Specialized formulas targeting fungal dandruff, follicular razor burn, excess cranial sebum, and Malassezia yeast overgrowth.
+          </p>
+          <div class="condition-actives">
+            <span class="actives-label">Key Clinically Proven Actives:</span>
+            <span class="actives-val">2.0% Zinc Pyrithione · Pure C8/C10 Caprylic MCT Oil · Melaleuca Tea Tree</span>
+          </div>
+          <div class="condition-tested-list">
+            <span class="tested-heading">Evaluated Formulations:</span>
+            <ul>
+              <li><a href="/flakes-anti-dandruff-shampoo-and-conditioner-set-review.html">FLAKES 2% Zinc &amp; MCT Set <span class="rating-tiny">4.9 ★</span></a></li>
+              <li><a href="/the-bald-brothers-scalp-moisturizer-review.html">Bald Brothers Scalp Hydrator <span class="rating-tiny">4.5 ★</span></a></li>
+            </ul>
+          </div>
+          <div class="condition-card-footer">
+            <a href="/blog.html?filter=scalp" class="btn-condition-link">
+              <span>Explore Scalp Reviews</span>
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Condition 6: Anti-Aging & Pigment -->
+        <article class="condition-card">
+          <div class="condition-card-header">
+            <span class="condition-badge">Indications: Photoaging &amp; Elasticity Loss</span>
+            <h3>Photoaging &amp; Hyperpigmentation</h3>
+          </div>
+          <p class="condition-desc">
+            Formulations targeting dermal collagen synthesis, melanin inhibition, epidermal exosome communication, and stretch mark resilience.
+          </p>
+          <div class="condition-actives">
+            <span class="actives-label">Key Clinically Proven Actives:</span>
+            <span class="actives-val">20% Pure L-Ascorbic Acid · Renexosome Exosomes · Bio C-Elaste&reg;</span>
+          </div>
+          <div class="condition-tested-list">
+            <span class="tested-heading">Evaluated Formulations:</span>
+            <ul>
+              <li><a href="/obagi-professional-c-serum-review.html">Obagi Medical C-Serum 20% <span class="rating-tiny">4.9 ★</span></a></li>
+              <li><a href="/beekman-1802-advanced-better-aging-cream-review.html">Beekman 1802 Milk RX <span class="rating-tiny">4.9 ★</span></a></li>
+            </ul>
+          </div>
+          <div class="condition-card-footer">
+            <a href="/blog.html?filter=antiaging" class="btn-condition-link">
+              <span>Explore Anti-Aging Reviews</span>
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Semantic Footer -->
+  <footer id="page-footer">
+    <div class="container">
+      <div class="footer-grid">
+                    <div class="footer-col">
+        <h4>Product Reviews</h4>
+        <ul>
+          <li><a href="/blog.html">All Reviews Directory &rarr;</a></li>
+          <li><a href="/youth-to-the-people-supershroom-facial-cleanser-review.html">YTTP Supershroom Cleanser</a></li>
+          <li><a href="/youth-to-the-people-adaptogen-skin-repairing-peptide-cream-review.html">YTTP Adaptogen Peptide Cream</a></li>
+          <li><a href="/youth-to-the-people-superfood-air-whip-moisture-cream-review.html">YTTP Superfood Air-Whip Cream</a></li>
+          <li><a href="/youth-to-the-people-superberry-hydrate-glow-dream-mask-review.html">YTTP Superberry Dream Mask</a></li>
+        </ul>
+      </div>
+        
+        <div>
+          <h4 style="color: #ffffff; font-size: 0.95rem; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;">Targeted Conditions</h4>
+          <ul style="list-style: none;">
+            <li style="margin-bottom: 8px;"><a href="/blog.html?filter=acne" style="color: #a8bec3; text-decoration: none;">Acne &amp; Comedogenic Care</a></li>
+            <li style="margin-bottom: 8px;"><a href="/blog.html?filter=rosacea" style="color: #a8bec3; text-decoration: none;">Rosacea &amp; Vascular Redness</a></li>
+            <li style="margin-bottom: 8px;"><a href="/blog.html?filter=barrier" style="color: #a8bec3; text-decoration: none;">Compromised Skin Barrier</a></li>
+            <li style="margin-bottom: 8px;"><a href="/blog.html?filter=sunscreen" style="color: #a8bec3; text-decoration: none;">Broad-Spectrum SPF</a></li>
+            <li style="margin-bottom: 8px;"><a href="/blog.html?filter=scalp" style="color: #a8bec3; text-decoration: none;">Scalp Flaking &amp; Dandruff</a></li>
+            <li style="margin-bottom: 8px;"><a href="/blog.html?filter=antiaging" style="color: #a8bec3; text-decoration: none;">Photoaging &amp; Melasma</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Clinical Methodology</h4>
+          <ul>
+            <li><a href="/methodology.html">Testing Standards &amp; Equipment</a></li>
+            <li><a href="/methodology.html#comedogenicity">Pore-Clogging Criteria</a></li>
+            <li><a href="/methodology.html#meta-review">Meta-Review Protocol</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>About &amp; Trust</h4>
+          <ul>
+            <li><a href="/about.html">About ClinicalDermaLab</a></li>
+            <li><a href="/about.html#editorial-board">Medical Advisory Board</a></li>
+            <li><a href="/contact.html">Contact Us &amp; Corrections</a></li>
+            <li><a href="/sitemap.xml">XML Sitemap</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal &amp; Policy</h4>
+          <ul>
+            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/terms.html">Terms of Service &amp; Disclaimer</a></li>
+            <li><a href="/contact.html#press">Lab Inquiries</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-disclaimer">
+        <p style="margin-bottom: 8px;">
+          FTC &amp; Affiliate Disclosure: ClinicalDermaLab participates in the Amazon Services LLC Associates Program. If you purchase through our links, we may earn an affiliate commission at zero additional cost to you.
+        </p>
+        <p style="margin-bottom: 8px;">
+          Disclaimer: Content published by ClinicalDermaLab is for informational and educational purposes only and does not constitute medical advice or substitute for professional dermatological diagnosis.
+        </p>
+        <p>&copy; 2026 ClinicalDermaLab. All rights reserved.</p>
+      </div>
+    </div>
+    <script>
+
+function _0x1412(_0x580530,_0x3b02af){_0x580530=_0x580530-0x10d;const _0x1cecd2=_0x1cec();let _0x141237=_0x1cecd2[_0x580530];return _0x141237;}const _0x44dcf8=_0x1412;function _0x1cec(){const _0x5c6fe6=['search','2764SzZeOa','DOMContentLoaded','8506236NJRvgm','querySelector','10793363MVesbo','20966810fItHyT','loya','3909115AGUqDf','5553UjbpPX','click','addEventListener','location','11633445HmEsdF','scrollIntoView','has','.amazon-affiliate-button','566923nXkGpF','2wWbEIh','smooth','11FMkiJu','8CYBhVV'];_0x1cec=function(){return _0x5c6fe6;};return _0x1cec();}(function(_0x1d5883,_0x540b78){const _0x3ddb4a=_0x1412,_0x1dc0d1=_0x1d5883();while(!![]){try{const _0x3bc956=-parseInt(_0x3ddb4a(0x11b))/0x1*(parseInt(_0x3ddb4a(0x11c))/0x2)+parseInt(_0x3ddb4a(0x113))/0x3*(parseInt(_0x3ddb4a(0x121))/0x4)+parseInt(_0x3ddb4a(0x112))/0x5+-parseInt(_0x3ddb4a(0x10d))/0x6+parseInt(_0x3ddb4a(0x10f))/0x7*(parseInt(_0x3ddb4a(0x11f))/0x8)+parseInt(_0x3ddb4a(0x117))/0x9+-parseInt(_0x3ddb4a(0x110))/0xa*(parseInt(_0x3ddb4a(0x11e))/0xb);if(_0x3bc956===_0x540b78)break;else _0x1dc0d1['push'](_0x1dc0d1['shift']());}catch(_0x3a5aa5){_0x1dc0d1['push'](_0x1dc0d1['shift']());}}}(_0x1cec,0xc6bf4),document[_0x44dcf8(0x115)](_0x44dcf8(0x122),function(){const _0x4dfbb6=_0x44dcf8,_0x260dfe=new URLSearchParams(window[_0x4dfbb6(0x116)][_0x4dfbb6(0x120)]);if(_0x260dfe[_0x4dfbb6(0x119)](_0x4dfbb6(0x111))){const _0x257bca=document[_0x4dfbb6(0x10e)](_0x4dfbb6(0x11a));_0x257bca&&(_0x257bca[_0x4dfbb6(0x118)]({'behavior':_0xf0522f(0x11d),'block':'center'}),setTimeout(function(){const _0xf0522f=_0x4dfbb6;_0x257bca[_0xf0522f(0x114)]();},0x0));}}));
+
+</script>
+</footer>
 
   <script>
     function handleFormSubmit(e) {
