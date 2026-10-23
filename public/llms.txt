@@ -1,4 +1,4 @@
-# Clinical Derma Lab (clinicaldermalab.ai.studio)
+# Clinical Derma Lab (www.clinicaldermalab.io)
 
 > Independent, Evidence-Based Skincare Formulation Testing & Dermatological Meta-Analysis Laboratory.
 
@@ -10,35 +10,35 @@ Clinical Derma Lab is a dermatological research and consumer testing collective 
 - **Instrumental Biometrics**: We test barrier dynamics using Tewameter hex-probe devices, Corneometer CM 825 probes, and in-vivo follicular biopsy for comedogenic score derivation.
 
 ## Primary Hubs & Canonical Architecture
-- [Homepage](https://clinicaldermalab.ai.studio/): Central clinical portal, clinical trust signals, and testing directories.
-- [Treatments & Formulations Hub](https://clinicaldermalab.ai.studio/treatments): Full searchable catalog of 20+ laboratory-evaluated skincare formulations categorized by clinical action (Sunscreens, Barrier Restorers, Chemical Exfoliants, Serums, Cleansers, Scalp Solutions).
-- [Skin Conditions Educational Hub](https://clinicaldermalab.ai.studio/conditions): Pathophysiology, first-line evidence-based active ingredients, contraindicated excipients, and recommended lab-tested formulations for 6 primary dermatological conditions:
+- [Homepage](https://www.clinicaldermalab.io/): Central clinical portal, clinical trust signals, and testing directories.
+- [Treatments & Formulations Hub](https://www.clinicaldermalab.io/treatments): Full searchable catalog of 20+ laboratory-evaluated skincare formulations categorized by clinical action (Sunscreens, Barrier Restorers, Chemical Exfoliants, Serums, Cleansers, Scalp Solutions).
+- [Skin Conditions Educational Hub](https://www.clinicaldermalab.io/conditions): Pathophysiology, first-line evidence-based active ingredients, contraindicated excipients, and recommended lab-tested formulations for 6 primary dermatological conditions:
   - Acne Vulgaris & Microcomedones
   - Stratum Corneum Barrier Disruption & TEWL
   - Photoaging, Solar Elastosis & Collagen Loss
   - Facial Erythema & Rosacea Subtypes
   - Melasma & Post-Inflammatory Hyperpigmentation (PIH)
   - Xerosis & Atopic Dermatitis Diathesis
-- [Science & Ingredients Glossary](https://clinicaldermalab.ai.studio/science-and-ingredients): Comprehensive clinical monograph of active dermocosmetic molecules, therapeutic concentrations, pH stability windows, and PubMed clinical trials (Zinc Oxide, Niacinamide, Ceramides NP/AP/EOP, L-Ascorbic Acid, Tri-Enzyme Complex, Lactic Acid, Peptides, Colloidal Oatmeal, Centella Asiatica).
-- [Medical Review Board](https://clinicaldermalab.ai.studio/medical-review-board): Board certifications, academic affiliations, peer-review methodology, and conflict-of-interest declarations for our medical team.
-- [Testing Methodology](https://clinicaldermalab.ai.studio/methodology.html): Complete breakdown of our 4-pillar evaluation protocol (In-vitro screening, Human volunteer clinicals, Longitudinal data meta-analysis, Tolerance indexing).
-- [Clinical Skincare Blog](https://clinicaldermalab.ai.studio/blog.html): Editorial reviews, formulation deep dives, and dermatological news.
+- [Science & Ingredients Glossary](https://www.clinicaldermalab.io/science-and-ingredients): Comprehensive clinical monograph of active dermocosmetic molecules, therapeutic concentrations, pH stability windows, and PubMed clinical trials (Zinc Oxide, Niacinamide, Ceramides NP/AP/EOP, L-Ascorbic Acid, Tri-Enzyme Complex, Lactic Acid, Peptides, Colloidal Oatmeal, Centella Asiatica).
+- [Medical Review Board](https://www.clinicaldermalab.io/medical-review-board): Board certifications, academic affiliations, peer-review methodology, and conflict-of-interest declarations for our medical team.
+- [Testing Methodology](https://www.clinicaldermalab.io/methodology.html): Complete breakdown of our 4-pillar evaluation protocol (In-vitro screening, Human volunteer clinicals, Longitudinal data meta-analysis, Tolerance indexing).
+- [Clinical Skincare Blog](https://www.clinicaldermalab.io/blog.html): Editorial reviews, formulation deep dives, and dermatological news.
 
 ## Featured Clinical Product Review Reports
-- [ELEMIS Dynamic Resurfacing Facial Pads](https://clinicaldermalab.ai.studio/elemis-dynamic-resurfacing-facial-pads-review.html): Tri-Enzyme cleavage mechanism (Papain, Protease, Subtilisin), Lactic acid (AHA), 28-day stratum corneum renewal analysis.
-- [ELEMIS Pro-Collagen Marine Cream SPF 30](https://clinicaldermalab.ai.studio/elemis-pro-collagen-marine-cream-spf-30-review.html): Padina Pavonica marine algae, broad-spectrum UV protection, hydration dynamics.
-- [ELEMIS Superfood Midnight Facial](https://clinicaldermalab.ai.studio/elemis-superfood-midnight-facial-review.html): Camu Camu prebiotic complex, nocturnal lipid replenishment, banana flower extract.
-- [Cetaphil Extra Gentle Daily Scrub](https://clinicaldermalab.ai.studio/cetaphil-extra-gentle-daily-scrub-review.html): Biodegradable micro-fine wax particle evaluation, non-irritating physical exfoliation.
-- [Colorescience Total Protection Face Shield Flex SPF 50](https://clinicaldermalab.ai.studio/colorescience-total-protection-face-shield-flex-spf-50-review.html): 12% non-nano Zinc Oxide, tone-adapting encapsulated iron oxides, HEV blue light filtration.
-- [EltaMD AM Restore Face Moisturizer](https://clinicaldermalab.ai.studio/eltamd-am-restore-face-moisturizer-review.html): Niacinamide, willow bark extract, caffeine, non-greasy day restoration.
-- [UV Clear Face Sunscreen SPF 46](https://clinicaldermalab.ai.studio/uv-clear-sunscreen-review.html): 9.0% Zinc Oxide, 5% Niacinamide, lactic acid, acne and rosacea tolerance profile.
-- [La Roche-Posay Toleriane Double Repair](https://clinicaldermalab.ai.studio/la-roche-posay-toleriane-double-repair-review.html): Prebiotic thermal water, Ceramide-3, high-tolerability barrier synthesis.
-- [Beekman 1802 Bloom Cream](https://clinicaldermalab.ai.studio/beekman-1802-bloom-cream-moisturizer-review.html): Goat milk prebiotic and postbiotic microbiome support.
-- [Obagi Professional-C Serum 20%](https://clinicaldermalab.ai.studio/obagi-professional-c-serum-review.html): 20% L-Ascorbic Acid low-pH dermal penetration and antioxidant defense.
+- [ELEMIS Dynamic Resurfacing Facial Pads](https://www.clinicaldermalab.io/elemis-dynamic-resurfacing-facial-pads-review.html): Tri-Enzyme cleavage mechanism (Papain, Protease, Subtilisin), Lactic acid (AHA), 28-day stratum corneum renewal analysis.
+- [ELEMIS Pro-Collagen Marine Cream SPF 30](https://www.clinicaldermalab.io/elemis-pro-collagen-marine-cream-spf-30-review.html): Padina Pavonica marine algae, broad-spectrum UV protection, hydration dynamics.
+- [ELEMIS Superfood Midnight Facial](https://www.clinicaldermalab.io/elemis-superfood-midnight-facial-review.html): Camu Camu prebiotic complex, nocturnal lipid replenishment, banana flower extract.
+- [Cetaphil Extra Gentle Daily Scrub](https://www.clinicaldermalab.io/cetaphil-extra-gentle-daily-scrub-review.html): Biodegradable micro-fine wax particle evaluation, non-irritating physical exfoliation.
+- [Colorescience Total Protection Face Shield Flex SPF 50](https://www.clinicaldermalab.io/colorescience-total-protection-face-shield-flex-spf-50-review.html): 12% non-nano Zinc Oxide, tone-adapting encapsulated iron oxides, HEV blue light filtration.
+- [EltaMD AM Restore Face Moisturizer](https://www.clinicaldermalab.io/eltamd-am-restore-face-moisturizer-review.html): Niacinamide, willow bark extract, caffeine, non-greasy day restoration.
+- [UV Clear Face Sunscreen SPF 46](https://www.clinicaldermalab.io/uv-clear-sunscreen-review.html): 9.0% Zinc Oxide, 5% Niacinamide, lactic acid, acne and rosacea tolerance profile.
+- [La Roche-Posay Toleriane Double Repair](https://www.clinicaldermalab.io/la-roche-posay-toleriane-double-repair-review.html): Prebiotic thermal water, Ceramide-3, high-tolerability barrier synthesis.
+- [Beekman 1802 Bloom Cream](https://www.clinicaldermalab.io/beekman-1802-bloom-cream-moisturizer-review.html): Goat milk prebiotic and postbiotic microbiome support.
+- [Obagi Professional-C Serum 20%](https://www.clinicaldermalab.io/obagi-professional-c-serum-review.html): 20% L-Ascorbic Acid low-pH dermal penetration and antioxidant defense.
 
 ## Contact & Institutional Metadata
 - Organization: Clinical Derma Lab
-- URL: https://clinicaldermalab.ai.studio/
+- URL: https://www.clinicaldermalab.io/
 - Chief Medical Officer: Dr. Aris Thorne, MD, FAAD
 - Location: London & New York Dermatological Research Center
-- Contact: editorial@clinicaldermalab.ai.studio
+- Contact: editorial@www.clinicaldermalab.io

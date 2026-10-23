@@ -75,11 +75,11 @@ export class SEOHeadController {
     // 3. Self-referencing canonical
     const canonical = config.canonicalUrl.startsWith('http')
       ? config.canonicalUrl
-      : `https://clinicaldermalab.ai.studio${config.canonicalUrl.startsWith('/') ? '' : '/'}${config.canonicalUrl}`;
+      : `https://www.clinicaldermalab.io${config.canonicalUrl.startsWith('/') ? '' : '/'}${config.canonicalUrl}`;
     this.setOrCreateCanonical(canonical);
 
     // 4. OpenGraph tags
-    const ogImage = config.ogImage || 'https://clinicaldermalab.ai.studio/images/clinicaldermalab-logo.svg';
+    const ogImage = config.ogImage || 'https://www.clinicaldermalab.io/images/clinicaldermalab-logo.svg';
     this.setOrCreateMeta('og:title', formattedTitle, true);
     this.setOrCreateMeta('og:description', desc, true);
     this.setOrCreateMeta('og:url', canonical, true);
@@ -94,7 +94,7 @@ export class SEOHeadController {
     this.setOrCreateMeta('twitter:image', ogImage);
 
     // 6. JSON-LD Structured Data
-    if (config.canonicalUrl === 'https://clinicaldermalab.ai.studio/' || config.canonicalUrl === '/') {
+    if (config.canonicalUrl === 'https://www.clinicaldermalab.io/' || config.canonicalUrl === '/') {
       this.setJsonLd('dynamic-seo-schema', generateMedicalClinicSchema());
     } else {
       this.setJsonLd('dynamic-seo-schema', generateMedicalWebPageSchema(config));

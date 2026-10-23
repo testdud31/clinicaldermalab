@@ -1,5 +1,5 @@
 # Clinical Derma Lab - Search Engine & AI Answer Engine Directives
-# Canonical Host: https://clinicaldermalab.ai.studio/
+# Canonical Host: https://www.clinicaldermalab.io/
 
 User-agent: *
 Allow: /
@@ -45,4 +45,4 @@ User-agent: Cohere-ai
 Allow: /
 
 # Canonical Discovery XML Sitemap
-Sitemap: https://clinicaldermalab.ai.studio/sitemap.xml
+Sitemap: https://www.clinicaldermalab.io/sitemap.xml

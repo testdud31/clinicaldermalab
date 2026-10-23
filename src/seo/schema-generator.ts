@@ -6,7 +6,7 @@ export const DEFAULT_REVIEWER: ReviewerInfo = {
   credentials: 'MD, FAAD',
   role: 'Clinical Director & Lead Dermatological Investigator',
   affiliation: 'American Academy of Dermatology (AAD) & Clinical Derma Lab Research Unit',
-  url: 'https://clinicaldermalab.ai.studio/medical-review-board',
+  url: 'https://www.clinicaldermalab.io/medical-review-board',
 };
 
 /**
@@ -16,12 +16,12 @@ export function generateMedicalClinicSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'MedicalClinic',
-    '@id': 'https://clinicaldermalab.ai.studio/#medicalclinic',
+    '@id': 'https://www.clinicaldermalab.io/#medicalclinic',
     name: 'Clinical Derma Lab',
     alternateName: 'ClinicalDermaLab',
-    url: 'https://clinicaldermalab.ai.studio/',
-    logo: 'https://clinicaldermalab.ai.studio/images/clinicaldermalab-logo.svg',
-    image: 'https://clinicaldermalab.ai.studio/images/clinicaldermalab-logo.svg',
+    url: 'https://www.clinicaldermalab.io/',
+    logo: 'https://www.clinicaldermalab.io/images/clinicaldermalab-logo.svg',
+    image: 'https://www.clinicaldermalab.io/images/clinicaldermalab-logo.svg',
     description:
       'Independent dermatological laboratory and evidence-based skincare meta-analysis collective. We test barrier dynamics, transepidermal water loss (TEWL), comedogenicity, and active compound tolerability.',
     medicalSpecialty: [
@@ -41,12 +41,12 @@ export function generateMedicalClinicSchema() {
       name: 'Dr. Aris Thorne',
       honorificSuffix: 'MD, FAAD',
       jobTitle: 'Board-Certified Dermatologist & Clinical Director',
-      url: 'https://clinicaldermalab.ai.studio/medical-review-board'
+      url: 'https://www.clinicaldermalab.io/medical-review-board'
     },
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'Editorial & Clinical Inquiries',
-      email: 'editorial@clinicaldermalab.ai.studio',
+      email: 'editorial@www.clinicaldermalab.io',
       availableLanguage: ['English']
     }
   };
@@ -113,7 +113,7 @@ export function generateMedicalWebPageSchema(config: SEOPageConfig) {
       publisher: {
         '@type': 'MedicalClinic',
         name: 'Clinical Derma Lab',
-        url: 'https://clinicaldermalab.ai.studio/'
+        url: 'https://www.clinicaldermalab.io/'
       }
     }
   ];
