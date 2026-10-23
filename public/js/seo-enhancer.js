@@ -119,18 +119,57 @@
     });
   }
 
+  // 5. GitHub Pages Subpath Link & Asset Normalizer
+  function normalizeGitHubPagesPaths() {
+    var host = window.location.hostname;
+    var pathname = window.location.pathname;
+    if (host.endsWith('github.io')) {
+      var segments = pathname.split('/').filter(Boolean);
+      // For username.github.io/reponame/..., segments[0] is the repository name
+      if (segments.length > 0 && !host.startsWith(segments[0])) {
+        var repo = segments[0];
+        var prefix = '/' + repo;
+
+        // Prefix internal links
+        var links = document.querySelectorAll('a[href^="/"]');
+        links.forEach(function(a) {
+          var href = a.getAttribute('href');
+          if (href && href.startsWith('/') && !href.startsWith('//') && !href.startsWith(prefix + '/') && href !== prefix) {
+            a.setAttribute('href', prefix + href);
+          }
+        });
+
+        // Prefix media and resources
+        var elements = document.querySelectorAll('img[src^="/"], link[href^="/"], script[src^="/"]');
+        elements.forEach(function(el) {
+          var src = el.getAttribute('src');
+          var href = el.getAttribute('href');
+          if (src && src.startsWith('/') && !src.startsWith('//') && !src.startsWith(prefix + '/')) {
+            el.setAttribute('src', prefix + src);
+          }
+          if (href && href.startsWith('/') && !href.startsWith('//') && !href.startsWith(prefix + '/')) {
+            el.setAttribute('href', prefix + href);
+          }
+        });
+      }
+    }
+  }
+
   // Initialize when DOM is ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function() {
+      normalizeGitHubPagesPaths();
       initCitationsAccordion();
       verifyCanonical();
       initCatalogFilters();
       initAuthorityVerification();
     });
   } else {
+    normalizeGitHubPagesPaths();
     initCitationsAccordion();
     verifyCanonical();
     initCatalogFilters();
     initAuthorityVerification();
   }
 })();
+

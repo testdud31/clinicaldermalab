@@ -1,0 +1,215 @@
+/* ========================================================
+   ClinicalDermaLab - Targeted Skin Conditions Directory
+   Sephora-Inspired Luxury Beauty & Clinical Taxonomy
+   ======================================================== */
+
+:root {
+  --sephora-black: #000000;
+  --sephora-red: #e00034;
+  --sephora-gray-bg: #f6f6f6;
+  --sephora-border: #e6e6e6;
+  --sephora-text: #111111;
+  --sephora-muted: #757575;
+}
+
+.skin-conditions-section {
+  margin: 56px 0 64px;
+  padding: 44px 32px;
+  background: #ffffff;
+  border: 1px solid var(--sephora-border);
+  border-radius: 8px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+}
+
+.clinical-kicker {
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--sephora-red);
+  margin-bottom: 8px;
+}
+
+.skin-conditions-section .section-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.skin-conditions-section .section-header h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--sephora-black);
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.skin-conditions-section .section-header p {
+  color: var(--sephora-muted);
+  font-size: 0.96rem;
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.condition-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 24px;
+  margin-top: 28px;
+}
+
+.condition-card {
+  background: #ffffff;
+  border: 1px solid var(--sephora-border);
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.condition-card:hover {
+  border-color: var(--sephora-black);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.condition-card-header {
+  margin-bottom: 12px;
+}
+
+.condition-badge {
+  display: inline-block;
+  background: var(--sephora-black);
+  color: #ffffff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 3px 8px;
+  border-radius: 3px;
+  margin-bottom: 8px;
+}
+
+.condition-card h3 {
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: var(--sephora-black);
+  margin: 4px 0 0;
+  line-height: 1.3;
+}
+
+.condition-desc {
+  font-size: 0.9rem;
+  color: #444444;
+  margin-bottom: 16px;
+  line-height: 1.55;
+  flex-grow: 1;
+}
+
+.condition-actives {
+  background: var(--sephora-gray-bg);
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  font-size: 0.82rem;
+}
+
+.actives-label {
+  display: block;
+  font-weight: 800;
+  color: var(--sephora-black);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.7rem;
+  margin-bottom: 2px;
+}
+
+.actives-val {
+  color: #333333;
+}
+
+.condition-tested-list {
+  border-top: 1px solid var(--sephora-border);
+  padding-top: 14px;
+  margin-top: auto;
+}
+
+.tested-heading {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--sephora-muted);
+  margin-bottom: 8px;
+}
+
+.condition-tested-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.condition-tested-list li {
+  margin-bottom: 6px;
+  font-size: 0.86rem;
+}
+
+.condition-tested-list a {
+  color: var(--sephora-black);
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.15s ease;
+}
+
+.condition-tested-list a:hover {
+  color: var(--sephora-red);
+  text-decoration: underline;
+}
+
+.rating-tiny {
+  background: var(--sephora-gray-bg);
+  color: var(--sephora-black);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+}
+
+.condition-card-footer {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--sephora-border);
+}
+
+.btn-condition-link, .btn-condition-filter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: #ffffff;
+  color: var(--sephora-black);
+  border: 1px solid var(--sephora-black);
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.18s ease;
+}
+
+.btn-condition-link:hover, .btn-condition-filter:hover {
+  background: var(--sephora-black);
+  color: #ffffff;
+}

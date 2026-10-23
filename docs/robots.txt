@@ -1,0 +1,48 @@
+# Clinical Derma Lab - Search Engine & AI Answer Engine Directives
+# Canonical Host: https://clinicaldermalab.ai.studio/
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /private/
+
+# Explicit Permission for Next-Gen AI Answer Engines & Foundation LLM Web Crawlers
+# GEO (Generative Engine Optimization) Directives
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Cohere-ai
+Allow: /
+
+# Canonical Discovery XML Sitemap
+Sitemap: https://clinicaldermalab.ai.studio/sitemap.xml
