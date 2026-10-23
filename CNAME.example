@@ -1,0 +1,6 @@
+# To configure a custom domain for your GitHub Pages site:
+# 1. Rename this file to `CNAME` (without any extension)
+# 2. Place it in the `public/` directory so Vite copies it into `dist/` on build
+# 3. Put your custom domain on the first line (e.g., yourdomain.com or clinicaldermalab.com)
+#
+# clinicaldermalab.com

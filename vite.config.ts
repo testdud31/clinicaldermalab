@@ -53,9 +53,11 @@ export default defineConfig(() => {
           scienceIngredients: path.resolve(__dirname, 'science-and-ingredients.html'),
           medicalReviewBoardDir: path.resolve(__dirname, 'medical-review-board/index.html'),
           medicalReviewBoard: path.resolve(__dirname, 'medical-review-board.html'),
+          notFound: path.resolve(__dirname, '404.html'),
         },
       },
     },
+    base: process.env.VITE_BASE_URL || process.env.BASE_URL || '/',
     server: {
       // HMR is disabled in AI Studio via DISABLE_HMR env var.
       // Do not modifyâfile watching is disabled to prevent flickering during agent edits.
