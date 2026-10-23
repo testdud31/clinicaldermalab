@@ -1031,6 +1031,252 @@
       font-size: 0.78rem;
       color: #617366;
     }
+  
+    /* Modern Editorial Table of Contents & Executive Jump Links */
+    .toc-container {
+      background: #f7f4ef;
+      border: 1px solid var(--border, #e8e2d7);
+      border-left: 4px solid var(--accent-green, #2e663e);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 20px 0 28px;
+    }
+    .toc-title {
+      font-size: 0.85rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--primary-dark, #15241b);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .toc-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 0.84rem;
+    }
+    .toc-links a {
+      color: var(--accent-dark, #744d24);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.15s ease;
+    }
+    .toc-links a:hover {
+      color: var(--primary, #233729);
+      text-decoration: underline;
+    }
+    .section-kicker {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--accent-green, #2e663e);
+      margin-bottom: 4px;
+    }
+  
+    /* High-Contrast Professional Verdict Box */
+    .verdict-box {
+      background: linear-gradient(135deg, #112317 0%, #1a3322 100%) !important;
+      color: #ffffff !important;
+      border-radius: 14px;
+      padding: 36px 28px;
+      margin: 40px 0;
+      box-shadow: 0 10px 30px rgba(17, 35, 23, 0.25);
+      border: 1px solid #284c33;
+      text-align: center;
+    }
+    .verdict-header {
+      margin-bottom: 18px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .verdict-award-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #d97706;
+      color: #ffffff;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-bottom: 10px;
+    }
+    .verdict-header h2 {
+      color: #ffffff !important;
+      font-size: 1.6rem !important;
+      font-weight: 800;
+      margin-bottom: 10px;
+      border-bottom: none !important;
+      padding-bottom: 0 !important;
+    }
+    .verdict-score-display {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 4px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 6px 16px;
+      border-radius: 8px;
+    }
+    .verdict-score-display .score-num {
+      font-size: 1.75rem;
+      font-weight: 900;
+      color: #fbbf24;
+    }
+    .verdict-score-display .score-denom {
+      font-size: 0.88rem;
+      color: #a7f3d0;
+      font-weight: 600;
+    }
+    .verdict-body {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .verdict-text {
+      color: #e2e8f0 !important;
+      font-size: 1.02rem !important;
+      line-height: 1.7 !important;
+      margin-bottom: 22px !important;
+    }
+    .verdict-text strong {
+      color: #ffffff !important;
+      font-weight: 700;
+    }
+    .verdict-affiliate-area {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .verdict-affiliate-area .amazon-affiliate-button img {
+      max-width: 240px;
+      height: auto;
+      border-radius: 8px;
+      transition: transform 0.2s ease, filter 0.2s ease;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+    }
+    .verdict-affiliate-area .amazon-affiliate-button:hover img {
+      transform: translateY(-2px);
+      filter: brightness(1.08);
+    }
+    .verdict-disclosure {
+      font-size: 0.75rem;
+      color: #a0aec0;
+    }
+
+    /* Pro Related Products Section */
+    .related-section {
+      margin: 44px 0;
+      padding: 32px 24px;
+      background: #fcfbf9;
+      border: 1px solid var(--border, #e8e2d7);
+      border-radius: 12px;
+    }
+    .related-section h3 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--primary-dark, #15241b);
+      margin-bottom: 20px;
+      letter-spacing: -0.3px;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .related-card {
+      background: #ffffff;
+      border: 1px solid var(--border, #e8e2d7) !important;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: var(--text, #1e2923);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .related-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      border-color: var(--accent-green, #2e663e) !important;
+    }
+    .related-thumb {
+      width: 100%;
+      height: 180px;
+      background: #f8f6f2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      border-bottom: 1px solid #f0eae1;
+      overflow: hidden;
+    }
+    .related-thumb img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto !important;
+      height: auto !important;
+      object-fit: contain;
+      transition: transform 0.25s ease;
+    }
+    .related-card:hover .related-thumb img {
+      transform: scale(1.04);
+    }
+    .related-info {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .related-category-tag {
+      font-size: 0.68rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--accent-green, #2e663e);
+      margin-bottom: 6px;
+    }
+    .related-info h4 {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--primary-dark, #15241b);
+      margin-bottom: 8px;
+      line-height: 1.35;
+    }
+    .related-info p {
+      font-size: 0.82rem;
+      color: var(--text-muted, #596760);
+      line-height: 1.5;
+      margin-bottom: 14px;
+      flex-grow: 1;
+    }
+    .related-cta {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--accent-green, #2e663e);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+    section[id], div[id], [id] {
+      scroll-margin-top: 85px;
+    }
   </style>
   <link rel="stylesheet" href="/skin-conditions.css" />
   <link rel="stylesheet" href="/clinical-framework.css" />
@@ -1062,6 +1308,29 @@
       </ul>
     </div>
   </header>
+
+        <!-- Table of Contents & Jump Links for Professional Navigation -->
+        <!-- Table of Contents & Jump Links for Professional Navigation -->
+        <!-- Table of Contents & Jump Links for Professional Navigation -->
+        <nav class="toc-container" aria-label="Table of Contents">
+          <div class="toc-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+            Article Contents &amp; Jump Links
+          </div>
+          <ul class="toc-links">
+            <li><a href="#executive-summary-amp-clinical-s">1. Executive Summary &amp; Clinical Scorecard</a></li>
+            <li><a href="#peptide-amp-adaptogenic-mushroom">2. Peptide &amp; Adaptogenic Mushroom Biochemistry</a></li>
+            <li><a href="#stratum-corneum-lipid-architectu">3. Stratum Corneum Lipid Architecture &amp; TEWL Kinetics</a></li>
+            <li><a href="#clinical-laboratory-testing-amp-">4. Clinical Laboratory Testing &amp; Bioinstrumentation</a></li>
+            <li><a href="#the-two-step-adaptogen-barrier-p">5. The Two-Step Adaptogen Barrier Protocol (Cleanser &amp; Cream)</a></li>
+            <li><a href="#head-to-head-comparative-analysi">6. Head-to-Head Comparative Analysis</a></li>
+            <li><a href="#ingredient-safety-clean-standard">7. Ingredient Safety, Clean Standards &amp; NEA Seal</a></li>
+            <li><a href="#dermatologist-application-amp-ro">8. Dermatologist Application &amp; Routine Layering</a></li>
+            <li><a href="#frequently-asked-questions-faq">9. Frequently Asked Questions (FAQ)</a></li>
+            <li><a href="#final-clinical-verdict-49-50">10. Final Clinical Verdict: 4.9 / 5.0</a></li>
+            <li><a href="#verdict">11. Final Verdict & Score</a></li>
+          </ul>
+        </nav>
 
   <!-- Breadcrumbs for Google SERP -->
   <nav class="breadcrumbs" aria-label="Breadcrumb">
@@ -1104,28 +1373,28 @@
           <!-- Interactive Product Image Thumbnails -->
           <div class="thumbnail-gallery" style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-top: 4px;">
             <button type="button" class="gallery-thumb-btn active-thumb" onclick="switchProductImg(this, 'https://m.media-amazon.com/images/I/71R3z2T26sL._SL1500_.jpg')" style="border: 2px solid var(--accent-mushroom); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-              <img src="https://m.media-amazon.com/images/I/71R3z2T26sL._SS40_.jpg" alt="Glass Jar Product Shot" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
+              <img src="https://m.media-amazon.com/images/I/71R3z2T26sL._SS40_.jpg" alt="Product Angle 1" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
             </button>
             <button type="button" class="gallery-thumb-btn" onclick="switchProductImg(this, 'https://m.media-amazon.com/images/I/71n8iDKuJUL._SL1500_.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-              <img src="https://m.media-amazon.com/images/I/71n8iDKuJUL._SS40_.jpg" alt="Rich Cushiony Cream Texture Scoop" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
+              <img src="https://m.media-amazon.com/images/I/71n8iDKuJUL._SS40_.jpg" alt="Product Angle 2" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
             </button>
             <button type="button" class="gallery-thumb-btn" onclick="switchProductImg(this, 'https://m.media-amazon.com/images/I/81IHXA2A4wL._SL1500_.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-              <img src="https://m.media-amazon.com/images/I/81IHXA2A4wL._SS40_.jpg" alt="Dipeptide-1 & Adaptogen Actives Breakdown" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
+              <img src="https://m.media-amazon.com/images/I/81IHXA2A4wL._SS40_.jpg" alt="Product Angle 3" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
             </button>
             <button type="button" class="gallery-thumb-btn" onclick="switchProductImg(this, 'https://m.media-amazon.com/images/I/81p9O9NduHL._SL1500_.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-              <img src="https://m.media-amazon.com/images/I/81p9O9NduHL._SS40_.jpg" alt="Clinical Redness & Hydration Data" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
+              <img src="https://m.media-amazon.com/images/I/81p9O9NduHL._SS40_.jpg" alt="Product Angle 4" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
             </button>
             <button type="button" class="gallery-thumb-btn" onclick="switchProductImg(this, 'https://m.media-amazon.com/images/I/71QYEk+RWkL._SL1500_.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-              <img src="https://m.media-amazon.com/images/I/71QYEk+RWkL._SS40_.jpg" alt="Before & After Redness Relief" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
+              <img src="https://m.media-amazon.com/images/I/71QYEk+RWkL._SS40_.jpg" alt="Product Angle 5" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
             </button>
             <button type="button" class="gallery-thumb-btn" onclick="switchProductImg(this, 'https://m.media-amazon.com/images/I/815iVOSVgYL._SL1500_.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-              <img src="https://m.media-amazon.com/images/I/815iVOSVgYL._SS40_.jpg" alt="National Eczema Association NEA Seal" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
+              <img src="https://m.media-amazon.com/images/I/815iVOSVgYL._SS40_.jpg" alt="Product Angle 6" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
             </button>
             <button type="button" class="gallery-thumb-btn" onclick="switchProductImg(this, 'https://m.media-amazon.com/images/I/91gwaKH4qSL._SL1500_.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-              <img src="https://m.media-amazon.com/images/I/91gwaKH4qSL._SS40_.jpg" alt="Facial Cushion Application" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
+              <img src="https://m.media-amazon.com/images/I/91gwaKH4qSL._SS40_.jpg" alt="Product Angle 7" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
             </button>
             <button type="button" class="gallery-thumb-btn" onclick="switchProductImg(this, 'https://m.media-amazon.com/images/I/71FGGexOlVL._SL1500_.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-              <img src="https://m.media-amazon.com/images/I/71FGGexOlVL._SS40_.jpg" alt="Sustainable Glass Packaging Standards" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
+              <img src="https://m.media-amazon.com/images/I/71FGGexOlVL._SS40_.jpg" alt="Product Angle 8" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
             </button>
           </div>
           <div style="font-size: 0.75rem; color: var(--text-muted); text-align: center;">
@@ -1191,7 +1460,7 @@
       </div>
 
       <!-- Section 1: Executive Summary & Clinical Scorecard -->
-      <section class="content-section" id="executive-summary">
+      <section id="executive-summary-amp-clinical-s" class="content-section">
         <h2>1. Executive Summary &amp; Clinical Scorecard</h2>
         <p>
           Chronic cutaneous barrier impairment represents one of the most pervasive pathologies encountered in modern clinical dermatology. When the stratum corneum is stripped of essential intercellular lipids—through environmental pollution, climate extremes, harsh surfactants, or aggressive acid/retinoid overuse—the epidermal integrity collapses. The resulting pathology is characterized by runaway transepidermal water loss (TEWL), neurogenic inflammation, hypersensitivity to ambient triggers, and persistent facial erythema.
@@ -1237,7 +1506,7 @@
       </section>
 
       <!-- Section 2: Peptide & Mushroom Biochemistry -->
-      <section class="content-section" id="biochemistry">
+      <section id="peptide-amp-adaptogenic-mushroom" class="content-section">
         <h2>2. Peptide &amp; Adaptogenic Mushroom Biochemistry</h2>
         <p>
           The therapeutic efficacy of Youth To The People Adaptogen Cream is governed by a synergistic triad of clinical actives: synthetic biomimetic peptides, mycotherapeutic adaptogenic extracts, and physiological barrier lipids.
@@ -1273,7 +1542,7 @@
       </section>
 
       <!-- Section 3: Stratum Corneum Lipid Architecture & TEWL Kinetics -->
-      <section class="content-section" id="lipid-architecture">
+      <section id="stratum-corneum-lipid-architectu" class="content-section">
         <h2>3. Stratum Corneum Lipid Architecture &amp; TEWL Kinetics</h2>
         <p>
           The human stratum corneum operates under the classic "brick-and-mortar" structural paradigm: corneocytes (anucleated keratinocytes) act as bricks, enveloped by an intercellular lamellar lipid membrane composed of ceramides (50%), cholesterol (25%), and free fatty acids (15%). When this lipid matrix develops microscopic clefts, water evaporates unchecked into the atmosphere.
@@ -1305,7 +1574,7 @@
       </section>
 
       <!-- Section 4: Clinical Laboratory Testing & Bioinstrumentation -->
-      <section class="content-section" id="clinical-testing">
+      <section id="clinical-laboratory-testing-amp-" class="content-section">
         <h2>4. Clinical Laboratory Testing &amp; Bioinstrumentation</h2>
         <p>
           To independently audit the physiological claims of the Adaptogen Skin Repairing Peptide Cream, our laboratory recruited 38 volunteer subjects (Fitzpatrick Skin Types I–V, 68% female, 32% male, ages 24–62) exhibiting documented dry skin, chronic erythema, mild facial eczema, or barrier breakdown from retinoid therapy. Subjects applied the cream twice daily for 28 consecutive days.
@@ -1361,7 +1630,7 @@
       </section>
 
       <!-- Section 5: The Synergistic Adaptogen Protocol: Cleanser + Cream -->
-      <section class="content-section" id="synergistic-routine">
+      <section id="the-two-step-adaptogen-barrier-p" class="content-section">
         <h2>5. The Two-Step Adaptogen Barrier Protocol (Cleanser &amp; Cream)</h2>
         <p>
           In clinical dermatological practice, applying a superior moisturizer on top of an improperly cleansed, alkaline-stripped stratum corneum severely undermines therapeutic recovery. Cleansers formulated with sulfates or alkaline pH (>7.0) strip intercellular ceramides and degrade tight junctions, forcing your moisturizer to spend hours simply countering the damage caused by your face wash.
@@ -1398,7 +1667,7 @@
       </section>
 
       <!-- Section 6: Head-to-Head Comparative Analysis -->
-      <section class="content-section" id="comparative-analysis">
+      <section id="head-to-head-comparative-analysi" class="content-section">
         <h2>6. Head-to-Head Comparative Analysis</h2>
         <p>
           How does the Youth To The People Adaptogen Skin Repairing Peptide Cream compare to other premier barrier repair moisturizers reviewed in our clinical database?
@@ -1463,7 +1732,7 @@
       </section>
 
       <!-- Section 7: Ingredient Safety, Clean Standards & National Eczema Association -->
-      <section class="content-section" id="ingredient-safety">
+      <section id="ingredient-safety-clean-standard" class="content-section">
         <h2>7. Ingredient Safety, Clean Standards &amp; NEA Seal</h2>
         <p>
           The National Eczema Association (NEA) awards its coveted <strong>Seal of Acceptance</strong> only to formulations that undergo rigorous toxicological audits proving they are free of ingredients known to irritate sensitive or atopic skin.
@@ -1527,7 +1796,7 @@
       </section>
 
       <!-- Section 8: Dermatologist Application & Routine Layering -->
-      <section class="content-section" id="how-to-use">
+      <section id="dermatologist-application-amp-ro" class="content-section">
         <h2>8. Dermatologist Application &amp; Routine Layering</h2>
         <p>
           To unlock the maximum clinical benefits of the Adaptogen Skin Repairing Peptide Cream, follow our dermatologist-tested morning and evening layering protocols:
@@ -1556,7 +1825,7 @@
       </section>
 
       <!-- Section 9: Frequently Asked Questions -->
-      <section class="content-section" id="faq">
+      <section id="frequently-asked-questions-faq" class="content-section">
         <h2>9. Frequently Asked Questions (FAQ)</h2>
 
         <div class="faq-item">
@@ -1596,7 +1865,7 @@
       </section>
 
       <!-- Section 10: Final Verdict & Gold Seal -->
-      <section class="verdict-box" id="verdict">
+      <section id="final-clinical-verdict-49-50" class="verdict-box">
         <h2>10. Final Clinical Verdict: 4.9 / 5.0</h2>
         <p>
           Youth To The People Adaptogen Skin Repairing Peptide Face Cream represents a masterclass in modern barrier pharmacology. By fusing targeted neuro-calming peptides with potent adaptogenic mushroom polysaccharides, Ceramide NP, and clean squalane, this formula does not simply mask dry skin—it systematically de-escalates cutaneous inflammation, repairs intercellular lipid clefts, and locks in moisture for a verified 24 hours. Awarded the ClinicalDermaLab Gold Standard for Sensitive Skin Care.
@@ -1610,80 +1879,73 @@
       </section>
 
       <!-- Related Products & Synergistic Internal Linking Section -->
-      <section class="related-section">
+      <section class="related-section" id="related">
         <h3>Related Clinical Reviews &amp; Synergistic Skincare Protocols</h3>
         <div class="related-grid">
-          <!-- Card 0: Superberry Dream Mask (Overnight Brightening Companion) -->
-          <a href="/youth-to-the-people-superberry-hydrate-glow-dream-mask-review.html" class="related-card" style="border: 2px solid #b45309;">
+          <a href="/youth-to-the-people-superberry-hydrate-glow-dream-mask-review.html" class="related-card">
             <div class="related-thumb">
               <img src="https://m.media-amazon.com/images/I/718d+AtnahL._SL1500_.jpg" alt="Youth To The People Superberry Hydrate + Glow Dream Mask" />
             </div>
             <div class="related-info">
-              <div style="font-size: 0.72rem; font-weight: 700; color: #b45309; text-transform: uppercase; margin-bottom: 2px;">Overnight Radiance Mask</div>
+              <span class="related-category-tag">Companion Protocol</span>
               <h4>YTTP Superberry Dream Mask</h4>
               <p>Lipid-soluble THD Ascorbate Vitamin C, Maqui berry, and squalane for intense nocturnal hydration and glow.</p>
-              <span class="related-cta">Read Dream Mask Review &rarr;</span>
+              <span class="related-cta">Read Review <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
             </div>
           </a>
-
-          <!-- Card 1: Superfood Air-Whip (Lightweight Daytime Companion) -->
-          <a href="/youth-to-the-people-superfood-air-whip-moisture-cream-review.html" class="related-card" style="border: 2px solid #2e6945;">
+          <a href="/youth-to-the-people-superfood-air-whip-moisture-cream-review.html" class="related-card">
             <div class="related-thumb">
               <img src="https://m.media-amazon.com/images/I/61qfyPkAhWL._SL1500_.jpg" alt="Youth To The People Superfood Air-Whip Moisture Cream" />
             </div>
             <div class="related-info">
-              <div style="font-size: 0.72rem; font-weight: 700; color: #2e6945; text-transform: uppercase; margin-bottom: 2px;">Daytime / Oily Skin Alternative</div>
+              <span class="related-category-tag">Companion Protocol</span>
               <h4>YTTP Superfood Air-Whip</h4>
               <p>Featherlight whipped gel-cream with Kale, Spinach &amp; Green Tea. Ideal for combination and acne-prone skin.</p>
-              <span class="related-cta">Read Air-Whip Review &rarr;</span>
+              <span class="related-cta">Read Review <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
             </div>
           </a>
-
-          <!-- Card 2: Companion Cleanser -->
           <a href="/youth-to-the-people-supershroom-facial-cleanser-review.html" class="related-card">
             <div class="related-thumb">
               <img src="https://m.media-amazon.com/images/I/61sKOHJTc+L._SL1500_.jpg" alt="Youth To The People Supershroom Facial Cleanser" />
             </div>
             <div class="related-info">
+              <span class="related-category-tag">Companion Protocol</span>
               <h4>YTTP Supershroom Cleanser</h4>
               <p>The companion Step 1 wash with Reishi &amp; Ashwagandha. Prepares the skin at pH 5.4 for optimal peptide absorption.</p>
-              <span class="related-cta">Read Cleanser Review &rarr;</span>
+              <span class="related-cta">Read Review <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
             </div>
           </a>
-
-          <!-- Card 2: Kiehl's Ultra Facial Cream -->
           <a href="/kiehls-ultra-facial-cream-review.html" class="related-card">
             <div class="related-thumb">
               <img src="https://images-na.ssl-images-amazon.com/images/P/B00C6SV33M.01.LZZZZZZZ.jpg" alt="Kiehl's Ultra Facial Cream" />
             </div>
             <div class="related-info">
+              <span class="related-category-tag">Companion Protocol</span>
               <h4>Kiehl's Ultra Facial Cream</h4>
               <p>Clinical evaluation of 4.5% squalane &amp; antarcticine for extreme climate 24-hour hydration.</p>
-              <span class="related-cta">Read Kiehl's Review &rarr;</span>
+              <span class="related-cta">Read Review <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
             </div>
           </a>
-
-          <!-- Card 3: La Roche-Posay Toleriane Double Repair -->
           <a href="/la-roche-posay-toleriane-double-repair-review.html" class="related-card">
             <div class="related-thumb">
               <img src="https://m.media-amazon.com/images/I/514C1oU5mVL._SL1086_.jpg" alt="La Roche-Posay Toleriane Double Repair Face Moisturizer" />
             </div>
             <div class="related-info">
+              <span class="related-category-tag">Companion Protocol</span>
               <h4>La Roche-Posay Toleriane</h4>
               <p>Prebiotic thermal water, ceramide-3, and niacinamide daily barrier repair cream evaluation.</p>
-              <span class="related-cta">Read Toleriane Review &rarr;</span>
+              <span class="related-cta">Read Review <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
             </div>
           </a>
-
-          <!-- Card 4: EltaMD UV Clear SPF 46 -->
           <a href="/uv-clear-sunscreen-review.html" class="related-card">
             <div class="related-thumb">
               <img src="https://m.media-amazon.com/images/I/71aXlh7do4L._SL1500_.jpg" alt="EltaMD UV Clear Face Sunscreen Broad-Spectrum SPF 46" />
             </div>
             <div class="related-info">
+              <span class="related-category-tag">Companion Protocol</span>
               <h4>EltaMD UV Clear SPF 46</h4>
               <p>The dermatologist-preferred zinc oxide mineral sunscreen for sensitive, acne- and rosacea-prone skin.</p>
-              <span class="related-cta">Read Sunscreen Review &rarr;</span>
+              <span class="related-cta">Read Review <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
             </div>
           </a>
         </div>
@@ -2048,20 +2310,14 @@
         </p>
       </div>
 
-      <div class="footer-col">
+                  <div class="footer-col">
         <h4>Product Reviews</h4>
         <ul>
-          <li><a href="/youth-to-the-people-superberry-hydrate-glow-dream-mask-review.html">YTTP Superberry Dream Mask</a></li>
-          <li><a href="/youth-to-the-people-superfood-air-whip-moisture-cream-review.html">YTTP Superfood Air-Whip Cream</a></li>
-          <li><a href="/youth-to-the-people-adaptogen-skin-repairing-peptide-cream-review.html">YTTP Adaptogen Cream</a></li>
+          <li><a href="/blog.html">All Reviews Directory &rarr;</a></li>
           <li><a href="/youth-to-the-people-supershroom-facial-cleanser-review.html">YTTP Supershroom Cleanser</a></li>
-          <li><a href="/kiehls-ultra-facial-cream-review.html">Kiehl's Ultra Facial Cream</a></li>
-          <li><a href="/la-roche-posay-toleriane-double-repair-review.html">La Roche-Posay Toleriane</a></li>
-          <li><a href="/uv-clear-sunscreen-review.html">EltaMD UV Clear SPF 46</a></li>
-          <li><a href="/obagi-professional-c-serum-review.html">Obagi Professional-C 20%</a></li>
-          <li><a href="/beekman-1802-bloom-cream-moisturizer-review.html">Beekman 1802 Bloom Cream</a></li>
-          <li><a href="/beauty-by-earth-self-tanner-lotion-review.html">Beauty by Earth Self Tanner</a></li>
-          <li><a href="/the-bald-brothers-spf-50-invisible-sunscreen-gel-review.html">The Bald Brothers SPF50</a></li>
+          <li><a href="/youth-to-the-people-adaptogen-skin-repairing-peptide-cream-review.html">YTTP Adaptogen Peptide Cream</a></li>
+          <li><a href="/youth-to-the-people-superfood-air-whip-moisture-cream-review.html">YTTP Superfood Air-Whip Cream</a></li>
+          <li><a href="/youth-to-the-people-superberry-hydrate-glow-dream-mask-review.html">YTTP Superberry Dream Mask</a></li>
         </ul>
       </div>
 

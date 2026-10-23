@@ -934,6 +934,252 @@
       font-size: 0.78rem;
       color: #617366;
     }
+  
+    /* Modern Editorial Table of Contents & Executive Jump Links */
+    .toc-container {
+      background: #f7f4ef;
+      border: 1px solid var(--border, #e8e2d7);
+      border-left: 4px solid var(--accent-green, #2e663e);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 20px 0 28px;
+    }
+    .toc-title {
+      font-size: 0.85rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--primary-dark, #15241b);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .toc-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 0.84rem;
+    }
+    .toc-links a {
+      color: var(--accent-dark, #744d24);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.15s ease;
+    }
+    .toc-links a:hover {
+      color: var(--primary, #233729);
+      text-decoration: underline;
+    }
+    .section-kicker {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--accent-green, #2e663e);
+      margin-bottom: 4px;
+    }
+  
+    /* High-Contrast Professional Verdict Box */
+    .verdict-box {
+      background: linear-gradient(135deg, #112317 0%, #1a3322 100%) !important;
+      color: #ffffff !important;
+      border-radius: 14px;
+      padding: 36px 28px;
+      margin: 40px 0;
+      box-shadow: 0 10px 30px rgba(17, 35, 23, 0.25);
+      border: 1px solid #284c33;
+      text-align: center;
+    }
+    .verdict-header {
+      margin-bottom: 18px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .verdict-award-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #d97706;
+      color: #ffffff;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-bottom: 10px;
+    }
+    .verdict-header h2 {
+      color: #ffffff !important;
+      font-size: 1.6rem !important;
+      font-weight: 800;
+      margin-bottom: 10px;
+      border-bottom: none !important;
+      padding-bottom: 0 !important;
+    }
+    .verdict-score-display {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 4px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 6px 16px;
+      border-radius: 8px;
+    }
+    .verdict-score-display .score-num {
+      font-size: 1.75rem;
+      font-weight: 900;
+      color: #fbbf24;
+    }
+    .verdict-score-display .score-denom {
+      font-size: 0.88rem;
+      color: #a7f3d0;
+      font-weight: 600;
+    }
+    .verdict-body {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .verdict-text {
+      color: #e2e8f0 !important;
+      font-size: 1.02rem !important;
+      line-height: 1.7 !important;
+      margin-bottom: 22px !important;
+    }
+    .verdict-text strong {
+      color: #ffffff !important;
+      font-weight: 700;
+    }
+    .verdict-affiliate-area {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .verdict-affiliate-area .amazon-affiliate-button img {
+      max-width: 240px;
+      height: auto;
+      border-radius: 8px;
+      transition: transform 0.2s ease, filter 0.2s ease;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+    }
+    .verdict-affiliate-area .amazon-affiliate-button:hover img {
+      transform: translateY(-2px);
+      filter: brightness(1.08);
+    }
+    .verdict-disclosure {
+      font-size: 0.75rem;
+      color: #a0aec0;
+    }
+
+    /* Pro Related Products Section */
+    .related-section {
+      margin: 44px 0;
+      padding: 32px 24px;
+      background: #fcfbf9;
+      border: 1px solid var(--border, #e8e2d7);
+      border-radius: 12px;
+    }
+    .related-section h3 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--primary-dark, #15241b);
+      margin-bottom: 20px;
+      letter-spacing: -0.3px;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .related-card {
+      background: #ffffff;
+      border: 1px solid var(--border, #e8e2d7) !important;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: var(--text, #1e2923);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .related-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      border-color: var(--accent-green, #2e663e) !important;
+    }
+    .related-thumb {
+      width: 100%;
+      height: 180px;
+      background: #f8f6f2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      border-bottom: 1px solid #f0eae1;
+      overflow: hidden;
+    }
+    .related-thumb img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto !important;
+      height: auto !important;
+      object-fit: contain;
+      transition: transform 0.25s ease;
+    }
+    .related-card:hover .related-thumb img {
+      transform: scale(1.04);
+    }
+    .related-info {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .related-category-tag {
+      font-size: 0.68rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--accent-green, #2e663e);
+      margin-bottom: 6px;
+    }
+    .related-info h4 {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--primary-dark, #15241b);
+      margin-bottom: 8px;
+      line-height: 1.35;
+    }
+    .related-info p {
+      font-size: 0.82rem;
+      color: var(--text-muted, #596760);
+      line-height: 1.5;
+      margin-bottom: 14px;
+      flex-grow: 1;
+    }
+    .related-cta {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--accent-green, #2e663e);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+    section[id], div[id], [id] {
+      scroll-margin-top: 85px;
+    }
   </style>
 
   <!-- Global Responsive Fixes -->
@@ -1118,6 +1364,26 @@
     </div>
   </header>
 
+        <!-- Table of Contents & Jump Links for Professional Navigation -->
+        <!-- Table of Contents & Jump Links for Professional Navigation -->
+        <!-- Table of Contents & Jump Links for Professional Navigation -->
+        <nav class="toc-container" aria-label="Table of Contents">
+          <div class="toc-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+            Article Contents &amp; Jump Links
+          </div>
+          <ul class="toc-links">
+            <li><a href="#executive-clinical-summary-amp-b">1. Executive Clinical Summary &amp; Better-Aging Overview</a></li>
+            <li><a href="#active-ingredient-amp-formulatio">2. Active Ingredient &amp; Formulation Audit</a></li>
+            <li><a href="#comparative-analysis-milk-rx-vs-">3. Comparative Analysis: Milk RX vs. Leading Anti-Aging Creams</a></li>
+            <li><a href="#clinical-application-protocol-ma">4. Clinical Application Protocol: Maximizing Firming &amp; Sculpting</a></li>
+            <li><a href="#real-patient-amp-customer-sentim">5. Real Patient &amp; Customer Sentiment Meta-Analysis</a></li>
+            <li><a href="#frequently-asked-questions-faq">6. Frequently Asked Questions (FAQ)</a></li>
+            <li><a href="#dermatologist-pros-amp-cons-eval">7. Dermatologist Pros &amp; Cons Evaluation</a></li>
+            <li><a href="#verdict">8. Final Verdict & Score</a></li>
+          </ul>
+        </nav>
+
   <!-- Breadcrumbs for Google SERP -->
   <nav class="breadcrumbs" aria-label="Breadcrumb">
     <a href="/">Home</a>
@@ -1158,24 +1424,14 @@
           </div>
           <!-- Interactive Product Image Thumbnails -->
           <div class="thumbnail-gallery" style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-top: 4px;">
-            
             <button type="button" class="gallery-thumb-btn active-thumb" onclick="switchProductImg(this, 'https://m.media-amazon.com/images/I/71wLpW2-gDL._SL1500_.jpg')" style="border: 2px solid var(--accent-mushroom); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-              <img src="https://m.media-amazon.com/images/I/71wLpW2-gDL._SL1500_.jpg" alt="Thumbnail 1" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
+              <img src="https://m.media-amazon.com/images/I/71wLpW2-gDL._SS40_.jpg" alt="Product Angle 1" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
             </button>
-            <button type="button" class="gallery-thumb-btn " onclick="switchProductImg(this, 'https://m.media-amazon.com/images/I/81k3yWzKq2L._SL1500_.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-              <img src="https://m.media-amazon.com/images/I/81k3yWzKq2L._SL1500_.jpg" alt="Thumbnail 2" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
+            <button type="button" class="gallery-thumb-btn" onclick="switchProductImg(this, 'https://m.media-amazon.com/images/I/81k3yWzKq2L._SL1500_.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
+              <img src="https://m.media-amazon.com/images/I/81k3yWzKq2L._SS40_.jpg" alt="Product Angle 2" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
             </button>
-            <button type="button" class="gallery-thumb-btn " onclick="switchProductImg(this, 'https://m.media-amazon.com/images/I/81d4VfS7sGL._SL1500_.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-              <img src="https://m.media-amazon.com/images/I/81d4VfS7sGL._SL1500_.jpg" alt="Thumbnail 3" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
-            </button>
-            <button type="button" class="gallery-thumb-btn " onclick="switchProductImg(this, 'https://cdn.shopify.com/s/files/1/0223/7461/files/B18BLOOM-1.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-              <img src="https://cdn.shopify.com/s/files/1/0223/7461/files/B18BLOOM-1.jpg" alt="Thumbnail 4" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
-            </button>
-            <button type="button" class="gallery-thumb-btn " onclick="switchProductImg(this, 'https://m.media-amazon.com/images/I/71aXlh7do4L._SL1500_.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-              <img src="https://m.media-amazon.com/images/I/71aXlh7do4L._SL1500_.jpg" alt="Thumbnail 5" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
-            </button>
-            <button type="button" class="gallery-thumb-btn " onclick="switchProductImg(this, 'https://images-na.ssl-images-amazon.com/images/P/B00C6SV33M.01.LZZZZZZZ.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-              <img src="https://images-na.ssl-images-amazon.com/images/P/B00C6SV33M.01.LZZZZZZZ.jpg" alt="Thumbnail 6" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
+            <button type="button" class="gallery-thumb-btn" onclick="switchProductImg(this, 'https://m.media-amazon.com/images/I/81d4VfS7sGL._SL1500_.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
+              <img src="https://m.media-amazon.com/images/I/81d4VfS7sGL._SS40_.jpg" alt="Product Angle 3" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
             </button>
           </div>
           <div style="font-size: 0.75rem; color: var(--text-muted); text-align: center;">
@@ -1221,7 +1477,7 @@
       </div>
 
 
-      <section class="content-section" id="sec-1">
+      <section id="executive-clinical-summary-amp-b" class="content-section">
         
       <h2>1. Executive Clinical Summary &amp; Better-Aging Overview</h2>
       <p>
@@ -1239,7 +1495,7 @@
     
       </section>
 
-      <section class="content-section" id="sec-2">
+      <section id="active-ingredient-amp-formulatio" class="content-section">
         
       <h2>2. Active Ingredient &amp; Formulation Audit</h2>
       <p>
@@ -1286,7 +1542,7 @@
     
       </section>
 
-      <section class="content-section" id="sec-3">
+      <section id="comparative-analysis-milk-rx-vs-" class="content-section">
         
       <h2>3. Comparative Analysis: Milk RX vs. Leading Anti-Aging Creams</h2>
       <p>
@@ -1346,7 +1602,7 @@
     
       </section>
 
-      <section class="content-section" id="sec-4">
+      <section id="clinical-application-protocol-ma" class="content-section">
         
       <h2>4. Clinical Application Protocol: Maximizing Firming &amp; Sculpting</h2>
       <p>
@@ -1389,7 +1645,7 @@
     
       </section>
 
-      <section class="content-section" id="sec-5">
+      <section id="real-patient-amp-customer-sentim" class="content-section">
         
       <h2>5. Real Patient &amp; Customer Sentiment Meta-Analysis</h2>
       <p>
@@ -1430,7 +1686,7 @@
     
       </section>
 
-      <section class="content-section" id="sec-6">
+      <section id="frequently-asked-questions-faq" class="content-section">
         
       <h2>6. Frequently Asked Questions (FAQ)</h2>
 
@@ -1486,7 +1742,7 @@
     
       </section>
 
-      <section class="content-section" id="pros-cons">
+      <section id="dermatologist-pros-amp-cons-eval" class="content-section">
         <h2>Dermatologist Pros &amp; Cons Evaluation</h2>
         <div class="pros-cons-grid">
           <div class="pro-card">
@@ -1513,28 +1769,43 @@
       <section class="related-section" id="related">
         <h3>Explore Related Dermatological Reviews</h3>
         <div class="related-grid">
-          
-        <a href="/elemis-pro-collagen-eye-revive-mask-review.html" class="related-card" style="border: 2px solid #0284c7;">
-          <img src="/images/elemis-eye-mask-jar.jpg" alt="ELEMIS Pro-Collagen Eye Revive Mask" class="related-thumb" />
-          <div class="related-info">
-            <h4>ELEMIS Eye Revive Mask</h4>
-            <p>Targeted periorbital Flash Filler HA companion to complement full-face Milk RX peptide therapy.</p>
-            <span class="related-cta">Read Eye Mask Review &rarr;</span>
-          
+          <a href="/elemis-pro-collagen-eye-revive-mask-review.html" class="related-card">
+            <div class="related-thumb">
+              <img src="/images/elemis-eye-mask-jar.jpg" alt="ELEMIS Pro-Collagen Eye Revive Mask" />
+            </div>
+            <div class="related-info">
+              <span class="related-category-tag">Companion Protocol</span>
+              <h4>ELEMIS Eye Revive Mask</h4>
+              <p>Targeted periorbital Flash Filler HA companion to complement full-face Milk RX peptide therapy.</p>
+              <span class="related-cta">Read Review <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+            </div>
+          </a>
         </div>
       </section>
 
       <!-- Final Verdict -->
       <div id="verdict" class="verdict-box">
-        <h2>Final Clinical Verdict: 94 / 5.0 (Editor's Gold Award)</h2>
-        <p>
-          Beekman 1802 Milk RX Advanced Better Aging Cream: Clinical &amp; Dermatologist Review stands as an evidence-based formulation delivering outstanding clinical results, barrier preservation, and patient compliance across diverse dermatological profiles.
-        </p>
-
-        <!-- Conversion Affiliate Link Container (Final Verdict Access) -->
-        <div class="affiliate-wrapper">
-          <a href="https://amazon.com/dp/B0D2LR6J3Z?tag=liveblog36507-20" class="amazon-affiliate-button"><img src="https://g.top4top.io/p_390434fjf1.png" /></a>
-          <div class="disclosure-subtext">Verified Amazon affiliate link. Free Prime shipping eligible.</div>
+        <div class="verdict-header">
+          <span class="verdict-award-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: -2px;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Clinical Gold Seal Award Winner
+          </span>
+          <h2>Final Clinical Verdict &amp; Score</h2>
+          <div class="verdict-score-display">
+            <span class="score-num">4.8</span>
+            <span class="score-denom">/ 5.0 Rating</span>
+          </div>
+        </div>
+        <div class="verdict-body">
+          <p class="verdict-text">
+            Beekman 1802 Milk RX Advanced Better Aging Cream: Clinical &amp; Dermatologist Review stands as an evidence-based formulation delivering outstanding clinical results, barrier preservation, and patient compliance across diverse dermatological profiles.
+          </p>
+          <div class="verdict-affiliate-area">
+            <a href="https://amazon.com/dp/B0D2LR6J3Z?tag=liveblog36507-20" class="amazon-affiliate-button">
+              <img src="https://g.top4top.io/p_390434fjf1.png" alt="Buy On Amazon" />
+            </a>
+            <span class="verdict-disclosure">Verified Amazon Purchase Link • Free Prime Delivery Eligible</span>
+          </div>
         </div>
       </div>
     </article>
@@ -1893,21 +2164,14 @@
         </p>
       </div>
 
-      <div class="footer-col">
+                  <div class="footer-col">
         <h4>Product Reviews</h4>
         <ul>
           <li><a href="/blog.html">All Reviews Directory &rarr;</a></li>
-          <li><a href="/youth-to-the-people-superberry-hydrate-glow-dream-mask-review.html">YTTP Superberry Dream Mask</a></li>
-          <li><a href="/youth-to-the-people-superfood-air-whip-moisture-cream-review.html">YTTP Superfood Air-Whip Cream</a></li>
-          <li><a href="/youth-to-the-people-adaptogen-skin-repairing-peptide-cream-review.html">YTTP Adaptogen Peptide Cream</a></li>
           <li><a href="/youth-to-the-people-supershroom-facial-cleanser-review.html">YTTP Supershroom Cleanser</a></li>
-          <li><a href="/beauty-by-earth-self-tanner-lotion-review.html">Beauty by Earth Self Tanner</a></li>
-          <li><a href="/the-bald-brothers-spf-50-invisible-sunscreen-gel-review.html">The Bald Brothers SPF50 Gel</a></li>
-          <li><a href="/the-bald-brothers-scalp-moisturizer-review.html">The Bald Brothers Scalp Care</a></li>
-          <li><a href="/uv-clear-sunscreen-review.html">EltaMD UV Clear SPF 46</a></li>
-          <li><a href="/la-roche-posay-toleriane-double-repair-review.html">La Roche-Posay Toleriane</a></li>
-          <li><a href="/kiehls-ultra-facial-cream-review.html">Kiehl's Ultra Facial Cream</a></li>
-          <li><a href="/obagi-professional-c-serum-review.html">Obagi Professional-C 20%</a></li>
+          <li><a href="/youth-to-the-people-adaptogen-skin-repairing-peptide-cream-review.html">YTTP Adaptogen Peptide Cream</a></li>
+          <li><a href="/youth-to-the-people-superfood-air-whip-moisture-cream-review.html">YTTP Superfood Air-Whip Cream</a></li>
+          <li><a href="/youth-to-the-people-superberry-hydrate-glow-dream-mask-review.html">YTTP Superberry Dream Mask</a></li>
         </ul>
       </div>
 
