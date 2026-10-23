@@ -1,0 +1,366 @@
+/* ==========================================================================
+   Clinical Derma Lab - YMYL, E-E-A-T & SEO Component Stylesheet
+   Luxury Dermatological & Clean Clinical Retail Aesthetics
+   ========================================================================== */
+
+:root {
+  --primary-teal: #0e3b43;
+  --primary-teal-dark: #08242a;
+  --accent-emerald: #2a7f62;
+  --accent-soft-emerald: #eef7f4;
+  --warm-neutral-bg: #fcfbf9;
+  --surface-card: #ffffff;
+  --border-subtle: #e6e2db;
+  --border-strong: #d1cbc1;
+  --text-main: #1d2528;
+  --text-muted: #536469;
+  --badge-gold: #b45309;
+  --badge-gold-bg: #fef3c7;
+}
+
+/* 1. Breadcrumb Navigation */
+.clinical-breadcrumb-nav {
+  margin: 18px 0 24px;
+  font-size: 0.84rem;
+}
+.clinical-breadcrumb-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.clinical-breadcrumb-item {
+  display: inline-flex;
+  align-items: center;
+  color: var(--text-muted);
+}
+.clinical-breadcrumb-item a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+.clinical-breadcrumb-item a:hover {
+  color: var(--accent-emerald);
+  text-decoration: underline;
+}
+.clinical-breadcrumb-separator {
+  margin: 0 4px;
+  color: #a0aec0;
+  font-size: 0.75rem;
+}
+.clinical-breadcrumb-current {
+  color: var(--primary-teal);
+  font-weight: 700;
+}
+
+/* 2. Clinical Authority Bar (E-E-A-T Signal) */
+.clinical-authority-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  background: #f7faf9;
+  border: 1px solid rgba(42, 127, 98, 0.22);
+  border-left: 4px solid var(--accent-emerald);
+  border-radius: 8px;
+  padding: 14px 20px;
+  margin: 20px 0 28px;
+}
+.authority-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.authority-avatar-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--primary-teal);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.88rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 6px rgba(14, 59, 67, 0.2);
+  flex-shrink: 0;
+}
+.authority-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.authority-statement {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--primary-teal);
+  margin: 0;
+}
+.authority-statement a {
+  color: var(--primary-teal);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.authority-meta {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+.authority-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.btn-verify-credentials {
+  background: #ffffff;
+  color: var(--accent-emerald);
+  border: 1px solid var(--accent-emerald);
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+}
+.btn-verify-credentials:hover {
+  background: var(--accent-emerald);
+  color: #ffffff;
+}
+
+/* 3. Key Clinical Takeaways (GEO & AI Overview Optimized) */
+.clinical-takeaways-box {
+  background: linear-gradient(180deg, #ffffff 0%, #f9fbfb 100%);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  padding: 24px 26px;
+  margin: 28px 0 36px;
+  box-shadow: 0 2px 12px rgba(14, 59, 67, 0.04);
+  position: relative;
+}
+.takeaways-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-emerald);
+  background: var(--accent-soft-emerald);
+  padding: 3px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+.takeaways-heading {
+  font-size: 1.28rem;
+  font-weight: 800;
+  color: var(--primary-teal);
+  margin-bottom: 14px;
+  line-height: 1.35;
+}
+.takeaways-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.takeaways-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.94rem;
+  color: var(--text-main);
+  line-height: 1.55;
+}
+.takeaways-bullet-icon {
+  color: var(--accent-emerald);
+  font-weight: 900;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.takeaways-item strong {
+  color: var(--primary-teal);
+}
+
+/* 4. Peer-Reviewed Citations & References Section (Collapsible) */
+.citations-wrapper {
+  margin: 56px 0 40px;
+  border-top: 2px solid var(--border-subtle);
+  padding-top: 28px;
+}
+.citations-header-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fbfaf8;
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 16px 20px;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+.citations-header-btn:hover {
+  background: #f2f0ec;
+  border-color: var(--border-strong);
+}
+.citations-header-btn:focus-visible {
+  outline: 2px solid var(--accent-emerald);
+  outline-offset: 2px;
+}
+.citations-title-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.citations-badge {
+  background: var(--primary-teal);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+.citations-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary-teal);
+  margin: 0;
+}
+.citations-chevron {
+  transition: transform 0.2s ease;
+  color: var(--text-muted);
+}
+.citations-header-btn[aria-expanded="true"] .citations-chevron {
+  transform: rotate(180deg);
+}
+.citations-panel {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  padding: 22px 24px;
+}
+.citations-list {
+  list-style-type: decimal;
+  padding-left: 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.citation-entry {
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--text-main);
+}
+.citation-journal {
+  font-style: italic;
+  color: var(--primary-teal);
+  font-weight: 600;
+}
+.citation-links {
+  margin-top: 3px;
+  display: inline-flex;
+  gap: 12px;
+  font-size: 0.78rem;
+}
+.citation-links a {
+  color: var(--accent-emerald);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* 5. Accessible Verification Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(14, 59, 67, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 16px;
+}
+.modal-card {
+  background: #ffffff;
+  border-radius: 12px;
+  max-width: 580px;
+  width: 100%;
+  padding: 32px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.modal-close-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px;
+  line-height: 1;
+}
+
+/* 6. Formulations & Catalog Category Pills */
+.filter-pills-bar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 24px 0 32px;
+}
+.filter-pill {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.filter-pill:hover {
+  border-color: var(--accent-emerald);
+  color: var(--accent-emerald);
+}
+.filter-pill.active {
+  background: var(--primary-teal);
+  border-color: var(--primary-teal);
+  color: #ffffff;
+}
+
+/* Accessibility focus-visible rules */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 2px solid var(--accent-emerald) !important;
+  outline-offset: 2px !important;
+}
+
+@media (max-width: 640px) {
+  .clinical-authority-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .authority-bar-right {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

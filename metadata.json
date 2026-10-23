@@ -1,0 +1,8 @@
+{
+  "name": "UV Clear Face Sunscreen with Zinc Oxide Review",
+  "description": "Comprehensive clinical and real customer review analysis of top skincare products including ELEMIS Dynamic Resurfacing Facial Pads, ELEMIS Pro-Collagen Marine Cream SPF 30, ELEMIS Superfood Midnight Facial, Cetaphil Extra Gentle Daily Scrub, ELEMIS Pro-Collagen Eye Revive Mask, ELEMIS Pro-Collagen Cleansing Balm, EltaMD AM Restore Face Moisturizer, Colorescience Face Shield Flex SPF 50, Youth To The People Superberry Dream Mask, YTTP Superfood Air-Whip, YTTP Adaptogen Peptide Cream, YTTP Supershroom Cleanser, UV Clear Face Sunscreen, Beauty by Earth Self Tanner, La Roche-Posay Toleriane, Beekman 1802, Obagi Professional-C, Kiehl's Ultra Facial Cream, Paul Mitchell Tea Tree, Flakes Anti-Dandruff Set, Palmer's Cocoa Butter Stretch Mark Kit, and The Bald Brothers Scalp Care & SPF50 Sunscreen Gel.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
