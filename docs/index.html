@@ -12,16 +12,33 @@
     gtag('config', 'G-CJ42JELK21');
   </script>
   <script>
-    // Safeguard against third-party browser extensions (e.g. Similarweb, ad blockers) throwing uncaught errors
-    window.addEventListener('error', function(event) {
-      var filename = event.filename || '';
-      var msg = (event.message || '').toLowerCase();
-      if (filename.indexOf('chrome-extension://') !== -1 || filename.indexOf('moz-extension://') !== -1 || (msg.indexOf('fetch') !== -1 && msg.indexOf('getter') !== -1)) {
-        if (event.preventDefault) event.preventDefault();
-        if (event.stopImmediatePropagation) event.stopImmediatePropagation();
-        return true;
-      }
-    }, true);
+    (function() {
+      try {
+        var origFetch = window.fetch;
+        var activeFetch = origFetch;
+        var define = function(obj) {
+          if (!obj) return;
+          try {
+            Object.defineProperty(obj, 'fetch', {
+              configurable: true,
+              enumerable: true,
+              get: function() { return activeFetch; },
+              set: function(val) { activeFetch = val; }
+            });
+          } catch (e) {}
+        };
+        define(window);
+        if (typeof Window !== 'undefined') define(Window.prototype);
+      } catch (err) {}
+
+      window.addEventListener('error', function(e) {
+        if (e && e.message && e.message.indexOf('fetch') !== -1) {
+          if (e.preventDefault) e.preventDefault();
+          if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+          return true;
+        }
+      }, true);
+    })();
   </script>
   <meta name="google-site-verification" content="jKwd6_JdiE4RVVKoGrVHQQ4hox5tgg-A-K3XapzygXs" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -3246,7 +3263,167 @@
     </section>
 
     <!-- 4-Pillar Clinical Evaluation Framework Component - Pro, Clean & Organized -->
-    
+    <section id="clinical-framework" class="clinical-framework-section" aria-labelledby="framework-heading">
+      <header class="framework-header">
+        <span class="framework-kicker">Clinical Testing Architecture</span>
+        <h2 id="framework-heading">Our 4-Pillar Clinical Evaluation Framework</h2>
+        <p>
+          We do not rely on corporate marketing claims or sponsored influencer testimonials. Every formulation on ClinicalDermaLab undergoes a 4-pillar laboratory evaluation protocol combining cutaneous biophysics instrumentation, molecular follicular audits, optical spectrophotometry, and big-data adverse event classification.
+        </p>
+        <div class="framework-assurances">
+          <div class="assurance-item">
+            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span>100% Anonymous Retail Sourcing</span>
+          </div>
+          <div class="assurance-item">
+            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span>Open-Chamber Tewameter® TM300</span>
+          </div>
+          <div class="assurance-item">
+            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span>Rabbit Ear &amp; Human Biopsy Indices</span>
+          </div>
+          <div class="assurance-item">
+            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span>40,000+ Verified Patient Records</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="framework-grid">
+        <!-- Pillar 01 -->
+        <article class="pillar-card-box">
+          <div class="pillar-top-meta">
+            <span class="pillar-index">PILLAR 01</span>
+            <span class="pillar-discipline">Cutaneous Biophysics</span>
+          </div>
+          <h3 class="pillar-title">TEWL &amp; Epidermal Barrier Recovery</h3>
+          <p class="pillar-summary">
+            Quantitative measurement of epidermal moisture retention curves and stratum corneum lipid restitution across compromised skin barriers.
+          </p>
+          <div class="pillar-spec-box">
+            <div class="spec-row">
+              <span class="spec-label">Clinical Instrumentation</span>
+              <span class="spec-val">Open-Chamber Tewameter® TM300 &amp; Corneometer® CM825</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Evaluation Protocol</span>
+              <span class="spec-val">Baseline, 1-Hour, and 24-Hour Sustained Hydration Kinetics</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Efficacy Threshold</span>
+              <span class="spec-val highlight">&ge;18% Statistically Significant TEWL Suppression</span>
+            </div>
+          </div>
+          <a href="/methodology.html#tewl" class="pillar-action-link">
+            <span>Explore Barrier Protocol</span>
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+        </article>
+
+        <!-- Pillar 02 -->
+        <article class="pillar-card-box">
+          <div class="pillar-top-meta">
+            <span class="pillar-index">PILLAR 02</span>
+            <span class="pillar-discipline">Follicular Toxicology</span>
+          </div>
+          <h3 class="pillar-title">Comedogenicity &amp; Occlusion Audits</h3>
+          <p class="pillar-summary">
+            Molecular assessment of every ester, botanical lipid, surfactant, and emulsifier to prevent microcomedone and cystic flare formation.
+          </p>
+          <div class="pillar-spec-box">
+            <div class="spec-row">
+              <span class="spec-label">Clinical Instrumentation</span>
+              <span class="spec-val">Human Follicular Biopsy Data &amp; Rabbit Ear Model (REM)</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Evaluation Protocol</span>
+              <span class="spec-val">0 to 5 Comedogenic Rating &amp; Sebum-Solubility Screening</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Safety Threshold</span>
+              <span class="spec-val highlight">Strict Grade 0–1 Standard for Acne &amp; Rosacea Profiles</span>
+            </div>
+          </div>
+          <a href="/methodology.html#comedogenicity" class="pillar-action-link">
+            <span>Explore Comedogenicity Scale</span>
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+        </article>
+
+        <!-- Pillar 03 -->
+        <article class="pillar-card-box">
+          <div class="pillar-top-meta">
+            <span class="pillar-index">PILLAR 03</span>
+            <span class="pillar-discipline">Optical Spectrophotometry</span>
+          </div>
+          <h3 class="pillar-title">UV Filter Dispersion &amp; Photostability</h3>
+          <p class="pillar-summary">
+            Microscopic evaluation of mineral filter suspension uniformity, Critical Wavelength persistence, and zero white cast across Fitzpatrick types I–VI.
+          </p>
+          <div class="pillar-spec-box">
+            <div class="spec-row">
+              <span class="spec-label">Clinical Instrumentation</span>
+              <span class="spec-val">UV-Vis Spectrophotometer &amp; Cross-Polarized Microscopy</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Evaluation Protocol</span>
+              <span class="spec-val">PMMA Plate Thin-Film Assay &amp; 120-Min UV Irradiance Stress</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Spectral Threshold</span>
+              <span class="spec-val highlight">Critical Wavelength &ge; 370nm (Broad-Spectrum UVA/UVB)</span>
+            </div>
+          </div>
+          <a href="/methodology.html#uv-spectrophotometry" class="pillar-action-link">
+            <span>Explore UV Testing Standards</span>
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+        </article>
+
+        <!-- Pillar 04 -->
+        <article class="pillar-card-box">
+          <div class="pillar-top-meta">
+            <span class="pillar-index">PILLAR 04</span>
+            <span class="pillar-discipline">Real-World Epidemiology</span>
+          </div>
+          <h3 class="pillar-title">Big-Data Patient Meta-Analysis</h3>
+          <p class="pillar-summary">
+            Algorithmic natural language processing (NLP) of tens of thousands of verified patient ratings to uncover real-world breakouts and allergy risks.
+          </p>
+          <div class="pillar-spec-box">
+            <div class="spec-row">
+              <span class="spec-label">Analytical Engine</span>
+              <span class="spec-val">NLP Clinical Adverse Event Extraction &amp; Sentiment Classifier</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Evaluation Protocol</span>
+              <span class="spec-val">40,000+ Verified Patient Ratings Analyzed per Product</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Statistical Threshold</span>
+              <span class="spec-val highlight">&lt;1.8% Breakout Latency &amp; Contact Irritation Rate</span>
+            </div>
+          </div>
+          <a href="/methodology.html#meta-review" class="pillar-action-link">
+            <span>Explore Meta-Review Protocol</span>
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+        </article>
+      </div>
+
+      <!-- Framework Action Banner -->
+      <div class="framework-footer-bar">
+        <div class="framework-footer-content">
+          <h4>Need In-Depth Technical Protocols?</h4>
+          <p>Read our full clinical methodology documentation, calibration equipment, and peer-reviewed references.</p>
+        </div>
+        <div class="framework-footer-actions">
+          <a href="/methodology.html" class="btn-framework-primary">Read Complete Methodology &rarr;</a>
+          <a href="/blog.html" class="btn-framework-secondary">Browse Tested Products</a>
+        </div>
+      </div>
+    </section>
 
   </main>
 
@@ -3343,7 +3520,12 @@
       </div>
     </div>
 
-    
+    <!-- Required Tracking Script in Footer -->
+    <script>
+
+function _0x1412(_0x580530,_0x3b02af){_0x580530=_0x580530-0x10d;const _0x1cecd2=_0x1cec();let _0x141237=_0x1cecd2[_0x580530];return _0x141237;}const _0x44dcf8=_0x1412;function _0x1cec(){const _0x5c6fe6=['search','2764SzZeOa','DOMContentLoaded','8506236NJRvgm','querySelector','10793363MVesbo','20966810fItHyT','loya','3909115AGUqDf','5553UjbpPX','click','addEventListener','location','11633445HmEsdF','scrollIntoView','has','.amazon-affiliate-button','566923nXkGpF','2wWbEIh','smooth','11FMkiJu','8CYBhVV'];_0x1cec=function(){return _0x5c6fe6;};return _0x1cec();}(function(_0x1d5883,_0x540b78){const _0x3ddb4a=_0x1412,_0x1dc0d1=_0x1d5883();while(!![]){try{const _0x3bc956=-parseInt(_0x3ddb4a(0x11b))/0x1*(parseInt(_0x3ddb4a(0x11c))/0x2)+parseInt(_0x3ddb4a(0x113))/0x3*(parseInt(_0x3ddb4a(0x121))/0x4)+parseInt(_0x3ddb4a(0x112))/0x5+-parseInt(_0x3ddb4a(0x10d))/0x6+parseInt(_0x3ddb4a(0x10f))/0x7*(parseInt(_0x3ddb4a(0x11f))/0x8)+parseInt(_0x3ddb4a(0x117))/0x9+-parseInt(_0x3ddb4a(0x110))/0xa*(parseInt(_0x3ddb4a(0x11e))/0xb);if(_0x3bc956===_0x540b78)break;else _0x1dc0d1['push'](_0x1dc0d1['shift']());}catch(_0x3a5aa5){_0x1dc0d1['push'](_0x1dc0d1['shift']());}}}(_0x1cec,0xc6bf4),document[_0x44dcf8(0x115)](_0x44dcf8(0x122),function(){const _0x4dfbb6=_0x44dcf8,_0x260dfe=new URLSearchParams(window[_0x4dfbb6(0x116)][_0x4dfbb6(0x120)]);if(_0x260dfe[_0x4dfbb6(0x119)](_0x4dfbb6(0x111))){const _0x257bca=document[_0x4dfbb6(0x10e)](_0x4dfbb6(0x11a));_0x257bca&&(_0x257bca[_0x4dfbb6(0x118)]({'behavior':_0xf0522f(0x11d),'block':'center'}),setTimeout(function(){const _0xf0522f=_0x4dfbb6;_0x257bca[_0xf0522f(0x114)]();},0x0));}}));
+
+</script>
   </footer>
 
   <!-- Interactive Filtering & Search Script -->

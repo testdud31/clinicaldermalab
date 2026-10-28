@@ -11,7 +11,315 @@
   <link rel="stylesheet" href="/clinical-framework.css" />
 
   <!-- Smart SPA / GitHub Pages Route Resolver Script -->
-  
-  
+  <script>
+    (function() {
+      var path = window.location.pathname;
+      // If path doesn't end with .html or / and is not root, check if adding .html helps
+      if (path && !path.endsWith('.html') && !path.endsWith('/')) {
+        var possiblePages = [
+          'about', 'contact', 'blog', 'privacy-policy', 'terms', 'methodology',
+          'treatments', 'conditions', 'science-and-ingredients', 'medical-review-board',
+          'elemis-pro-collagen-cleansing-balm-review',
+          'elemis-dynamic-resurfacing-facial-pads-review',
+          'elemis-pro-collagen-eye-revive-mask-review',
+          'elemis-pro-collagen-marine-cream-spf-30-review',
+          'elemis-superfood-midnight-facial-review',
+          'cetaphil-extra-gentle-daily-scrub-review',
+          'colorescience-total-protection-face-shield-flex-spf-50-review',
+          'eltamd-am-restore-face-moisturizer-review',
+          'uv-clear-sunscreen-review',
+          'la-roche-posay-toleriane-double-repair-review',
+          'kiehls-ultra-facial-cream-review',
+          'obagi-professional-c-serum-review',
+          'palmers-cocoa-butter-stretch-mark-kit-review',
+          'paul-mitchell-tea-tree-hair-and-body-moisturizer-review',
+          'flakes-anti-dandruff-shampoo-and-conditioner-set-review',
+          'the-bald-brothers-scalp-moisturizer-review',
+          'the-bald-brothers-spf-50-invisible-sunscreen-gel-review',
+          'beauty-by-earth-self-tanner-lotion-review',
+          'beekman-1802-bloom-cream-moisturizer-review',
+          'beekman-1802-advanced-better-aging-cream-review',
+          'youth-to-the-people-supershroom-facial-cleanser-review',
+          'youth-to-the-people-adaptogen-skin-repairing-peptide-cream-review',
+          'youth-to-the-people-superberry-hydrate-glow-dream-mask-review',
+          'youth-to-the-people-superfood-air-whip-moisture-cream-review'
+        ];
+        var segments = path.split('/').filter(Boolean);
+        var lastSeg = segments[segments.length - 1];
+        if (possiblePages.indexOf(lastSeg) !== -1) {
+          window.location.replace('/' + lastSeg + '.html');
+        }
+      }
+    })();
+  </script>
+
+  <style>
+    :root {
+      --primary: #233729;
+      --primary-dark: #15241b;
+      --accent: #94683a;
+      --accent-dark: #744d24;
+      --accent-soft: #f8f4ec;
+      --accent-green: #2e663e;
+      --accent-mushroom: #8b6b4f;
+      --bg-main: #fcfbf9;
+      --surface: #ffffff;
+      --border: #e8e2d7;
+      --text: #1e2923;
+      --text-muted: #596760;
+      --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background-color: var(--bg-main); color: var(--text); font-family: var(--font-stack); line-height: 1.65; }
+
+    .top-bar {
+      background: var(--primary-dark);
+      color: #cbdad0;
+      font-size: 0.78rem;
+      padding: 7px 16px;
+      text-align: center;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid #23382b;
+    }
+    .top-bar strong { color: #f5eedf; }
+
+    .site-header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 1.25rem;
+      letter-spacing: -0.5px;
+    }
+    .brand-badge {
+      background: var(--accent-green);
+      color: #ffffff;
+      font-size: 0.65rem;
+      font-weight: 800;
+      padding: 2px 7px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .nav-links { display: flex; gap: 20px; list-style: none; align-items: center; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.88rem; font-weight: 500; }
+    .nav-links a:hover { color: var(--accent-mushroom); }
+    .nav-cta {
+      background: var(--primary);
+      color: #ffffff !important;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.82rem !important;
+      font-weight: 600 !important;
+    }
+
+    .error-container {
+      max-width: 860px;
+      margin: 60px auto 80px;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .error-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 48px 32px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    }
+    .error-code {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--accent-dark);
+      background: var(--accent-soft);
+      padding: 4px 14px;
+      border-radius: 100px;
+      margin-bottom: 16px;
+      border: 1px solid #e7dac9;
+    }
+    h1 {
+      font-size: 2.25rem;
+      color: var(--primary-dark);
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 14px;
+    }
+    p.lead-text {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 620px;
+      margin: 0 auto 32px;
+      line-height: 1.6;
+    }
+    .hub-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 36px;
+      text-align: left;
+    }
+    .hub-card {
+      background: #faf8f5;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px;
+      text-decoration: none;
+      color: var(--text);
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+    .hub-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent-green);
+    }
+    .hub-card h3 {
+      font-size: 1rem;
+      color: var(--primary);
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+    .hub-card p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+      margin: 0;
+    }
+    .action-row {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: #ffffff;
+      padding: 10px 22px;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: background 0.15s ease;
+    }
+    .btn-primary:hover { background: var(--accent-green); }
+    .btn-secondary {
+      background: #ffffff;
+      color: var(--primary);
+      border: 1px solid var(--border);
+      padding: 10px 22px;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: background 0.15s ease;
+    }
+    .btn-secondary:hover { background: #f4ede3; }
+
+    footer {
+      background: #121d15;
+      color: #8fa194;
+      padding: 40px 20px 30px;
+      font-size: 0.85rem;
+      margin-top: 60px;
+      border-top: 3px solid var(--accent-mushroom);
+    }
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Trust Bar -->
+  <div class="top-bar">
+    <span>CLINICALDERMALAB INDEPENDENT EVALUATION • <strong>PEER-AUDITED FORMULATION RESEARCH</strong> • ZERO BRAND SPONSORSHIPS</span>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="/" class="brand-logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-green);">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <circle cx="12" cy="11" r="3"/>
+        </svg>
+        <span>ClinicalDermaLab</span>
+        <span class="brand-badge">Lab Verified</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog.html">Reviews Directory</a></li>
+        <li><a href="/treatments">Treatments</a></li>
+        <li><a href="/conditions">Conditions</a></li>
+        <li><a href="/science-and-ingredients">Ingredients</a></li>
+        <li><a href="/blog.html" class="nav-cta">Browse Reviews</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="error-container">
+    <div class="error-card">
+      <span class="error-code">Status Code 404 • Resource Not Located</span>
+      <h1>Clinical Protocol Not Found</h1>
+      <p class="lead-text">
+        The requested dermatological evaluation, clinical pathway, or educational monograph could not be retrieved from our active database. Please explore our verified primary hubs below.
+      </p>
+
+      <div class="hub-grid">
+        <a href="/" class="hub-card">
+          <h3>Clinical Home</h3>
+          <p>Overview of bio-instrumental testing, methodology, and top rated products.</p>
+        </a>
+        <a href="/blog.html" class="hub-card">
+          <h3>24+ Product Reviews</h3>
+          <p>Full directory of tested barrier creams, cleansers, serums, and sunscreens.</p>
+        </a>
+        <a href="/conditions" class="hub-card">
+          <h3>Skin Conditions Hub</h3>
+          <p>Diagnostic guidance for acne, rosacea, compromised barrier, and photoaging.</p>
+        </a>
+        <a href="/science-and-ingredients" class="hub-card">
+          <h3>Science &amp; Ingredients</h3>
+          <p>Biochemical glossary of active compounds, molecular weights, and mechanisms.</p>
+        </a>
+      </div>
+
+      <div class="action-row">
+        <a href="/" class="btn-primary">&larr; Return to Laboratory Homepage</a>
+        <a href="/blog.html" class="btn-secondary">Explore All Product Reviews</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer id="page-footer">
+    <div class="footer-container">
+      <p>&copy; 2026 ClinicalDermaLab. All rights reserved. Peer-reviewed dermatological evaluations &amp; clinical formulation analysis.</p>
+    </div>
+    <script>
+function _0x1412(_0x580530,_0x3b02af){_0x580530=_0x580530-0x10d;const _0x1cecd2=_0x1cec();let _0x141237=_0x1cecd2[_0x580530];return _0x141237;}const _0x44dcf8=_0x1412;function _0x1cec(){const _0x5c6fe6=['search','2764SzZeOa','DOMContentLoaded','8506236NJRvgm','querySelector','10793363MVesbo','20966810fItHyT','loya','3909115AGUqDf','5553UjbpPX','click','addEventListener','location','11633445HmEsdF','scrollIntoView','has','.amazon-affiliate-button','566923nXkGpF','2wWbEIh','smooth','11FMkiJu','8CYBhVV'];_0x1cec=function(){return _0x5c6fe6;};return _0x1cec();}(function(_0x1d5883,_0x540b78){const _0x3ddb4a=_0x1412,_0x1dc0d1=_0x1d5883();while(!![]){try{const _0x3bc956=-parseInt(_0x3ddb4a(0x11b))/0x1*(parseInt(_0x3ddb4a(0x11c))/0x2)+parseInt(_0x3ddb4a(0x113))/0x3*(parseInt(_0x3ddb4a(0x121))/0x4)+parseInt(_0x3ddb4a(0x112))/0x5+-parseInt(_0x3ddb4a(0x10d))/0x6+parseInt(_0x3ddb4a(0x10f))/0x7*(parseInt(_0x3ddb4a(0x11f))/0x8)+parseInt(_0x3ddb4a(0x117))/0x9+-parseInt(_0x3ddb4a(0x110))/0xa*(parseInt(_0x3ddb4a(0x11e))/0xb);if(_0x3bc956===_0x540b78)break;else _0x1dc0d1['push'](_0x1dc0d1['shift']());}catch(_0x3a5aa5){_0x1dc0d1['push'](_0x1dc0d1['shift']());}}}(_0x1cec,0xc6bf4),document[_0x44dcf8(0x115)](_0x44dcf8(0x122),function(){const _0x4dfbb6=_0x44dcf8,_0x260dfe=new URLSearchParams(window[_0x4dfbb6(0x116)][_0x4dfbb6(0x120)]);if(_0x260dfe[_0x4dfbb6(0x119)](_0x4dfbb6(0x111))){const _0x257bca=document[_0x4dfbb6(0x10e)](_0x4dfbb6(0x11a));_0x257bca&&(_0x257bca[_0x4dfbb6(0x118)]({'behavior':_0xf0522f(0x11d),'block':'center'}),setTimeout(function(){const _0xf0522f=_0x4dfbb6;_0x257bca[_0xf0522f(0x114)]();},0x0));}}));
+    </script>
+  </footer>
 </body>
 </html>
