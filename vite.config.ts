@@ -10,8 +10,8 @@ export default defineConfig(() => {
         name: 'domain-redirect',
         configureServer(server) {
           server.middlewares.use((req, res, next) => {
-            const host = req.headers.host || '';
-            const hostname = host.split(':')[0];
+            const rawHost = (req.headers['x-forwarded-host'] as string) || req.headers.host || '';
+            const hostname = rawHost.split(',')[0].trim().split(':')[0];
             if (hostname === 'clinicaldermalab.ai.studio' || hostname.endsWith('.clinicaldermalab.ai.studio')) {
               res.writeHead(301, { Location: `https://clinicaldermalab.io${req.url || ''}` });
               res.end();
@@ -22,8 +22,8 @@ export default defineConfig(() => {
         },
         configurePreviewServer(server) {
           server.middlewares.use((req, res, next) => {
-            const host = req.headers.host || '';
-            const hostname = host.split(':')[0];
+            const rawHost = (req.headers['x-forwarded-host'] as string) || req.headers.host || '';
+            const hostname = rawHost.split(',')[0].trim().split(':')[0];
             if (hostname === 'clinicaldermalab.ai.studio' || hostname.endsWith('.clinicaldermalab.ai.studio')) {
               res.writeHead(301, { Location: `https://clinicaldermalab.io${req.url || ''}` });
               res.end();
