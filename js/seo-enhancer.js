@@ -8,6 +8,13 @@
 (function() {
   'use strict';
 
+  // Domain Redirect: Automatically redirect visitors from clinicaldermalab.ai.studio to clinicaldermalab.io
+  var host = window.location.hostname;
+  if (host === 'clinicaldermalab.ai.studio' || host.endsWith('.clinicaldermalab.ai.studio')) {
+    window.location.replace('https://clinicaldermalab.io' + window.location.pathname + window.location.search + window.location.hash);
+    return;
+  }
+
   // 1. Interactive Citations & References Accordion
   function initCitationsAccordion() {
     var toggles = document.querySelectorAll('[data-accordion-toggle="citations"]');

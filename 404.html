@@ -2,6 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <!-- Domain Redirect -->
+  <script>
+    (function() {
+      var h = window.location.hostname;
+      if (h === 'clinicaldermalab.ai.studio' || h.endsWith('.clinicaldermalab.ai.studio')) {
+        window.location.replace('https://clinicaldermalab.io' + window.location.pathname + window.location.search + window.location.hash);
+      }
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Page Not Found (404) | Clinical Derma Lab</title>
   <meta name="description" content="The requested clinical protocol or dermatological review could not be located in our active laboratory database. Browse our verified skincare formulations and diagnostic directories." />

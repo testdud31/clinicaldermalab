@@ -2,6 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <!-- Domain Redirect -->
+  <script>
+    (function() {
+      var h = window.location.hostname;
+      if (h === 'clinicaldermalab.ai.studio' || h.endsWith('.clinicaldermalab.ai.studio')) {
+        window.location.replace('https://clinicaldermalab.io' + window.location.pathname + window.location.search + window.location.hash);
+      }
+    })();
+  </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CJ42JELK21"></script>
   <script>

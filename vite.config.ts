@@ -5,7 +5,37 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    plugins: [react(), tailwindcss()],
+    plugins: [
+      {
+        name: 'domain-redirect',
+        configureServer(server) {
+          server.middlewares.use((req, res, next) => {
+            const host = req.headers.host || '';
+            const hostname = host.split(':')[0];
+            if (hostname === 'clinicaldermalab.ai.studio' || hostname.endsWith('.clinicaldermalab.ai.studio')) {
+              res.writeHead(301, { Location: `https://clinicaldermalab.io${req.url || ''}` });
+              res.end();
+              return;
+            }
+            next();
+          });
+        },
+        configurePreviewServer(server) {
+          server.middlewares.use((req, res, next) => {
+            const host = req.headers.host || '';
+            const hostname = host.split(':')[0];
+            if (hostname === 'clinicaldermalab.ai.studio' || hostname.endsWith('.clinicaldermalab.ai.studio')) {
+              res.writeHead(301, { Location: `https://clinicaldermalab.io${req.url || ''}` });
+              res.end();
+              return;
+            }
+            next();
+          });
+        },
+      },
+      react(),
+      tailwindcss(),
+    ],
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
