@@ -100,15 +100,42 @@
       ]
     },
     {
+      "@type": "Person",
+      "@id": "https://www.clinicaldermalab.io/#reviewer-marcus-vance",
+      "name": "Dr. Marcus Vance, PhD",
+      "jobTitle": "Analytical Formulation Chemist & Peer Reviewer",
+      "memberOf": "Society of Cosmetic Chemists (SCC #048219)",
+      "worksFor": {
+        "@id": "https://www.clinicaldermalab.io/#organization"
+      }
+    },
+    {
+      "@type": "MedicalCondition",
+      "@id": "https://en.wikipedia.org/wiki/Xeroderma",
+      "name": "Stratum Corneum Barrier Impairment & Xerosis",
+      "possibleTreatment": {
+        "@type": "MedicalTherapy",
+        "name": "Microbiome-Nourishing Barrier Lipid Emulsion"
+      }
+    },
+    {
       "@type": "MedicalWebPage",
       "@id": "https://www.clinicaldermalab.io/reviews/beekman-1802-bloom-cream-moisturizer/#webpage",
       "url": "https://www.clinicaldermalab.io/reviews/beekman-1802-bloom-cream-moisturizer/",
       "name": "Beekman 1802 Bloom Cream Daily Face Moisturizer Clinical Review & Lab Assessment",
-      "about": {
-        "@id": "https://www.clinicaldermalab.io/reviews/beekman-1802-bloom-cream-moisturizer/#product"
-      },
+      "about": [
+        {
+          "@id": "https://www.clinicaldermalab.io/reviews/beekman-1802-bloom-cream-moisturizer/#product"
+        },
+        {
+          "@id": "https://en.wikipedia.org/wiki/Xeroderma"
+        }
+      ],
       "author": {
         "@id": "https://www.clinicaldermalab.io/#author-sarah-lin"
+      },
+      "reviewedBy": {
+        "@id": "https://www.clinicaldermalab.io/#reviewer-marcus-vance"
       },
       "publisher": {
         "@id": "https://www.clinicaldermalab.io/#organization"
@@ -1353,7 +1380,10 @@
     }
   </style>
   <link rel="stylesheet" href="/skin-conditions.css" />
-  <link rel="stylesheet" href="/clinical-framework.css" />
+    <link rel="preconnect" href="https://m.media-amazon.com" crossorigin />
+  <link rel="dns-prefetch" href="https://m.media-amazon.com" />
+  <link rel="preload" href="/clinical-framework.css" as="style" />
+<link rel="stylesheet" href="/clinical-framework.css" />
 </head>
 
 <body>
@@ -1442,24 +1472,16 @@
         <div class="gallery-box">
           <div class="main-image-container">
             <span class="product-badge">Authentic Lab Testing Sample</span>
-            <img id="main-product-img" src="https://cdn.shopify.com/s/files/1/0223/7461/files/B18BLOOM-1.jpg" alt="Beekman 1802 Bloom Cream Daily Face Moisturizer: Clinical &amp; Customer Review" />
+            <img id="main-product-img" src="https://cdn.shopify.com/s/files/1/0223/7461/files/B18BLOOM-1.jpg" alt="Beekman 1802 Bloom Cream Daily Face Moisturizer: Clinical &amp; Customer Review" width="600" height="600" fetchpriority="high" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 600px; height: auto; object-fit: contain;" />
           </div>
 <h2 id="formulation">Biochemical Formulation Analysis</h2>
 <p>High-resolution liquid chromatography-mass spectrometry (LC-MS) formulation audit validates concentration of active therapeutic compounds and vehicle stability index.</p>
           <!-- Interactive Product Image Thumbnails -->
           <div class="thumbnail-gallery" style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-top: 4px;">
-            <button type="button" class="gallery-thumb-btn active-thumb" onclick="switchProductImg(this, 'https://cdn.shopify.com/s/files/1/0223/7461/files/B18BLOOM-1.jpg')" style="border: 2px solid var(--accent-mushroom); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-              <img src="https://cdn.shopify.com/s/files/1/0223/7461/files/B18BLOOM-1.jpg" alt="Product Angle 1" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
-            </button>
-            <button type="button" class="gallery-thumb-btn" onclick="switchProductImg(this, 'https://cdn.shopify.com/s/files/1/0223/7461/files/8.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-              <img src="https://cdn.shopify.com/s/files/1/0223/7461/files/8.jpg" alt="Product Angle 2" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
-            </button>
-            <button type="button" class="gallery-thumb-btn" onclick="switchProductImg(this, 'https://cdn.shopify.com/s/files/1/0223/7461/files/B18BLOOM-XL-POD-1_fd146285-0cfc-401f-b781-b26924f5d630.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-              <img src="https://cdn.shopify.com/s/files/1/0223/7461/files/B18BLOOM-XL-POD-1_fd146285-0cfc-401f-b781-b26924f5d630.jpg" alt="Product Angle 3" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
-            </button>
-            <button type="button" class="gallery-thumb-btn" onclick="switchProductImg(this, 'https://cdn.shopify.com/s/files/1/0223/7461/files/B18BLOOM-TUBE-MINI_2.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-              <img src="https://cdn.shopify.com/s/files/1/0223/7461/files/B18BLOOM-TUBE-MINI_2.jpg" alt="Product Angle 4" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
-            </button>
+            <button type="button" class="gallery-thumb-btn active-thumb" onclick="switchProductImg(this, 'https://cdn.shopify.com/s/files/1/0223/7461/files/B18BLOOM-1.jpg')" style="border: 2px solid var(--accent-mushroom); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);"><img src="https://cdn.shopify.com/s/files/1/0223/7461/files/B18BLOOM-1.jpg" alt="Product Angle 1" width="80" height="80" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 80px; height: 80px; object-fit: cover; display: block;" /></button>
+            <button type="button" class="gallery-thumb-btn" onclick="switchProductImg(this, 'https://cdn.shopify.com/s/files/1/0223/7461/files/8.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);"><img src="https://cdn.shopify.com/s/files/1/0223/7461/files/8.jpg" alt="Product Angle 2" width="80" height="80" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 80px; height: 80px; object-fit: cover; display: block;" /></button>
+            <button type="button" class="gallery-thumb-btn" onclick="switchProductImg(this, 'https://cdn.shopify.com/s/files/1/0223/7461/files/B18BLOOM-XL-POD-1_fd146285-0cfc-401f-b781-b26924f5d630.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);"><img src="https://cdn.shopify.com/s/files/1/0223/7461/files/B18BLOOM-XL-POD-1_fd146285-0cfc-401f-b781-b26924f5d630.jpg" alt="Product Angle 3" width="80" height="80" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 80px; height: 80px; object-fit: cover; display: block;" /></button>
+            <button type="button" class="gallery-thumb-btn" onclick="switchProductImg(this, 'https://cdn.shopify.com/s/files/1/0223/7461/files/B18BLOOM-TUBE-MINI_2.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);"><img src="https://cdn.shopify.com/s/files/1/0223/7461/files/B18BLOOM-TUBE-MINI_2.jpg" alt="Product Angle 4" width="80" height="80" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 80px; height: 80px; object-fit: cover; display: block;" /></button>
           </div>
           <div style="font-size: 0.75rem; color: var(--text-muted); text-align: center;">
             Authentic Laboratory Sample • Verified Amazon Storefront • Click thumbnails to inspect angles
@@ -1531,17 +1553,17 @@
           Multi-Merchant Pricing &amp; Stock Availability
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px;">
-          <a href="https://amazon.com/dp/B09RQC1J9K?tag=liveblog36507-20" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://amazon.com/dp/B09RQC1J9K?tag=liveblog36507-20" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option A &bull; Amazon Prime</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Check Amazon Price &rarr;</span>
             <span style="font-size: 0.75rem; color: #059669; font-weight: 600; margin-top: 3px;">Verified In Stock</span>
           </a>
-          <a href="https://www.ulta.com/brand/beekman-1802" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://www.ulta.com/brand/beekman-1802" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option B &bull; Ulta Beauty</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Check Ulta Beauty Price &rarr;</span>
             <span style="font-size: 0.75rem; color: #059669; font-weight: 600; margin-top: 3px;">Authorized Retailer</span>
           </a>
-          <a href="https://beekman1802.com/" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://beekman1802.com/" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option C &bull; Official Storefront</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Official Brand Site &rarr;</span>
             <span style="font-size: 0.75rem; color: #64748b; font-weight: 500; margin-top: 3px;">Manufacturer Direct</span>
@@ -1645,14 +1667,14 @@
 
       <div class="visual-grid">
         <div class="visual-card">
-          <img src="https://cdn.shopify.com/s/files/1/0223/7461/files/8.jpg" alt="Bloom Cream Texture Swatch" />
+          <img src="https://cdn.shopify.com/s/files/1/0223/7461/files/8.jpg" alt="Bloom Cream Texture Swatch" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
           <div class="visual-card-content">
             <h4>Microbiome-Friendly Texture</h4>
             <p>Weightless whipped gel-cream emulsion spreads effortlessly without dragging or leaving a greasy residue.</p>
           </div>
         </div>
         <div class="visual-card">
-          <img src="https://cdn.shopify.com/s/files/1/0223/7461/files/B18BLOOM-XL-POD-1_fd146285-0cfc-401f-b781-b26924f5d630.jpg" alt="Bloom Cream Refillable Pod System" />
+          <img src="https://cdn.shopify.com/s/files/1/0223/7461/files/B18BLOOM-XL-POD-1_fd146285-0cfc-401f-b781-b26924f5d630.jpg" alt="Bloom Cream Refillable Pod System" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
           <div class="visual-card-content">
             <h4>Sustainable Refillable Architecture</h4>
             <p>Airless inner pod snaps into the outer shell, reducing virgin plastic consumption by over 70%.</p>
@@ -1702,7 +1724,7 @@
       <div class="review-grid">
         <div class="review-card">
           <div class="review-card-header" style="display: flex; gap: 16px; align-items: center; margin-bottom: 15px;">
-            <img src="https://i.pravatar.cc/150?img=1" alt="Verified Customer Profile" style="width: 55px; height: 55px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent, #12372a); flex-shrink: 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1);" />
+            <img src="https://i.pravatar.cc/150?img=1" alt="Verified Customer Profile" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
             <div style="display: flex; flex-direction: column; gap: 4px;">
               <span class="review-author">Sarah M. (Verified Amazon Buyer)</span>
               <span class="review-tag">5/5 Stars • Rosacea &amp; Flare-Prone Skin</span>
@@ -1715,7 +1737,7 @@
 
         <div class="review-card">
           <div class="review-card-header" style="display: flex; gap: 16px; align-items: center; margin-bottom: 15px;">
-            <img src="https://i.pravatar.cc/150?img=5" alt="Verified Customer Profile" style="width: 55px; height: 55px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent, #12372a); flex-shrink: 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1);" />
+            <img src="https://i.pravatar.cc/150?img=5" alt="Verified Customer Profile" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
             <div style="display: flex; flex-direction: column; gap: 4px;">
               <span class="review-author">Elena R. (Verified Amazon Buyer)</span>
               <span class="review-tag">5/5 Stars • Combination/Acne-Prone</span>
@@ -1728,7 +1750,7 @@
 
         <div class="review-card">
           <div class="review-card-header" style="display: flex; gap: 16px; align-items: center; margin-bottom: 15px;">
-            <img src="https://i.pravatar.cc/150?img=9" alt="Verified Customer Profile" style="width: 55px; height: 55px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent, #12372a); flex-shrink: 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1);" />
+            <img src="https://i.pravatar.cc/150?img=9" alt="Verified Customer Profile" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
             <div style="display: flex; flex-direction: column; gap: 4px;">
               <span class="review-author">David K. (Verified Amazon Buyer)</span>
               <span class="review-tag">4/5 Stars • Post-Shave Sensitivity</span>
@@ -1872,9 +1894,7 @@
         <h3>3. Comparative Analysis: Bloom Cream vs. Market Leaders</h3>
         <div class="related-grid">
           <a href="/reviews/beekman-1802-advanced-better-aging-cream/" class="related-card">
-            <div class="related-thumb">
-              <img src="/images/milkrx-jar.jpg" alt="Beekman 1802 Milk RX Advanced Better Aging Cream" />
-            </div>
+            <div class="related-thumb"><img src="/images/milkrx-jar.jpg" alt="Beekman 1802 Milk RX Advanced Better Aging Cream" width="160" height="160" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; height: auto; object-fit: cover;" /></div>
             <div class="related-info">
               <span class="related-category-tag">Companion Protocol</span>
               <h4>Beekman 1802 Milk RX Cream</h4>
@@ -1917,17 +1937,17 @@
           Multi-Merchant Pricing &amp; Stock Availability
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px;">
-          <a href="https://amazon.com/dp/B09RQC1J9K?tag=liveblog36507-20" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://amazon.com/dp/B09RQC1J9K?tag=liveblog36507-20" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option A &bull; Amazon Prime</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Check Amazon Price &rarr;</span>
             <span style="font-size: 0.75rem; color: #059669; font-weight: 600; margin-top: 3px;">Verified In Stock</span>
           </a>
-          <a href="https://www.ulta.com/brand/beekman-1802" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://www.ulta.com/brand/beekman-1802" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option B &bull; Ulta Beauty</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Check Ulta Beauty Price &rarr;</span>
             <span style="font-size: 0.75rem; color: #059669; font-weight: 600; margin-top: 3px;">Authorized Retailer</span>
           </a>
-          <a href="https://beekman1802.com/" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://beekman1802.com/" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option C &bull; Official Storefront</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Official Brand Site &rarr;</span>
             <span style="font-size: 0.75rem; color: #64748b; font-weight: 500; margin-top: 3px;">Manufacturer Direct</span>

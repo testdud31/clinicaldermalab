@@ -100,15 +100,42 @@
       ]
     },
     {
+      "@type": "Person",
+      "@id": "https://www.clinicaldermalab.io/#reviewer-marcus-vance",
+      "name": "Dr. Marcus Vance, PhD",
+      "jobTitle": "Analytical Formulation Chemist & Peer Reviewer",
+      "memberOf": "Society of Cosmetic Chemists (SCC #048219)",
+      "worksFor": {
+        "@id": "https://www.clinicaldermalab.io/#organization"
+      }
+    },
+    {
+      "@type": "MedicalCondition",
+      "@id": "https://en.wikipedia.org/wiki/Transepidermal_water_loss",
+      "name": "Impaired Skin Barrier & Post-Procedure Sensitivity",
+      "possibleTreatment": {
+        "@type": "MedicalTherapy",
+        "name": "Willow Bark Salicin & Niacinamide Cellular Recovery"
+      }
+    },
+    {
       "@type": "MedicalWebPage",
       "@id": "https://www.clinicaldermalab.io/reviews/eltamd-am-restore-face-moisturizer/#webpage",
       "url": "https://www.clinicaldermalab.io/reviews/eltamd-am-restore-face-moisturizer/",
       "name": "EltaMD Skincare EltaMD AM Restore Face Moisturizer for Women and Men Clinical Review & Lab Assessment",
-      "about": {
-        "@id": "https://www.clinicaldermalab.io/reviews/eltamd-am-restore-face-moisturizer/#product"
-      },
+      "about": [
+        {
+          "@id": "https://www.clinicaldermalab.io/reviews/eltamd-am-restore-face-moisturizer/#product"
+        },
+        {
+          "@id": "https://en.wikipedia.org/wiki/Transepidermal_water_loss"
+        }
+      ],
       "author": {
         "@id": "https://www.clinicaldermalab.io/#author-sarah-lin"
+      },
+      "reviewedBy": {
+        "@id": "https://www.clinicaldermalab.io/#reviewer-marcus-vance"
       },
       "publisher": {
         "@id": "https://www.clinicaldermalab.io/#organization"
@@ -1202,7 +1229,10 @@
     }
   </style>
   <link rel="stylesheet" href="/skin-conditions.css" />
-  <link rel="stylesheet" href="/clinical-framework.css" />
+    <link rel="preconnect" href="https://m.media-amazon.com" crossorigin />
+  <link rel="dns-prefetch" href="https://m.media-amazon.com" />
+  <link rel="preload" href="/clinical-framework.css" as="style" />
+<link rel="stylesheet" href="/clinical-framework.css" />
 </head>
 
 <body>
@@ -1291,19 +1321,13 @@
         <div class="gallery-box">
           <div class="main-image-container">
             <span class="product-badge">#1 Clinical Choice</span>
-            <img id="main-product-img" src="https://www.clinicaldermalab.io/images/eltamd-am-restore-bottle.jpg" alt="EltaMD AM Restore Face Moisturizer: In-Depth Dermatologist &amp; Clinical Review" />
+            <img id="main-product-img" src="https://www.clinicaldermalab.io/images/eltamd-am-restore-bottle.jpg" alt="EltaMD AM Restore Face Moisturizer: In-Depth Dermatologist &amp; Clinical Review" width="600" height="600" fetchpriority="high" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 600px; height: auto; object-fit: contain;" />
           </div>
           <!-- Interactive Product Image Thumbnails -->
           <div class="thumbnail-gallery" style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-top: 4px;">
-            <button type="button" class="gallery-thumb-btn active-thumb" onclick="switchProductImg(this, 'https://www.clinicaldermalab.io/images/eltamd-am-restore-bottle.jpg')" style="border: 2px solid var(--accent-mushroom); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-              <img src="https://www.clinicaldermalab.io/images/eltamd-am-restore-bottle.jpg" alt="Product Angle 1" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
-            </button>
-            <button type="button" class="gallery-thumb-btn" onclick="switchProductImg(this, 'https://www.clinicaldermalab.io/images/eltamd-am-restore-texture.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-              <img src="https://www.clinicaldermalab.io/images/eltamd-am-restore-texture.jpg" alt="Product Angle 2" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
-            </button>
-            <button type="button" class="gallery-thumb-btn" onclick="switchProductImg(this, 'https://www.clinicaldermalab.io/images/eltamd-am-restore-ingredients.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-              <img src="https://www.clinicaldermalab.io/images/eltamd-am-restore-ingredients.jpg" alt="Product Angle 3" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
-            </button>
+            <button type="button" class="gallery-thumb-btn active-thumb" onclick="switchProductImg(this, 'https://www.clinicaldermalab.io/images/eltamd-am-restore-bottle.jpg')" style="border: 2px solid var(--accent-mushroom); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);"><img src="https://www.clinicaldermalab.io/images/eltamd-am-restore-bottle.jpg" alt="Product Angle 1" width="80" height="80" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 80px; height: 80px; object-fit: cover; display: block;" /></button>
+            <button type="button" class="gallery-thumb-btn" onclick="switchProductImg(this, 'https://www.clinicaldermalab.io/images/eltamd-am-restore-texture.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);"><img src="https://www.clinicaldermalab.io/images/eltamd-am-restore-texture.jpg" alt="Product Angle 2" width="80" height="80" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 80px; height: 80px; object-fit: cover; display: block;" /></button>
+            <button type="button" class="gallery-thumb-btn" onclick="switchProductImg(this, 'https://www.clinicaldermalab.io/images/eltamd-am-restore-ingredients.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);"><img src="https://www.clinicaldermalab.io/images/eltamd-am-restore-ingredients.jpg" alt="Product Angle 3" width="80" height="80" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 80px; height: 80px; object-fit: cover; display: block;" /></button>
           </div>
           <div style="font-size: 0.75rem; color: var(--text-muted); text-align: center;">
             Authentic Laboratory Sample • Verified Amazon Storefront • Click thumbnails to inspect angles
@@ -1359,17 +1383,17 @@
           Multi-Merchant Pricing &amp; Stock Availability
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px;">
-          <a href="https://amazon.com/dp/B00C8FVXQA?tag=liveblog36507-20" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://amazon.com/dp/B00C8FVXQA?tag=liveblog36507-20" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option A &bull; Amazon Prime</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Check Amazon Price &rarr;</span>
             <span style="font-size: 0.75rem; color: #059669; font-weight: 600; margin-top: 3px;">Verified In Stock</span>
           </a>
-          <a href="https://www.dermstore.com/brand/eltamd.list" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://www.dermstore.com/brand/eltamd.list" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option B &bull; Dermstore</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Check Dermstore Price &rarr;</span>
             <span style="font-size: 0.75rem; color: #059669; font-weight: 600; margin-top: 3px;">Authorized Retailer</span>
           </a>
-          <a href="https://eltamd.com/" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://eltamd.com/" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option C &bull; Official Storefront</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Official Brand Site &rarr;</span>
             <span style="font-size: 0.75rem; color: #64748b; font-weight: 500; margin-top: 3px;">Manufacturer Direct</span>
@@ -1437,17 +1461,17 @@
           Multi-Merchant Pricing &amp; Stock Availability
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px;">
-          <a href="https://amazon.com/dp/B00C8FVXQA?tag=liveblog36507-20" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://amazon.com/dp/B00C8FVXQA?tag=liveblog36507-20" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option A &bull; Amazon Prime</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Check Amazon Price &rarr;</span>
             <span style="font-size: 0.75rem; color: #059669; font-weight: 600; margin-top: 3px;">Verified In Stock</span>
           </a>
-          <a href="https://www.dermstore.com/brand/eltamd.list" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://www.dermstore.com/brand/eltamd.list" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option B &bull; Dermstore</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Check Dermstore Price &rarr;</span>
             <span style="font-size: 0.75rem; color: #059669; font-weight: 600; margin-top: 3px;">Authorized Retailer</span>
           </a>
-          <a href="https://eltamd.com/" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://eltamd.com/" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option C &bull; Official Storefront</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Official Brand Site &rarr;</span>
             <span style="font-size: 0.75rem; color: #64748b; font-weight: 500; margin-top: 3px;">Manufacturer Direct</span>
@@ -1516,17 +1540,17 @@
           Multi-Merchant Pricing &amp; Stock Availability
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px;">
-          <a href="https://amazon.com/dp/B00C8FVXQA?tag=liveblog36507-20" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://amazon.com/dp/B00C8FVXQA?tag=liveblog36507-20" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option A &bull; Amazon Prime</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Check Amazon Price &rarr;</span>
             <span style="font-size: 0.75rem; color: #059669; font-weight: 600; margin-top: 3px;">Verified In Stock</span>
           </a>
-          <a href="https://www.dermstore.com/brand/eltamd.list" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://www.dermstore.com/brand/eltamd.list" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option B &bull; Dermstore</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Check Dermstore Price &rarr;</span>
             <span style="font-size: 0.75rem; color: #059669; font-weight: 600; margin-top: 3px;">Authorized Retailer</span>
           </a>
-          <a href="https://eltamd.com/" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://eltamd.com/" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option C &bull; Official Storefront</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Official Brand Site &rarr;</span>
             <span style="font-size: 0.75rem; color: #64748b; font-weight: 500; margin-top: 3px;">Manufacturer Direct</span>
@@ -1645,17 +1669,17 @@
           Multi-Merchant Pricing &amp; Stock Availability
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px;">
-          <a href="https://amazon.com/dp/B00C8FVXQA?tag=liveblog36507-20" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://amazon.com/dp/B00C8FVXQA?tag=liveblog36507-20" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option A &bull; Amazon Prime</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Check Amazon Price &rarr;</span>
             <span style="font-size: 0.75rem; color: #059669; font-weight: 600; margin-top: 3px;">Verified In Stock</span>
           </a>
-          <a href="https://www.dermstore.com/brand/eltamd.list" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://www.dermstore.com/brand/eltamd.list" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option B &bull; Dermstore</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Check Dermstore Price &rarr;</span>
             <span style="font-size: 0.75rem; color: #059669; font-weight: 600; margin-top: 3px;">Authorized Retailer</span>
           </a>
-          <a href="https://eltamd.com/" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://eltamd.com/" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option C &bull; Official Storefront</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Official Brand Site &rarr;</span>
             <span style="font-size: 0.75rem; color: #64748b; font-weight: 500; margin-top: 3px;">Manufacturer Direct</span>
@@ -1718,17 +1742,17 @@
           Multi-Merchant Pricing &amp; Stock Availability
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px;">
-          <a href="https://amazon.com/dp/B00C8FVXQA?tag=liveblog36507-20" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://amazon.com/dp/B00C8FVXQA?tag=liveblog36507-20" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option A &bull; Amazon Prime</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Check Amazon Price &rarr;</span>
             <span style="font-size: 0.75rem; color: #059669; font-weight: 600; margin-top: 3px;">Verified In Stock</span>
           </a>
-          <a href="https://www.dermstore.com/brand/eltamd.list" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://www.dermstore.com/brand/eltamd.list" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option B &bull; Dermstore</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Check Dermstore Price &rarr;</span>
             <span style="font-size: 0.75rem; color: #059669; font-weight: 600; margin-top: 3px;">Authorized Retailer</span>
           </a>
-          <a href="https://eltamd.com/" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://eltamd.com/" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option C &bull; Official Storefront</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Official Brand Site &rarr;</span>
             <span style="font-size: 0.75rem; color: #64748b; font-weight: 500; margin-top: 3px;">Manufacturer Direct</span>
@@ -1796,9 +1820,7 @@
         <h3>Related Dermatologist Reviews &amp; Synergistic Skincare</h3>
         <div class="related-grid">
           <a href="/reviews/youth-to-the-people-superberry-hydrate-glow-dream-mask/" class="related-card">
-            <div class="related-thumb">
-              <img src="https://m.media-amazon.com/images/I/718d+AtnahL._SL1500_.jpg" alt="Youth To The People Superberry Hydrate + Glow Dream Mask" />
-            </div>
+            <div class="related-thumb"><img src="https://m.media-amazon.com/images/I/718d+AtnahL._SL1500_.jpg" alt="Youth To The People Superberry Hydrate + Glow Dream Mask" width="160" height="160" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; height: auto; object-fit: cover;" /></div>
             <div class="related-info">
               <span class="related-category-tag">Companion Protocol</span>
               <h4>YTTP Superberry Dream Mask</h4>
@@ -1807,9 +1829,7 @@
             </div>
           </a>
           <a href="/reviews/youth-to-the-people-superfood-air-whip-moisture-cream/" class="related-card">
-            <div class="related-thumb">
-              <img src="https://m.media-amazon.com/images/I/61qfyPkAhWL._SL1500_.jpg" alt="Youth To The People Superfood Air-Whip Moisture Cream" />
-            </div>
+            <div class="related-thumb"><img src="https://m.media-amazon.com/images/I/61qfyPkAhWL._SL1500_.jpg" alt="Youth To The People Superfood Air-Whip Moisture Cream" width="160" height="160" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; height: auto; object-fit: cover;" /></div>
             <div class="related-info">
               <span class="related-category-tag">Companion Protocol</span>
               <h4>YTTP Superfood Air-Whip Cream</h4>
@@ -1818,9 +1838,7 @@
             </div>
           </a>
           <a href="/reviews/youth-to-the-people-adaptogen-skin-repairing-peptide-cream/" class="related-card">
-            <div class="related-thumb">
-              <img src="https://m.media-amazon.com/images/I/71R3z2T26sL._SL1500_.jpg" alt="Youth To The People Adaptogen Skin Repairing Peptide Face Cream" />
-            </div>
+            <div class="related-thumb"><img src="https://m.media-amazon.com/images/I/71R3z2T26sL._SL1500_.jpg" alt="Youth To The People Adaptogen Skin Repairing Peptide Face Cream" width="160" height="160" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; height: auto; object-fit: cover;" /></div>
             <div class="related-info">
               <span class="related-category-tag">Companion Protocol</span>
               <h4>YTTP Adaptogen Peptide Cream</h4>
@@ -1829,9 +1847,7 @@
             </div>
           </a>
           <a href="/reviews/elemis-pro-collagen-cleansing-balm/" class="related-card">
-            <div class="related-thumb">
-              <img src="/images/elemis-balm-jar.jpg" alt="ELEMIS Pro-Collagen Cleansing Balm 100g" />
-            </div>
+            <div class="related-thumb"><img src="/images/elemis-balm-jar.jpg" alt="ELEMIS Pro-Collagen Cleansing Balm 100g" width="160" height="160" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; height: auto; object-fit: cover;" /></div>
             <div class="related-info">
               <span class="related-category-tag">Companion Protocol</span>
               <h4>ELEMIS Pro-Collagen Cleansing Balm</h4>
@@ -1840,9 +1856,7 @@
             </div>
           </a>
           <a href="/reviews/kiehls-ultra-facial-cream/" class="related-card">
-            <div class="related-thumb">
-              <img src="https://images-na.ssl-images-amazon.com/images/P/B00C6SV33M.01.LZZZZZZZ.jpg" alt="Kiehl's Ultra Facial Cream jar" />
-            </div>
+            <div class="related-thumb"><img src="https://images-na.ssl-images-amazon.com/images/P/B00C6SV33M.01.LZZZZZZZ.jpg" alt="Kiehl" width="160" height="160" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; height: auto; object-fit: cover;" /></div>
             <div class="related-info">
               <span class="related-category-tag">Companion Protocol</span>
               <h4>Kiehl's Ultra Facial Cream</h4>
@@ -1851,9 +1865,7 @@
             </div>
           </a>
           <a href="/reviews/la-roche-posay-toleriane-double-repair/" class="related-card">
-            <div class="related-thumb">
-              <img src="https://m.media-amazon.com/images/I/514C1oU5mVL._SL1086_.jpg" alt="La Roche-Posay Toleriane Double Repair Face Moisturizer" />
-            </div>
+            <div class="related-thumb"><img src="https://m.media-amazon.com/images/I/514C1oU5mVL._SL1086_.jpg" alt="La Roche-Posay Toleriane Double Repair Face Moisturizer" width="160" height="160" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; height: auto; object-fit: cover;" /></div>
             <div class="related-info">
               <span class="related-category-tag">Companion Protocol</span>
               <h4>La Roche-Posay Toleriane Double Repair</h4>
@@ -1862,9 +1874,7 @@
             </div>
           </a>
           <a href="/reviews/uv-clear-sunscreen/" class="related-card">
-            <div class="related-thumb">
-              <img src="https://m.media-amazon.com/images/I/71aXlh7do4L._SL1500_.jpg" alt="EltaMD UV Clear Facial Sunscreen SPF 46" />
-            </div>
+            <div class="related-thumb"><img src="https://m.media-amazon.com/images/I/71aXlh7do4L._SL1500_.jpg" alt="EltaMD UV Clear Facial Sunscreen SPF 46" width="160" height="160" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; height: auto; object-fit: cover;" /></div>
             <div class="related-info">
               <span class="related-category-tag">Companion Protocol</span>
               <h4>EltaMD UV Clear SPF 46</h4>
@@ -1873,9 +1883,7 @@
             </div>
           </a>
           <a href="/reviews/obagi-professional-c-serum/" class="related-card">
-            <div class="related-thumb">
-              <img src="https://static.thcdn.com/productimg/original/11289609-1245359051983246.jpg" alt="Obagi Medical Professional-C Serum 20%" />
-            </div>
+            <div class="related-thumb"><img src="https://static.thcdn.com/productimg/original/11289609-1245359051983246.jpg" alt="Obagi Medical Professional-C Serum 20%" width="160" height="160" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; height: auto; object-fit: cover;" /></div>
             <div class="related-info">
               <span class="related-category-tag">Companion Protocol</span>
               <h4>Obagi Professional-C Serum 20%</h4>
@@ -1884,9 +1892,7 @@
             </div>
           </a>
           <a href="/reviews/beekman-1802-bloom-cream-moisturizer/" class="related-card">
-            <div class="related-thumb">
-              <img src="https://cdn.shopify.com/s/files/1/0223/7461/files/B18BLOOM-1.jpg" alt="Beekman 1802 Bloom Cream Daily Probiotic Moisturizer" />
-            </div>
+            <div class="related-thumb"><img src="https://cdn.shopify.com/s/files/1/0223/7461/files/B18BLOOM-1.jpg" alt="Beekman 1802 Bloom Cream Daily Probiotic Moisturizer" width="160" height="160" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; height: auto; object-fit: cover;" /></div>
             <div class="related-info">
               <span class="related-category-tag">Companion Protocol</span>
               <h4>Beekman 1802 Bloom Cream</h4>
@@ -1895,9 +1901,7 @@
             </div>
           </a>
           <a href="/reviews/beauty-by-earth-self-tanner-lotion/" class="related-card">
-            <div class="related-thumb">
-              <img src="https://m.media-amazon.com/images/I/81rsFFpGv2L._SL1500_.jpg" alt="Beauty by Earth Self Tanner Tanning Lotion" />
-            </div>
+            <div class="related-thumb"><img src="https://m.media-amazon.com/images/I/81rsFFpGv2L._SL1500_.jpg" alt="Beauty by Earth Self Tanner Tanning Lotion" width="160" height="160" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; height: auto; object-fit: cover;" /></div>
             <div class="related-info">
               <span class="related-category-tag">Companion Protocol</span>
               <h4>Beauty by Earth Self Tanner</h4>
@@ -1940,17 +1944,17 @@
           Multi-Merchant Pricing &amp; Stock Availability
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px;">
-          <a href="https://amazon.com/dp/B00C8FVXQA?tag=liveblog36507-20" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://amazon.com/dp/B00C8FVXQA?tag=liveblog36507-20" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option A &bull; Amazon Prime</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Check Amazon Price &rarr;</span>
             <span style="font-size: 0.75rem; color: #059669; font-weight: 600; margin-top: 3px;">Verified In Stock</span>
           </a>
-          <a href="https://www.dermstore.com/brand/eltamd.list" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://www.dermstore.com/brand/eltamd.list" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option B &bull; Dermstore</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Check Dermstore Price &rarr;</span>
             <span style="font-size: 0.75rem; color: #059669; font-weight: 600; margin-top: 3px;">Authorized Retailer</span>
           </a>
-          <a href="https://eltamd.com/" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://eltamd.com/" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option C &bull; Official Storefront</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Official Brand Site &rarr;</span>
             <span style="font-size: 0.75rem; color: #64748b; font-weight: 500; margin-top: 3px;">Manufacturer Direct</span>

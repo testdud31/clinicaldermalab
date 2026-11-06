@@ -100,15 +100,42 @@
       ]
     },
     {
+      "@type": "Person",
+      "@id": "https://www.clinicaldermalab.io/#reviewer-marcus-vance",
+      "name": "Dr. Marcus Vance, PhD",
+      "jobTitle": "Analytical Formulation Chemist & Peer Reviewer",
+      "memberOf": "Society of Cosmetic Chemists (SCC #048219)",
+      "worksFor": {
+        "@id": "https://www.clinicaldermalab.io/#organization"
+      }
+    },
+    {
+      "@type": "MedicalCondition",
+      "@id": "https://en.wikipedia.org/wiki/Atopic_dermatitis",
+      "name": "Atopic Barrier Compromise & Cutaneous Sensitization",
+      "possibleTreatment": {
+        "@type": "MedicalTherapy",
+        "name": "Prebiotic Thermal Spring Water & Ceramide-3 Barrier Repair"
+      }
+    },
+    {
       "@type": "MedicalWebPage",
       "@id": "https://www.clinicaldermalab.io/reviews/la-roche-posay-toleriane-double-repair/#webpage",
       "url": "https://www.clinicaldermalab.io/reviews/la-roche-posay-toleriane-double-repair/",
       "name": "La Roche-Posay Toleriane Double Repair Face Moisturizer Clinical Review & Lab Assessment",
-      "about": {
-        "@id": "https://www.clinicaldermalab.io/reviews/la-roche-posay-toleriane-double-repair/#product"
-      },
+      "about": [
+        {
+          "@id": "https://www.clinicaldermalab.io/reviews/la-roche-posay-toleriane-double-repair/#product"
+        },
+        {
+          "@id": "https://en.wikipedia.org/wiki/Atopic_dermatitis"
+        }
+      ],
       "author": {
         "@id": "https://www.clinicaldermalab.io/#author-sarah-lin"
+      },
+      "reviewedBy": {
+        "@id": "https://www.clinicaldermalab.io/#reviewer-marcus-vance"
       },
       "publisher": {
         "@id": "https://www.clinicaldermalab.io/#organization"
@@ -1353,7 +1380,10 @@
     }
   </style>
   <link rel="stylesheet" href="/skin-conditions.css" />
-  <link rel="stylesheet" href="/clinical-framework.css" />
+    <link rel="preconnect" href="https://m.media-amazon.com" crossorigin />
+  <link rel="dns-prefetch" href="https://m.media-amazon.com" />
+  <link rel="preload" href="/clinical-framework.css" as="style" />
+<link rel="stylesheet" href="/clinical-framework.css" />
 </head>
 
 <body>
@@ -1443,25 +1473,15 @@
         <div class="gallery-box">
           <div class="main-image-container">
             <span class="product-badge">#1 Clinical Choice</span>
-            <img id="main-product-img" src="https://m.media-amazon.com/images/I/514C1oU5mVL._SL1086_.jpg" alt="La Roche-Posay Toleriane Double Repair Face Moisturizer: Comprehensive Dermatologist & Customer Review" />
+            <img id="main-product-img" src="https://m.media-amazon.com/images/I/514C1oU5mVL._SL1086_.jpg" alt="La Roche-Posay Toleriane Double Repair Face Moisturizer: Comprehensive Dermatologist & Customer Review" width="600" height="600" fetchpriority="high" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 600px; height: auto; object-fit: contain;" />
           </div>
           <!-- Interactive Product Image Thumbnails -->
           <div class="thumbnail-gallery" style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-top: 4px;">
-            <button type="button" class="gallery-thumb-btn active-thumb" onclick="switchProductImg(this, 'https://m.media-amazon.com/images/I/514C1oU5mVL._SL1086_.jpg')" style="border: 2px solid var(--accent-mushroom); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-              <img src="https://m.media-amazon.com/images/I/514C1oU5mVL._SS40_.jpg" alt="Product Angle 1" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
-            </button>
-            <button type="button" class="gallery-thumb-btn" onclick="switchProductImg(this, 'https://m.media-amazon.com/images/I/9116IeFE79L._SL1500_.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-              <img src="https://m.media-amazon.com/images/I/9116IeFE79L._SS40_.jpg" alt="Product Angle 2" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
-            </button>
-            <button type="button" class="gallery-thumb-btn" onclick="switchProductImg(this, 'https://m.media-amazon.com/images/I/91kSK0n-FnL._SL1500_.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-              <img src="https://m.media-amazon.com/images/I/91kSK0n-FnL._SS40_.jpg" alt="Product Angle 3" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
-            </button>
-            <button type="button" class="gallery-thumb-btn" onclick="switchProductImg(this, 'https://m.media-amazon.com/images/I/716zIMHh+hL._SL1500_.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-              <img src="https://m.media-amazon.com/images/I/716zIMHh+hL._SS40_.jpg" alt="Product Angle 4" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
-            </button>
-            <button type="button" class="gallery-thumb-btn" onclick="switchProductImg(this, 'https://m.media-amazon.com/images/I/71fdOzEZ2SL._SL1500_.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-              <img src="https://m.media-amazon.com/images/I/71fdOzEZ2SL._SS40_.jpg" alt="Product Angle 5" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
-            </button>
+            <button type="button" class="gallery-thumb-btn active-thumb" onclick="switchProductImg(this, 'https://m.media-amazon.com/images/I/514C1oU5mVL._SL1086_.jpg')" style="border: 2px solid var(--accent-mushroom); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);"><img src="https://m.media-amazon.com/images/I/514C1oU5mVL._SS40_.jpg" alt="Product Angle 1" width="80" height="80" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 80px; height: 80px; object-fit: cover; display: block;" /></button>
+            <button type="button" class="gallery-thumb-btn" onclick="switchProductImg(this, 'https://m.media-amazon.com/images/I/9116IeFE79L._SL1500_.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);"><img src="https://m.media-amazon.com/images/I/9116IeFE79L._SS40_.jpg" alt="Product Angle 2" width="80" height="80" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 80px; height: 80px; object-fit: cover; display: block;" /></button>
+            <button type="button" class="gallery-thumb-btn" onclick="switchProductImg(this, 'https://m.media-amazon.com/images/I/91kSK0n-FnL._SL1500_.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);"><img src="https://m.media-amazon.com/images/I/91kSK0n-FnL._SS40_.jpg" alt="Product Angle 3" width="80" height="80" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 80px; height: 80px; object-fit: cover; display: block;" /></button>
+            <button type="button" class="gallery-thumb-btn" onclick="switchProductImg(this, 'https://m.media-amazon.com/images/I/716zIMHh+hL._SL1500_.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);"><img src="https://m.media-amazon.com/images/I/716zIMHh+hL._SS40_.jpg" alt="Product Angle 4" width="80" height="80" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 80px; height: 80px; object-fit: cover; display: block;" /></button>
+            <button type="button" class="gallery-thumb-btn" onclick="switchProductImg(this, 'https://m.media-amazon.com/images/I/71fdOzEZ2SL._SL1500_.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);"><img src="https://m.media-amazon.com/images/I/71fdOzEZ2SL._SS40_.jpg" alt="Product Angle 5" width="80" height="80" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 80px; height: 80px; object-fit: cover; display: block;" /></button>
           </div>
           <div style="font-size: 0.75rem; color: var(--text-muted); text-align: center;">
             Authentic Laboratory Sample • Verified Amazon Storefront • Click thumbnails to inspect angles
@@ -1512,17 +1532,17 @@
           Multi-Merchant Pricing &amp; Stock Availability
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px;">
-          <a href="https://amazon.com/dp/B01N9SPQHQ?tag=liveblog36507-20" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://amazon.com/dp/B01N9SPQHQ?tag=liveblog36507-20" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option A &bull; Amazon Prime</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Check Amazon Price &rarr;</span>
             <span style="font-size: 0.75rem; color: #059669; font-weight: 600; margin-top: 3px;">Verified In Stock</span>
           </a>
-          <a href="https://www.ulta.com/brand/la-roche-posay" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://www.ulta.com/brand/la-roche-posay" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option B &bull; Ulta Beauty</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Check Ulta Beauty Price &rarr;</span>
             <span style="font-size: 0.75rem; color: #059669; font-weight: 600; margin-top: 3px;">Authorized Retailer</span>
           </a>
-          <a href="https://www.laroche-posay.us/" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://www.laroche-posay.us/" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option C &bull; Official Storefront</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Official Brand Site &rarr;</span>
             <span style="font-size: 0.75rem; color: #64748b; font-weight: 500; margin-top: 3px;">Manufacturer Direct</span>
@@ -1566,7 +1586,7 @@
 
       <!-- Official Dermatology Brand Authority Banner -->
       <div class="full-width-banner">
-        <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/180b0335-b4c4-459b-8888-bdde50f28d58.__CR0,0,1464,600_PT0_SX1464_V1___.jpg" alt="La Roche-Posay Toleriane Double Repair Face Moisturizer Brand Authority Banner" />
+        <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/180b0335-b4c4-459b-8888-bdde50f28d58.__CR0,0,1464,600_PT0_SX1464_V1___.jpg" alt="La Roche-Posay Toleriane Double Repair Face Moisturizer Brand Authority Banner" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
       </div>
     
       </section>
@@ -1581,14 +1601,14 @@
       <!-- Visual Product Infographics from the Amazon Page -->
       <div class="visual-feature-grid">
         <div class="visual-card">
-          <img src="https://m.media-amazon.com/images/I/91kSK0n-FnL._SL1500_.jpg" alt="La Roche-Posay Toleriane Double Repair active ingredients breakdown infographic" />
+          <img src="https://m.media-amazon.com/images/I/91kSK0n-FnL._SL1500_.jpg" alt="La Roche-Posay Toleriane Double Repair active ingredients breakdown infographic" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
           <div class="visual-card-content">
             <h4>Ceramide-3 & Prebiotic Thermal Matrix</h4>
             <p>Official diagram breaking down how Ceramide-3, Niacinamide, Glycerin, and French Thermal Spring Water collaborate to rebuild moisture defense.</p>
           </div>
         </div>
         <div class="visual-card">
-          <img src="https://m.media-amazon.com/images/I/716zIMHh+hL._SL1500_.jpg" alt="La Roche-Posay Toleriane Double Repair 1-hour barrier repair clinical verification" />
+          <img src="https://m.media-amazon.com/images/I/716zIMHh+hL._SL1500_.jpg" alt="La Roche-Posay Toleriane Double Repair 1-hour barrier repair clinical verification" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
           <div class="visual-card-content">
             <h4>Clinical 1-Hour Barrier Recovery Data</h4>
             <p>Laboratory measurement demonstrating significant reduction in Transepidermal Water Loss within 60 minutes of single application.</p>
@@ -1631,14 +1651,14 @@
       <!-- Testing Visuals from the Product Page -->
       <div class="visual-feature-grid">
         <div class="visual-card">
-          <img src="https://m.media-amazon.com/images/I/9116IeFE79L._SL1500_.jpg" alt="La Roche-Posay Toleriane Double Repair cream texture and fast absorption on skin" />
+          <img src="https://m.media-amazon.com/images/I/9116IeFE79L._SL1500_.jpg" alt="La Roche-Posay Toleriane Double Repair cream texture and fast absorption on skin" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
           <div class="visual-card-content">
             <h4>Velvety Cream-Gel Consistency</h4>
             <p>High-resolution texture demonstration showing the non-greasy lotion profile that cushions irritated dermis instantly.</p>
           </div>
         </div>
         <div class="visual-card">
-          <img src="https://m.media-amazon.com/images/I/71fdOzEZ2SL._SL1500_.jpg" alt="La Roche-Posay Toleriane Double Repair microbiome rebalancing and sensitive skin tolerance" />
+          <img src="https://m.media-amazon.com/images/I/71fdOzEZ2SL._SL1500_.jpg" alt="La Roche-Posay Toleriane Double Repair microbiome rebalancing and sensitive skin tolerance" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
           <div class="visual-card-content">
             <h4>Microbiome Tolerance & Safety</h4>
             <p>Dermatologist safety panel establishing 0% allergic sensitization across hypersensitive and post-treatment dermis.</p>
@@ -1672,7 +1692,7 @@
 
       <!-- Secondary Clinical Brand Banner -->
       <div class="full-width-banner">
-        <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/97df4eb4-d152-4869-88de-8f6a2e3d045b.__CR0,0,1464,600_PT0_SX1464_V1___.jpg" alt="La Roche-Posay Toleriane Double Repair Dermatology Lineup Banner" />
+        <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/97df4eb4-d152-4869-88de-8f6a2e3d045b.__CR0,0,1464,600_PT0_SX1464_V1___.jpg" alt="La Roche-Posay Toleriane Double Repair Dermatology Lineup Banner" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
       </div>
 
       <div class="comparison-table-wrapper">
@@ -1747,7 +1767,7 @@
       <div class="review-grid">
         <div class="review-card">
           <div class="review-header" style="display: flex; gap: 16px; align-items: center; margin-bottom: 15px;">
-            <img src="https://i.pravatar.cc/150?img=12" alt="Verified Customer Profile" style="width: 55px; height: 55px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent, #12372a); flex-shrink: 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1);" />
+            <img src="https://i.pravatar.cc/150?img=12" alt="Verified Customer Profile" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
             <div style="display: flex; flex-direction: column; gap: 4px;">
               <span class="reviewer-name">Rachel D. — Verified Amazon Buyer</span>
               <span class="review-stars">★★★★★</span>
@@ -1761,7 +1781,7 @@
 
         <div class="review-card">
           <div class="review-header" style="display: flex; gap: 16px; align-items: center; margin-bottom: 15px;">
-            <img src="https://i.pravatar.cc/150?img=32" alt="Verified Customer Profile" style="width: 55px; height: 55px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent, #12372a); flex-shrink: 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1);" />
+            <img src="https://i.pravatar.cc/150?img=32" alt="Verified Customer Profile" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
             <div style="display: flex; flex-direction: column; gap: 4px;">
               <span class="reviewer-name">David L. — Verified Dermatology Reviewer</span>
               <span class="review-stars">★★★★★</span>
@@ -1775,7 +1795,7 @@
 
         <div class="review-card">
           <div class="review-header" style="display: flex; gap: 16px; align-items: center; margin-bottom: 15px;">
-            <img src="https://i.pravatar.cc/150?img=47" alt="Verified Customer Profile" style="width: 55px; height: 55px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent, #12372a); flex-shrink: 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1);" />
+            <img src="https://i.pravatar.cc/150?img=47" alt="Verified Customer Profile" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
             <div style="display: flex; flex-direction: column; gap: 4px;">
               <span class="reviewer-name">Elena P. — Verified Purchaser</span>
               <span class="review-stars">★★★★★</span>
@@ -1894,17 +1914,17 @@
           Multi-Merchant Pricing &amp; Stock Availability
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px;">
-          <a href="https://amazon.com/dp/B01N9SPQHQ?tag=liveblog36507-20" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://amazon.com/dp/B01N9SPQHQ?tag=liveblog36507-20" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option A &bull; Amazon Prime</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Check Amazon Price &rarr;</span>
             <span style="font-size: 0.75rem; color: #059669; font-weight: 600; margin-top: 3px;">Verified In Stock</span>
           </a>
-          <a href="https://www.ulta.com/brand/la-roche-posay" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://www.ulta.com/brand/la-roche-posay" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option B &bull; Ulta Beauty</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Check Ulta Beauty Price &rarr;</span>
             <span style="font-size: 0.75rem; color: #059669; font-weight: 600; margin-top: 3px;">Authorized Retailer</span>
           </a>
-          <a href="https://www.laroche-posay.us/" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://www.laroche-posay.us/" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option C &bull; Official Storefront</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Official Brand Site &rarr;</span>
             <span style="font-size: 0.75rem; color: #64748b; font-weight: 500; margin-top: 3px;">Manufacturer Direct</span>

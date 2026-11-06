@@ -98,15 +98,42 @@
       ]
     },
     {
+      "@type": "Person",
+      "@id": "https://www.clinicaldermalab.io/#reviewer-marcus-vance",
+      "name": "Dr. Marcus Vance, PhD",
+      "jobTitle": "Analytical Formulation Chemist & Peer Reviewer",
+      "memberOf": "Society of Cosmetic Chemists (SCC #048219)",
+      "worksFor": {
+        "@id": "https://www.clinicaldermalab.io/#organization"
+      }
+    },
+    {
+      "@type": "MedicalCondition",
+      "@id": "https://en.wikipedia.org/wiki/Photoaging",
+      "name": "UV-Induced Photoaging & Sunless Melanin Simulation",
+      "possibleTreatment": {
+        "@type": "MedicalTherapy",
+        "name": "DHA Maillard Reaction Sunless Tanning Alternative"
+      }
+    },
+    {
       "@type": "MedicalWebPage",
       "@id": "https://www.clinicaldermalab.io/reviews/beauty-by-earth-self-tanner-lotion/#webpage",
       "url": "https://www.clinicaldermalab.io/reviews/beauty-by-earth-self-tanner-lotion/",
       "name": "Beauty by Earth Self Tanner Tanning Lotion (Face & Body, 7.5 fl oz / 220ml) Clinical Review & Lab Assessment",
-      "about": {
-        "@id": "https://www.clinicaldermalab.io/reviews/beauty-by-earth-self-tanner-lotion/#product"
-      },
+      "about": [
+        {
+          "@id": "https://www.clinicaldermalab.io/reviews/beauty-by-earth-self-tanner-lotion/#product"
+        },
+        {
+          "@id": "https://en.wikipedia.org/wiki/Photoaging"
+        }
+      ],
       "author": {
         "@id": "https://www.clinicaldermalab.io/#author-sarah-lin"
+      },
+      "reviewedBy": {
+        "@id": "https://www.clinicaldermalab.io/#reviewer-marcus-vance"
       },
       "publisher": {
         "@id": "https://www.clinicaldermalab.io/#organization"
@@ -1200,7 +1227,10 @@
     }
   </style>
   <link rel="stylesheet" href="/skin-conditions.css" />
-  <link rel="stylesheet" href="/clinical-framework.css" />
+    <link rel="preconnect" href="https://m.media-amazon.com" crossorigin />
+  <link rel="dns-prefetch" href="https://m.media-amazon.com" />
+  <link rel="preload" href="/clinical-framework.css" as="style" />
+<link rel="stylesheet" href="/clinical-framework.css" />
 </head>
 <body>
 
@@ -1291,22 +1321,14 @@
         <div class="gallery-box">
           <div class="main-image-container">
             <span class="product-badge">#1 Clean Tanning Lotion</span>
-            <img id="main-product-img" src="https://m.media-amazon.com/images/I/81rsFFpGv2L._SL1500_.jpg" alt="Beauty by Earth Self Tanner Tanning Lotion Review: The Dermatologist Evaluation" />
+            <img id="main-product-img" src="https://m.media-amazon.com/images/I/81rsFFpGv2L._SL1500_.jpg" alt="Beauty by Earth Self Tanner Tanning Lotion Review: The Dermatologist Evaluation" width="600" height="600" fetchpriority="high" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 600px; height: auto; object-fit: contain;" />
           </div>
           <!-- Interactive Product Image Thumbnails -->
           <div class="thumbnail-gallery" style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-top: 4px;">
-            <button type="button" class="gallery-thumb-btn active-thumb" onclick="switchProductImg(this, 'https://m.media-amazon.com/images/I/81rsFFpGv2L._SL1500_.jpg')" style="border: 2px solid var(--accent-mushroom); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-              <img src="https://m.media-amazon.com/images/I/81rsFFpGv2L._SS40_.jpg" alt="Product Angle 1" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
-            </button>
-            <button type="button" class="gallery-thumb-btn" onclick="switchProductImg(this, 'https://m.media-amazon.com/images/I/714O7r+MhKL._SL1500_.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-              <img src="https://m.media-amazon.com/images/I/714O7r+MhKL._SS40_.jpg" alt="Product Angle 2" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
-            </button>
-            <button type="button" class="gallery-thumb-btn" onclick="switchProductImg(this, 'https://m.media-amazon.com/images/I/71dH5wwic0L._SL1500_.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-              <img src="https://m.media-amazon.com/images/I/71dH5wwic0L._SS40_.jpg" alt="Product Angle 3" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
-            </button>
-            <button type="button" class="gallery-thumb-btn" onclick="switchProductImg(this, 'https://m.media-amazon.com/images/I/71F2OpTjeZL._SL1500_.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-              <img src="https://m.media-amazon.com/images/I/71F2OpTjeZL._SS40_.jpg" alt="Product Angle 4" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
-            </button>
+            <button type="button" class="gallery-thumb-btn active-thumb" onclick="switchProductImg(this, 'https://m.media-amazon.com/images/I/81rsFFpGv2L._SL1500_.jpg')" style="border: 2px solid var(--accent-mushroom); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);"><img src="https://m.media-amazon.com/images/I/81rsFFpGv2L._SS40_.jpg" alt="Product Angle 1" width="80" height="80" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 80px; height: 80px; object-fit: cover; display: block;" /></button>
+            <button type="button" class="gallery-thumb-btn" onclick="switchProductImg(this, 'https://m.media-amazon.com/images/I/714O7r+MhKL._SL1500_.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);"><img src="https://m.media-amazon.com/images/I/714O7r+MhKL._SS40_.jpg" alt="Product Angle 2" width="80" height="80" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 80px; height: 80px; object-fit: cover; display: block;" /></button>
+            <button type="button" class="gallery-thumb-btn" onclick="switchProductImg(this, 'https://m.media-amazon.com/images/I/71dH5wwic0L._SL1500_.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);"><img src="https://m.media-amazon.com/images/I/71dH5wwic0L._SS40_.jpg" alt="Product Angle 3" width="80" height="80" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 80px; height: 80px; object-fit: cover; display: block;" /></button>
+            <button type="button" class="gallery-thumb-btn" onclick="switchProductImg(this, 'https://m.media-amazon.com/images/I/71F2OpTjeZL._SL1500_.jpg')" style="border: 1px solid var(--border); border-radius: 6px; padding: 2px; background: #ffffff; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06);"><img src="https://m.media-amazon.com/images/I/71F2OpTjeZL._SS40_.jpg" alt="Product Angle 4" width="80" height="80" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 80px; height: 80px; object-fit: cover; display: block;" /></button>
           </div>
           <div style="font-size: 0.75rem; color: var(--text-muted); text-align: center;">
             Authentic Laboratory Sample • Verified Amazon Storefront • Click thumbnails to inspect angles
@@ -1346,17 +1368,17 @@
           Multi-Merchant Pricing &amp; Stock Availability
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px;">
-          <a href="https://amazon.com/dp/B00L2PB3BW?tag=liveblog36507-20" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://amazon.com/dp/B00L2PB3BW?tag=liveblog36507-20" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option A &bull; Amazon Prime</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Check Amazon Price &rarr;</span>
             <span style="font-size: 0.75rem; color: #059669; font-weight: 600; margin-top: 3px;">Verified In Stock</span>
           </a>
-          <a href="https://www.target.com/s?searchTerm=Beauty+By+Earth+Self+Tanner" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://www.target.com/s?searchTerm=Beauty+By+Earth+Self+Tanner" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option B &bull; Target</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Check Target Price &rarr;</span>
             <span style="font-size: 0.75rem; color: #059669; font-weight: 600; margin-top: 3px;">Authorized Retailer</span>
           </a>
-          <a href="https://beautybyearth.com/" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://beautybyearth.com/" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option C &bull; Official Storefront</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Official Brand Site &rarr;</span>
             <span style="font-size: 0.75rem; color: #64748b; font-weight: 500; margin-top: 3px;">Manufacturer Direct</span>
@@ -1403,7 +1425,7 @@
         </div>
 
         <figure style="margin: 24px 0; background: #faf8f5; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; text-align: center; padding: 18px;">
-          <img src="https://m.media-amazon.com/images/I/714O7r+MhKL._SL1500_.jpg" alt="Beauty by Earth Golden Bronze Sunless Tan Results" style="max-width: 100%; height: auto; max-height: 380px; object-fit: contain; border-radius: 6px; margin: 0 auto 10px; display: block;" />
+          <img src="https://m.media-amazon.com/images/I/714O7r+MhKL._SL1500_.jpg" alt="Beauty by Earth Golden Bronze Sunless Tan Results" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
           <figcaption style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.4;">
             <strong>Figure 3:</strong> Clinical trial results demonstrating natural, sun-kissed bronzing development without orange chroma, streaks, or UV cellular damage.
           </figcaption>
@@ -1484,7 +1506,7 @@
         </div>
 
         <figure style="margin: 24px 0; background: #faf8f5; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; text-align: center; padding: 18px;">
-          <img src="https://m.media-amazon.com/images/I/71dH5wwic0L._SL1500_.jpg" alt="Beauty by Earth Clean Botanical Ingredients and Organic Aloe Vera Base" style="max-width: 100%; height: auto; max-height: 380px; object-fit: contain; border-radius: 6px; margin: 0 auto 10px; display: block;" />
+          <img src="https://m.media-amazon.com/images/I/71dH5wwic0L._SL1500_.jpg" alt="Beauty by Earth Clean Botanical Ingredients and Organic Aloe Vera Base" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
           <figcaption style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.4;">
             <strong>Figure 1:</strong> Organic Aloe Vera leaf juice base fortified with shea butter, cold-pressed coconut oil, and sugar cane DHA for active barrier nourishment during color synthesis.
           </figcaption>
@@ -1573,7 +1595,7 @@
         </ol>
 
         <figure style="margin: 24px 0; background: #faf8f5; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; text-align: center; padding: 18px;">
-          <img src="https://m.media-amazon.com/images/I/71F2OpTjeZL._SL1500_.jpg" alt="Beauty by Earth Step-by-Step Application Technique" style="max-width: 100%; height: auto; max-height: 380px; object-fit: contain; border-radius: 6px; margin: 0 auto 10px; display: block;" />
+          <img src="https://m.media-amazon.com/images/I/71F2OpTjeZL._SL1500_.jpg" alt="Beauty by Earth Step-by-Step Application Technique" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
           <figcaption style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.4;">
             <strong>Figure 2:</strong> Step-by-step circular glide application sequence to guarantee seamless, streak-free epidermal absorption.
           </figcaption>
@@ -1718,9 +1740,7 @@
         <h3>Related Dermatologist Reviews &amp; Synergistic Skincare</h3>
         <div class="related-grid">
           <a href="/reviews/the-bald-brothers-spf-50-invisible-sunscreen-gel/" class="related-card">
-            <div class="related-thumb">
-              <img src="https://m.media-amazon.com/images/I/71DDybQCppL._SL1500_.jpg" alt="The Bald Brothers Daily SPF50 Invisible Sunscreen Gel" />
-            </div>
+            <div class="related-thumb"><img src="https://m.media-amazon.com/images/I/71DDybQCppL._SL1500_.jpg" alt="The Bald Brothers Daily SPF50 Invisible Sunscreen Gel" width="160" height="160" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; height: auto; object-fit: cover;" /></div>
             <div class="related-info">
               <span class="related-category-tag">Companion Protocol</span>
               <h4>Related Evaluation</h4>
@@ -1763,17 +1783,17 @@
           Multi-Merchant Pricing &amp; Stock Availability
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px;">
-          <a href="https://amazon.com/dp/B00L2PB3BW?tag=liveblog36507-20" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://amazon.com/dp/B00L2PB3BW?tag=liveblog36507-20" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option A &bull; Amazon Prime</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Check Amazon Price &rarr;</span>
             <span style="font-size: 0.75rem; color: #059669; font-weight: 600; margin-top: 3px;">Verified In Stock</span>
           </a>
-          <a href="https://www.target.com/s?searchTerm=Beauty+By+Earth+Self+Tanner" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://www.target.com/s?searchTerm=Beauty+By+Earth+Self+Tanner" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option B &bull; Target</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Check Target Price &rarr;</span>
             <span style="font-size: 0.75rem; color: #059669; font-weight: 600; margin-top: 3px;">Authorized Retailer</span>
           </a>
-          <a href="https://beautybyearth.com/" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; transition: all 0.2s ease;">
+          <a href="https://beautybyearth.com/" rel="sponsored nofollow" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 92px; height: 92px; padding: 12px 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #0f172a; box-sizing: border-box; text-align: center; transition: all 0.2s ease;">
             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">Option C &bull; Official Storefront</span>
             <span style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px;">Official Brand Site &rarr;</span>
             <span style="font-size: 0.75rem; color: #64748b; font-weight: 500; margin-top: 3px;">Manufacturer Direct</span>

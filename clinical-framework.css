@@ -215,14 +215,22 @@
 }
 
 .btn-framework-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: #ffffff;
   color: #000000;
-  padding: 10px 20px;
-  border-radius: 999px;
-  font-size: 0.8rem;
-  font-weight: 800;
+  height: 44px;
+  min-height: 44px;
+  padding: 0 24px;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
+  box-sizing: border-box;
+  text-decoration: none;
+  line-height: 1;
   transition: all 0.2s ease;
 }
 
@@ -232,15 +240,23 @@
 }
 
 .btn-framework-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: transparent;
   color: #ffffff;
   border: 1.5px solid #ffffff;
-  padding: 10px 20px;
-  border-radius: 999px;
-  font-size: 0.8rem;
-  font-weight: 800;
+  height: 44px;
+  min-height: 44px;
+  padding: 0 24px;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
+  box-sizing: border-box;
+  text-decoration: none;
+  line-height: 1;
   transition: all 0.2s ease;
 }
 

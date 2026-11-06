@@ -314,7 +314,10 @@
 
   <!-- External Clinical Architecture Stylesheets -->
   <link rel="stylesheet" href="/skin-conditions.css" />
-  <link rel="stylesheet" href="/clinical-framework.css" />
+    <link rel="preconnect" href="https://m.media-amazon.com" crossorigin />
+  <link rel="dns-prefetch" href="https://m.media-amazon.com" />
+  <link rel="preload" href="/clinical-framework.css" as="style" />
+<link rel="stylesheet" href="/clinical-framework.css" />
 
   <style>
     :root {
@@ -488,12 +491,19 @@
     .category-pill {
       background: var(--bg-main);
       border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 6px 14px;
-      font-size: 0.85rem;
+      border-radius: 8px;
+      height: 38px;
+      min-height: 38px;
+      padding: 0 16px;
+      font-size: 0.82rem;
       font-weight: 600;
       color: var(--text-muted);
       cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      line-height: 1;
       transition: all 0.15s ease;
     }
 
@@ -649,14 +659,21 @@
     .read-btn {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 6px;
       background: var(--primary);
       color: #ffffff;
       text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-      padding: 8px 16px;
-      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      height: 44px;
+      min-height: 44px;
+      padding: 0 20px;
+      border-radius: 8px;
+      box-sizing: border-box;
+      line-height: 1;
       transition: background 0.15s ease;
     }
 
@@ -1243,7 +1260,7 @@
       <article class="review-item-card" data-category="acne barrier antiaging" data-title="elemis dynamic resurfacing facial pads 60 count tri-enzyme papain protease subtilisin lactic acid aha probiotic b0d3jk3d39 exfoliating pads">
         <span class="card-badge" style="background: #ea580c;">#1 Tri-Enzyme Exfoliator</span>
         <div class="card-thumb-container">
-          <img src="/images/elemis-resurfacing-pads-jar.jpg" alt="ELEMIS Dynamic Resurfacing Facial Pads 60ct jar" referrerPolicy="no-referrer" />
+          <img src="/images/elemis-resurfacing-pads-jar.jpg" alt="ELEMIS Dynamic Resurfacing Facial Pads 60ct jar" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
         </div>
         <div class="card-content">
           <div class="card-meta">
@@ -1272,7 +1289,7 @@
       <article class="review-item-card" data-category="sunscreen antiaging barrier" data-title="elemis pro-collagen marine cream spf 30 anti-wrinkle day cream sunscreen padina pavonica chlorella algae 50ml b07vqb6bbs">
         <span class="card-badge" style="background: #0891b2;">#1 Anti-Wrinkle Day SPF</span>
         <div class="card-thumb-container">
-          <img src="/images/elemis-marine-spf30-jar.jpg" alt="ELEMIS Pro-Collagen Marine Cream SPF 30 50ml jar" referrerPolicy="no-referrer" />
+          <img src="/images/elemis-marine-spf30-jar.jpg" alt="ELEMIS Pro-Collagen Marine Cream SPF 30 50ml jar" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
         </div>
         <div class="card-content">
           <div class="card-meta">
@@ -1301,7 +1318,7 @@
       <article class="review-item-card" data-category="barrier antiaging" data-title="elemis superfood midnight facial prebiotic overnight sleeping cream camu camu vitamin c banana flower cocoa butter 50ml b0f4mlj6mw">
         <span class="card-badge" style="background: #6b21a8;">#1 Prebiotic Night Cream</span>
         <div class="card-thumb-container">
-          <img src="/images/elemis-midnight-facial-jar.jpg" alt="ELEMIS Superfood Midnight Facial 50ml jar" referrerPolicy="no-referrer" />
+          <img src="/images/elemis-midnight-facial-jar.jpg" alt="ELEMIS Superfood Midnight Facial 50ml jar" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
         </div>
         <div class="card-content">
           <div class="card-meta">
@@ -1330,7 +1347,7 @@
       <article class="review-item-card" data-category="acne barrier" data-title="cetaphil extra gentle daily scrub micro-fine bamboo extract sensitive skin face scrub b5 vitamin e non-comedogenic 6 oz b0gvvv79rx">
         <span class="card-badge" style="background: #2a7f62;">#1 Sensitive Skin Scrub</span>
         <div class="card-thumb-container">
-          <img src="/images/cetaphil-scrub-bottle.jpg" alt="Cetaphil Extra Gentle Daily Scrub 6 oz bottle" referrerPolicy="no-referrer" />
+          <img src="/images/cetaphil-scrub-bottle.jpg" alt="Cetaphil Extra Gentle Daily Scrub 6 oz bottle" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
         </div>
         <div class="card-content">
           <div class="card-meta">
@@ -1359,7 +1376,7 @@
       <article class="review-item-card" data-category="eye antiaging barrier" data-title="elemis pro-collagen eye revive mask flash filler hyaluronic acid watermelon snow algae bush clover puffiness dark circles crow feet 15ml b083r552xl">
         <span class="card-badge" style="background: #0284c7;">#1 Clinical Eye Treatment</span>
         <div class="card-thumb-container">
-          <img src="/images/elemis-eye-mask-jar.jpg" alt="ELEMIS Pro-Collagen Eye Revive Mask 15ml 0.5 fl oz pot" referrerPolicy="no-referrer" />
+          <img src="/images/elemis-eye-mask-jar.jpg" alt="ELEMIS Pro-Collagen Eye Revive Mask 15ml 0.5 fl oz pot" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
         </div>
         <div class="card-content">
           <div class="card-meta">
@@ -1388,7 +1405,7 @@
       <article class="review-item-card" data-category="barrier antiaging" data-title="elemis pro-collagen cleansing balm makeup remover padina pavonica starflower borage elderberry double cleanse 100g luxury b08mjzyw8p">
         <span class="card-badge" style="background: #0f2c3a;">#1 Luxury Cleansing Balm</span>
         <div class="card-thumb-container">
-          <img src="/images/elemis-balm-jar.jpg" alt="ELEMIS Pro-Collagen Cleansing Balm 100g 3.5 oz jar" referrerPolicy="no-referrer" />
+          <img src="/images/elemis-balm-jar.jpg" alt="ELEMIS Pro-Collagen Cleansing Balm 100g 3.5 oz jar" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
         </div>
         <div class="card-content">
           <div class="card-meta">
@@ -1417,7 +1434,7 @@
       <article class="review-item-card" data-category="sunscreen acne rosacea antiaging" data-title="colorescience total protection face shield flex spf 50 tinted mineral sunscreen zinc oxide iron oxides enviroscreen melasma niacinamide tremella b0f6sq5127">
         <span class="card-badge" style="background: #0e3b43;">#1 Tinted Mineral SPF 50</span>
         <div class="card-thumb-container">
-          <img src="/images/colorescience-flex-bottle.jpg" alt="Colorescience Total Protection Face Shield Flex SPF 50 1.8 fl oz bottle" referrerPolicy="no-referrer" />
+          <img src="/images/colorescience-flex-bottle.jpg" alt="Colorescience Total Protection Face Shield Flex SPF 50 1.8 fl oz bottle" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
         </div>
         <div class="card-content">
           <div class="card-meta">
@@ -1446,7 +1463,7 @@
       <article class="review-item-card" data-category="moisturizer acne rosacea barrier" data-title="eltamd am restore face moisturizer lightweight therapy niacinamide hyaluronic acid willow bark oil free b00c8fvxqa">
         <span class="card-badge" style="background: #0e3b43;">#1 Daytime Barrier Primer</span>
         <div class="card-thumb-container">
-          <img src="/images/eltamd-am-restore-bottle.jpg" alt="EltaMD AM Restore Face Moisturizer 1.7 oz bottle" />
+          <img src="/images/eltamd-am-restore-bottle.jpg" alt="EltaMD AM Restore Face Moisturizer 1.7 oz bottle" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
         </div>
         <div class="card-content">
           <div class="card-meta">
@@ -1475,7 +1492,7 @@
       <article class="review-item-card" data-category="sunscreen acne" data-title="uv clear face sunscreen zinc oxide spf 46 eltamd niacinamide">
         <span class="card-badge">Top Sunscreen Gold Standard</span>
         <div class="card-thumb-container">
-          <img src="https://m.media-amazon.com/images/I/71aXlh7do4L._SL1500_.jpg" alt="UV Clear Face Sunscreen with Zinc Oxide SPF 46 bottle" />
+          <img src="https://m.media-amazon.com/images/I/71aXlh7do4L._SL1500_.jpg" alt="UV Clear Face Sunscreen with Zinc Oxide SPF 46 bottle" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
         </div>
         <div class="card-content">
           <div class="card-meta">
@@ -1504,7 +1521,7 @@
       <article class="review-item-card" data-category="moisturizer acne" data-title="la roche posay toleriane double repair face moisturizer ceramide prebiotic thermal water">
         <span class="card-badge">Top Barrier Repair Gold Standard</span>
         <div class="card-thumb-container">
-          <img src="https://m.media-amazon.com/images/I/514C1oU5mVL._SL1086_.jpg" alt="La Roche-Posay Toleriane Double Repair Face Moisturizer bottle" />
+          <img src="https://m.media-amazon.com/images/I/514C1oU5mVL._SL1086_.jpg" alt="La Roche-Posay Toleriane Double Repair Face Moisturizer bottle" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
         </div>
         <div class="card-content">
           <div class="card-meta">
@@ -1533,7 +1550,7 @@
       <article class="review-item-card" data-category="moisturizer acne" data-title="beekman 1802 bloom cream daily face moisturizer goat milk prebiotic postbiotic niacinamide">
         <span class="card-badge" style="background: #1e7049;">Microbiome Gold Standard</span>
         <div class="card-thumb-container">
-          <img src="https://cdn.shopify.com/s/files/1/0223/7461/files/B18BLOOM-1.jpg" alt="Beekman 1802 Bloom Cream Daily Face Moisturizer bottle" />
+          <img src="https://cdn.shopify.com/s/files/1/0223/7461/files/B18BLOOM-1.jpg" alt="Beekman 1802 Bloom Cream Daily Face Moisturizer bottle" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
         </div>
         <div class="card-content">
           <div class="card-meta">
@@ -1562,7 +1579,7 @@
       <article class="review-item-card" data-category="moisturizer" data-title="beekman 1802 milk rx advanced better aging cream renexosome polypeptide goat milk exosomes collagen retinol alternative">
         <span class="card-badge" style="background: #1e7049;">#1 Better-Aging Exosomes</span>
         <div class="card-thumb-container">
-          <img src="/images/milkrx-jar.jpg" alt="Beekman 1802 Milk RX Advanced Better Aging Cream" />
+          <img src="/images/milkrx-jar.jpg" alt="Beekman 1802 Milk RX Advanced Better Aging Cream" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
         </div>
         <div class="card-content">
           <div class="card-meta">
@@ -1591,7 +1608,7 @@
       <article class="review-item-card" data-category="serum" data-title="obagi medical professional c serum 20 percent l ascorbic acid vitamin c brightening antioxidant">
         <span class="card-badge" style="background: #9c6000;">Clinical Vitamin C Gold Standard</span>
         <div class="card-thumb-container">
-          <img src="https://static.thcdn.com/productimg/original/11289609-1245359051983246.jpg" alt="Obagi Medical Professional-C Serum 20% bottle" />
+          <img src="https://static.thcdn.com/productimg/original/11289609-1245359051983246.jpg" alt="Obagi Medical Professional-C Serum 20% bottle" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
         </div>
         <div class="card-content">
           <div class="card-meta">
@@ -1620,7 +1637,7 @@
       <article class="review-item-card" data-category="moisturizer acne" data-title="kiehls ultra facial cream squalane glacial glycoprotein 72 hour hydration barrier repair 125ml 4.2oz">
         <span class="card-badge" style="background: #0e3b43;">#1 Global Squalane Hydrator</span>
         <div class="card-thumb-container">
-          <img src="https://images-na.ssl-images-amazon.com/images/P/B00C6SV33M.01.LZZZZZZZ.jpg" alt="Kiehl's Ultra Facial Cream with Squalane 4.2 oz jar" />
+          <img src="https://images-na.ssl-images-amazon.com/images/P/B00C6SV33M.01.LZZZZZZZ.jpg" alt="Kiehl" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
         </div>
         <div class="card-content">
           <div class="card-meta">
@@ -1649,7 +1666,7 @@
       <article class="review-item-card" data-category="moisturizer body scalp" data-title="paul mitchell tea tree hair and body moisturizer leave in conditioner post shave balm jojoba 10.14oz 300ml b002fj11uw">
         <span class="card-badge" style="background: #2a7f62;">#1 Multi-Use Botanical Hydrator</span>
         <div class="card-thumb-container">
-          <img src="https://m.media-amazon.com/images/I/61K-Z5-DQsL._SL1500_.jpg" alt="Paul Mitchell Tea Tree Hair and Body Moisturizer 10.14 oz bottle" />
+          <img src="https://m.media-amazon.com/images/I/61K-Z5-DQsL._SL1500_.jpg" alt="Paul Mitchell Tea Tree Hair and Body Moisturizer 10.14 oz bottle" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
         </div>
         <div class="card-content">
           <div class="card-meta">
@@ -1679,7 +1696,7 @@
       <article class="review-item-card" data-category="scalp" data-title="flakes anti dandruff shampoo and conditioner set zinc pyrithione mct oil malassezia scalp therapy">
         <span class="card-badge" style="background: #12372a; color: #ffffff;">Microbiome Antifungal</span>
         <div class="card-thumb-container">
-          <img src="https://cdn.shopify.com/s/files/1/0665/9106/4385/products/Rectangle152.jpg" alt="FLAKES Anti-Dandruff Shampoo and Conditioner Set" />
+          <img src="https://cdn.shopify.com/s/files/1/0665/9106/4385/products/Rectangle152.jpg" alt="FLAKES Anti-Dandruff Shampoo and Conditioner Set" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
         </div>
         <div class="card-content">
           <div class="card-meta">
@@ -1709,7 +1726,7 @@
       <article class="review-item-card" data-category="moisturizer body maternity" data-title="palmers cocoa butter formula complete stretch mark kit bio c-elaste argan oil rosehip pregnancy tummy butter lotion cream">
         <span class="card-badge" style="background: #0e3b43; color: #ffffff;">Gold Standard Maternity Care</span>
         <div class="card-thumb-container">
-          <img src="https://m.media-amazon.com/images/I/81qdUaYTfNL._AC_SL1500_.jpg" alt="Palmer's Cocoa Butter Formula Complete Stretch Mark Kit 4-Piece Set" />
+          <img src="https://m.media-amazon.com/images/I/81qdUaYTfNL._AC_SL1500_.jpg" alt="Palmer" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
         </div>
         <div class="card-content">
           <div class="card-meta">
@@ -1739,7 +1756,7 @@
       <article class="review-item-card" data-category="moisturizer scalp" data-title="the bald brothers scalp daily moisturizer everyday bald head care tapioca starch colloidal oat allantoin anti-shine fragrance free b09jsv8nrt">
         <span class="card-badge" style="background: #0e3b43; color: #ffffff;">#1 Bald Head Care</span>
         <div class="card-thumb-container">
-          <img src="https://m.media-amazon.com/images/I/61faBhOEQeL._SL1500_.jpg" alt="The Bald Brothers Scalp Daily Moisturizer Bottle 3 fl oz" />
+          <img src="https://m.media-amazon.com/images/I/61faBhOEQeL._SL1500_.jpg" alt="The Bald Brothers Scalp Daily Moisturizer Bottle 3 fl oz" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
         </div>
         <div class="card-content">
           <div class="card-meta">
@@ -1769,7 +1786,7 @@
       <article class="review-item-card" data-category="sunscreen scalp" data-title="the bald brothers daily spf50 invisible sunscreen gel face scalp clear matte dry touch bisabolol vitamin c b0fpcs1xrk">
         <span class="card-badge" style="background: #2a7f62; color: #ffffff;">#1 Bald Scalp Sunscreen</span>
         <div class="card-thumb-container">
-          <img src="https://m.media-amazon.com/images/I/71DDybQCppL._SL1500_.jpg" alt="The Bald Brothers Daily SPF50 Invisible Sunscreen Gel Tube 50ml" />
+          <img src="https://m.media-amazon.com/images/I/71DDybQCppL._SL1500_.jpg" alt="The Bald Brothers Daily SPF50 Invisible Sunscreen Gel Tube 50ml" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
         </div>
         <div class="card-content">
           <div class="card-meta">
@@ -1799,7 +1816,7 @@
       <article class="review-item-card" data-category="tanning moisturizer" data-title="beauty by earth self tanner tanning lotion dha organic aloe shea coconut clean sunless fake tan bronze">
         <span class="card-badge" style="background: #b37d4e;">#1 Clean Sunless Tanner</span>
         <div class="card-thumb-container">
-          <img src="https://m.media-amazon.com/images/I/81rsFFpGv2L._SL1500_.jpg" alt="Beauty by Earth Self Tanner Tanning Lotion bottle (7.5 fl oz)" />
+          <img src="https://m.media-amazon.com/images/I/81rsFFpGv2L._SL1500_.jpg" alt="Beauty by Earth Self Tanner Tanning Lotion bottle (7.5 fl oz)" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
         </div>
         <div class="card-content">
           <div class="card-meta">
@@ -1830,7 +1847,7 @@
       <article class="review-item-card" data-category="cleanser acne moisturizer" data-title="youth to the people supershroom facial cleanser adaptogen calming face wash reishi mushroom ashwagandha b0fhsrj71y sensitive skin">
         <span class="card-badge" style="background: #2e663e;">#1 Calming Cleanser</span>
         <div class="card-thumb-container">
-          <img src="https://m.media-amazon.com/images/I/61sKOHJTc+L._SL1500_.jpg" alt="Youth To The People Adaptogen Cleanser - Supershroom Calming Face Wash (8 fl oz / 237ml)" />
+          <img src="https://m.media-amazon.com/images/I/61sKOHJTc+L._SL1500_.jpg" alt="Youth To The People Adaptogen Cleanser - Supershroom Calming Face Wash (8 fl oz / 237ml)" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
         </div>
         <div class="card-content">
           <div class="card-meta">
@@ -1861,7 +1878,7 @@
       <article class="review-item-card" data-category="moisturizer acne" data-title="youth to the people adaptogen skin repairing peptide face cream reishi chaga snow mushroom dipeptide 1 pentapeptide 59 ceramide np squalane b0fg9l6gnw sensitive eczema redness">
         <span class="card-badge" style="background: #8b6b4f;">#1 Barrier Peptide Cream</span>
         <div class="card-thumb-container">
-          <img src="https://m.media-amazon.com/images/I/71R3z2T26sL._SL1500_.jpg" alt="Youth To The People Adaptogen Skin Repairing Peptide Face Cream (2 oz / 59ml)" />
+          <img src="https://m.media-amazon.com/images/I/71R3z2T26sL._SL1500_.jpg" alt="Youth To The People Adaptogen Skin Repairing Peptide Face Cream (2 oz / 59ml)" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
         </div>
         <div class="card-content">
           <div class="card-meta">
@@ -1892,7 +1909,7 @@
       <article class="review-item-card" data-category="moisturizer acne" data-title="youth to the people superfood air-whip moisture cream kale spinach green tea multi-weight hyaluronic acid b018a0mgh6 lightweight gel cream oily combination">
         <span class="card-badge" style="background: #2e6945;">#1 Air-Whipped Gel Cream</span>
         <div class="card-thumb-container">
-          <img src="https://m.media-amazon.com/images/I/61qfyPkAhWL._SL1500_.jpg" alt="Youth To The People Superfood Air-Whip Moisture Cream (2 oz / 59ml)" />
+          <img src="https://m.media-amazon.com/images/I/61qfyPkAhWL._SL1500_.jpg" alt="Youth To The People Superfood Air-Whip Moisture Cream (2 oz / 59ml)" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
         </div>
         <div class="card-content">
           <div class="card-meta">
@@ -1923,7 +1940,7 @@
       <article class="review-item-card" data-category="moisturizer acne" data-title="youth to the people superberry hydrate glow dream mask thd ascorbate vitamin c maqui berry squalane hyaluronic acid b07ph2bbks overnight sleeping mask brightening">
         <span class="card-badge" style="background: #b45309; color: #ffffff;">#1 Overnight Glow Mask</span>
         <div class="card-thumb-container">
-          <img src="https://m.media-amazon.com/images/I/718d+AtnahL._SL1500_.jpg" alt="Youth To The People Superberry Hydrate + Glow Dream Mask (2 oz / 59ml)" />
+          <img src="https://m.media-amazon.com/images/I/718d+AtnahL._SL1500_.jpg" alt="Youth To The People Superberry Hydrate + Glow Dream Mask (2 oz / 59ml)" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
         </div>
         <div class="card-content">
           <div class="card-meta">

@@ -87,7 +87,10 @@
 
   <!-- External Clinical Architecture Stylesheets -->
   <link rel="stylesheet" href="/skin-conditions.css" />
-  <link rel="stylesheet" href="/clinical-framework.css" />
+    <link rel="preconnect" href="https://m.media-amazon.com" crossorigin />
+  <link rel="dns-prefetch" href="https://m.media-amazon.com" />
+  <link rel="preload" href="/clinical-framework.css" as="style" />
+<link rel="stylesheet" href="/clinical-framework.css" />
 
   <style>
     :root {
@@ -334,21 +337,41 @@
     .cta-btn-primary {
       background: var(--accent);
       color: #ffffff;
-      padding: 10px 20px;
-      border-radius: 6px;
+      height: 44px;
+      min-height: 44px;
+      padding: 0 20px;
+      border-radius: 8px;
       text-decoration: none;
-      font-weight: 600;
-      font-size: 0.92rem;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      line-height: 1;
+      transition: all 0.2s ease;
     }
     .cta-btn-secondary {
       background: rgba(255, 255, 255, 0.15);
       color: #ffffff;
-      padding: 10px 20px;
-      border-radius: 6px;
+      height: 44px;
+      min-height: 44px;
+      padding: 0 20px;
+      border-radius: 8px;
       text-decoration: none;
-      font-weight: 600;
-      font-size: 0.92rem;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
       border: 1px solid rgba(255, 255, 255, 0.3);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      line-height: 1;
+      transition: all 0.2s ease;
     }
     .cta-btn-primary:hover { background: #236c53; }
     .cta-btn-secondary:hover { background: rgba(255, 255, 255, 0.25); }

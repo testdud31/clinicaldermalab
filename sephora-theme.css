@@ -342,14 +342,19 @@ header {
   gap: 8px;
   background: var(--sephora-white);
   color: var(--sephora-black);
-  font-weight: 800;
-  font-size: 0.86rem;
-  letter-spacing: 0.08em;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  padding: 13px 26px;
-  border-radius: var(--radius-pill);
+  height: 44px;
+  min-height: 44px;
+  padding: 0 24px;
+  border-radius: 8px;
   border: 1px solid var(--sephora-white);
   cursor: pointer;
+  box-sizing: border-box;
+  text-decoration: none;
+  line-height: 1;
   transition: var(--transition-fast);
 }
 
@@ -366,14 +371,19 @@ header {
   gap: 8px;
   background: transparent;
   color: var(--sephora-white);
-  font-weight: 800;
-  font-size: 0.86rem;
-  letter-spacing: 0.08em;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  padding: 13px 26px;
-  border-radius: var(--radius-pill);
+  height: 44px;
+  min-height: 44px;
+  padding: 0 24px;
+  border-radius: 8px;
   border: 1.5px solid var(--sephora-white);
   cursor: pointer;
+  box-sizing: border-box;
+  text-decoration: none;
+  line-height: 1;
   transition: var(--transition-fast);
 }
 
@@ -644,12 +654,19 @@ header {
   background: var(--sephora-white);
   border: 1px solid var(--sephora-gray-300);
   color: var(--sephora-black);
-  padding: 8px 16px;
-  border-radius: var(--radius-pill);
+  height: 38px;
+  min-height: 38px;
+  padding: 0 16px;
+  border-radius: 8px;
   font-size: 0.82rem;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
   letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  line-height: 1;
   transition: var(--transition-fast);
   font-family: inherit;
 }
@@ -905,20 +922,26 @@ header {
 }
 
 .btn-review {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
   background: var(--sephora-black);
   color: var(--sephora-white);
   font-size: 0.82rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  padding: 11px 18px;
-  border-radius: var(--radius-pill);
+  height: 44px;
+  min-height: 44px;
+  width: 100%;
+  padding: 0 20px;
+  border-radius: 8px;
+  box-sizing: border-box;
   transition: var(--transition-fast);
   text-align: center;
+  text-decoration: none;
+  line-height: 1;
 }
 
 .btn-review:hover {
@@ -978,15 +1001,18 @@ header {
 }
 
 .share-btn {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
   border-radius: 50%;
   border: 1px solid var(--sephora-gray-300);
   background: var(--sephora-white);
   color: var(--sephora-black);
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
   cursor: pointer;
   transition: var(--transition-fast);
   position: relative;

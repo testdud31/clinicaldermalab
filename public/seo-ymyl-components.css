@@ -121,14 +121,19 @@
   background: #ffffff;
   color: var(--accent-emerald);
   border: 1px solid var(--accent-emerald);
-  border-radius: 6px;
-  padding: 6px 14px;
-  font-size: 0.78rem;
+  border-radius: 8px;
+  height: 38px;
+  min-height: 38px;
+  padding: 0 16px;
+  font-size: 0.82rem;
   font-weight: 700;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
+  box-sizing: border-box;
+  line-height: 1;
   transition: all 0.15s ease;
 }
 .btn-verify-credentials:hover {
@@ -316,36 +321,140 @@
   font-size: 1.4rem;
   color: var(--text-muted);
   cursor: pointer;
-  padding: 4px;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 0;
   line-height: 1;
+  transition: all 0.15s ease;
+}
+.modal-close-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--text-main);
 }
 
-/* 6. Formulations & Catalog Category Pills */
+/* 6. Formulations & Catalog Category Pills (Standardized 38px Height) */
 .filter-pills-bar {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
   margin: 24px 0 32px;
 }
-.filter-pill {
+.filter-pill, .category-pill, .chip-btn {
   background: #ffffff;
-  border: 1px solid var(--border-subtle);
-  color: var(--text-main);
-  padding: 8px 18px;
-  border-radius: 999px;
-  font-size: 0.86rem;
+  border: 1px solid var(--border-subtle, #cbd5e1);
+  color: var(--text-main, #0f172a);
+  height: 38px;
+  min-height: 38px;
+  padding: 0 16px;
+  border-radius: 8px;
+  font-size: 0.82rem;
   font-weight: 600;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  line-height: 1;
+  text-decoration: none;
   transition: all 0.15s ease;
 }
-.filter-pill:hover {
-  border-color: var(--accent-emerald);
-  color: var(--accent-emerald);
+.filter-pill:hover, .category-pill:hover, .chip-btn:hover {
+  border-color: var(--accent-emerald, #0d9488);
+  color: var(--accent-emerald, #0d9488);
 }
-.filter-pill.active {
-  background: var(--primary-teal);
-  border-color: var(--primary-teal);
+.filter-pill.active, .category-pill.active, .chip-btn.active {
+  background: var(--primary-teal, #0e3b43);
+  border-color: var(--primary-teal, #0e3b43);
   color: #ffffff;
+}
+
+/* 7. Site-Wide Primary & Secondary Action Button Standardization (44px Height) */
+.btn-review,
+.read-btn,
+.view-report-btn,
+.btn-action,
+.cta-btn-primary,
+.cta-btn-secondary,
+.btn-primary,
+.btn-secondary,
+.submit-btn,
+.btn-framework-primary,
+.btn-framework-secondary,
+.btn-sephora-primary,
+.btn-sephora-outline {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  height: 44px !important;
+  min-height: 44px !important;
+  padding: 0 20px !important;
+  border-radius: 8px !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  box-sizing: border-box !important;
+  text-decoration: none !important;
+  text-align: center !important;
+  line-height: 1 !important;
+  transition: all 0.2s ease !important;
+}
+
+/* Full-width support for card CTA buttons */
+.product-card .btn-review,
+.card-footer .read-btn,
+.card-footer .view-report-btn {
+  width: 100% !important;
+}
+
+/* Multi-Merchant Pricing Option Buttons - Uniform Dimensions Across All Reviews */
+.merchant-option-card,
+.multi-merchant-option,
+a[data-merchant-option] {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 92px !important;
+  min-height: 92px !important;
+  padding: 12px 16px !important;
+  border-radius: 8px !important;
+  box-sizing: border-box !important;
+  text-align: center !important;
+  transition: all 0.2s ease !important;
+}
+
+/* Square / Circular Tool Buttons */
+.share-btn {
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;
+  min-height: 32px !important;
+  border-radius: 50% !important;
+  box-sizing: border-box !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.gallery-thumb-btn {
+  width: 50px !important;
+  height: 50px !important;
+  min-width: 50px !important;
+  min-height: 50px !important;
+  border-radius: 8px !important;
+  box-sizing: border-box !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 /* Accessibility focus-visible rules */
