@@ -19,45 +19,76 @@
   <link rel="stylesheet" href="/skin-conditions.css" />
   <link rel="stylesheet" href="/clinical-framework.css" />
 
-  <!-- Smart SPA / GitHub Pages Route Resolver Script -->
+  <!-- Smart Route Resolver for Canonical URLs -->
   <script>
     (function() {
       var path = window.location.pathname;
-      // If path doesn't end with .html or / and is not root, check if adding .html helps
-      if (path && !path.endsWith('.html') && !path.endsWith('/')) {
-        var possiblePages = [
-          'about', 'contact', 'blog', 'privacy-policy', 'terms', 'methodology',
-          'treatments', 'conditions', 'science-and-ingredients', 'medical-review-board',
-          'elemis-pro-collagen-cleansing-balm-review',
-          'elemis-dynamic-resurfacing-facial-pads-review',
-          'elemis-pro-collagen-eye-revive-mask-review',
-          'elemis-pro-collagen-marine-cream-spf-30-review',
-          'elemis-superfood-midnight-facial-review',
-          'cetaphil-extra-gentle-daily-scrub-review',
-          'colorescience-total-protection-face-shield-flex-spf-50-review',
-          'eltamd-am-restore-face-moisturizer-review',
-          'uv-clear-sunscreen-review',
-          'la-roche-posay-toleriane-double-repair-review',
-          'kiehls-ultra-facial-cream-review',
-          'obagi-professional-c-serum-review',
-          'palmers-cocoa-butter-stretch-mark-kit-review',
-          'paul-mitchell-tea-tree-hair-and-body-moisturizer-review',
-          'flakes-anti-dandruff-shampoo-and-conditioner-set-review',
-          'the-bald-brothers-scalp-moisturizer-review',
-          'the-bald-brothers-spf-50-invisible-sunscreen-gel-review',
-          'beauty-by-earth-self-tanner-lotion-review',
-          'beekman-1802-bloom-cream-moisturizer-review',
-          'beekman-1802-advanced-better-aging-cream-review',
-          'youth-to-the-people-supershroom-facial-cleanser-review',
-          'youth-to-the-people-adaptogen-skin-repairing-peptide-cream-review',
-          'youth-to-the-people-superberry-hydrate-glow-dream-mask-review',
-          'youth-to-the-people-superfood-air-whip-moisture-cream-review'
-        ];
-        var segments = path.split('/').filter(Boolean);
-        var lastSeg = segments[segments.length - 1];
-        if (possiblePages.indexOf(lastSeg) !== -1) {
-          window.location.replace('/' + lastSeg + '.html');
-        }
+      var search = window.location.search || '';
+      var hash = window.location.hash || '';
+
+      var hubMap = {
+        'about': '/about/',
+        'about.html': '/about/',
+        'contact': '/contact/',
+        'contact.html': '/contact/',
+        'blog': '/reviews/',
+        'blog.html': '/reviews/',
+        'reviews': '/reviews/',
+        'privacy-policy': '/privacy-policy/',
+        'privacy-policy.html': '/privacy-policy/',
+        'terms': '/terms/',
+        'terms.html': '/terms/',
+        'methodology': '/methodology/',
+        'methodology.html': '/methodology/',
+        'treatments': '/treatments/',
+        'treatments.html': '/treatments/',
+        'conditions': '/conditions/',
+        'conditions.html': '/conditions/',
+        'science-and-ingredients': '/science-and-ingredients/',
+        'science-and-ingredients.html': '/science-and-ingredients/',
+        'medical-review-board': '/medical-review-board/',
+        'medical-review-board.html': '/medical-review-board/'
+      };
+
+      var segments = path.split('/').filter(Boolean);
+      var lastSeg = segments[segments.length - 1] || '';
+
+      if (hubMap[lastSeg]) {
+        window.location.replace(hubMap[lastSeg] + search + hash);
+        return;
+      }
+
+      var cleanReviewSlug = lastSeg.replace(/-review\.html$/, '').replace(/\.html$/, '');
+      var reviews = [
+        'beauty-by-earth-self-tanner-lotion',
+        'beekman-1802-advanced-better-aging-cream',
+        'beekman-1802-bloom-cream-moisturizer',
+        'cetaphil-extra-gentle-daily-scrub',
+        'colorescience-total-protection-face-shield-flex-spf-50',
+        'elemis-dynamic-resurfacing-facial-pads',
+        'elemis-pro-collagen-cleansing-balm',
+        'elemis-pro-collagen-eye-revive-mask',
+        'elemis-pro-collagen-marine-cream-spf-30',
+        'elemis-superfood-midnight-facial',
+        'eltamd-am-restore-face-moisturizer',
+        'flakes-anti-dandruff-shampoo-and-conditioner-set',
+        'kiehls-ultra-facial-cream',
+        'la-roche-posay-toleriane-double-repair',
+        'obagi-professional-c-serum',
+        'palmers-cocoa-butter-stretch-mark-kit',
+        'paul-mitchell-tea-tree-hair-and-body-moisturizer',
+        'the-bald-brothers-scalp-moisturizer',
+        'the-bald-brothers-spf-50-invisible-sunscreen-gel',
+        'uv-clear-sunscreen',
+        'youth-to-the-people-adaptogen-skin-repairing-peptide-cream',
+        'youth-to-the-people-superberry-hydrate-glow-dream-mask',
+        'youth-to-the-people-superfood-air-whip-moisture-cream',
+        'youth-to-the-people-supershroom-facial-cleanser'
+      ];
+
+      if (reviews.indexOf(cleanReviewSlug) !== -1) {
+        window.location.replace('/reviews/' + cleanReviewSlug + '/' + search + hash);
+        return;
       }
     })();
   </script>
