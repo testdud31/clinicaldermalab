@@ -215,4 +215,28 @@
     <changefreq>yearly</changefreq>
     <priority>0.40</priority>
   </url>
+  <url>
+    <loc>https://www.clinicaldermalab.io/reviews/maree-purple-deep-conditioning-hair-mask/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.clinicaldermalab.io/reviews/alfheim-lavender-purple-hair-mask/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.clinicaldermalab.io/reviews/bloomora-caffeine-under-eye-patches/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.clinicaldermalab.io/reviews/percentage-supra-rich-hyaluron-anti-ageing-cream/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
 </urlset>
