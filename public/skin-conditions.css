@@ -4,10 +4,10 @@
    ======================================================== */
 
 :root {
-  --sephora-black: #000000;
-  --sephora-red: #e00034;
-  --sephora-gray-bg: #f6f6f6;
-  --sephora-border: #e6e6e6;
+  --sephora-black: #0f2942;
+  --sephora-red: #0284c7;
+  --sephora-gray-bg: #f1f5f9;
+  --sephora-border: #e2e8f0;
   --sephora-text: #111111;
   --sephora-muted: #757575;
 }

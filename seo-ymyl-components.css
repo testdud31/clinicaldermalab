@@ -4,16 +4,16 @@
    ========================================================================== */
 
 :root {
-  --primary-teal: #0e3b43;
-  --primary-teal-dark: #08242a;
-  --accent-emerald: #2a7f62;
-  --accent-soft-emerald: #eef7f4;
-  --warm-neutral-bg: #fcfbf9;
+  --primary-teal: #0f2942;
+  --primary-teal-dark: #091a2b;
+  --accent-emerald: #0284c7;
+  --accent-soft-emerald: #f0f9ff;
+  --warm-neutral-bg: #f8fafc;
   --surface-card: #ffffff;
-  --border-subtle: #e6e2db;
-  --border-strong: #d1cbc1;
-  --text-main: #1d2528;
-  --text-muted: #536469;
+  --border-subtle: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --text-main: #0f172a;
+  --text-muted: #475569;
   --badge-gold: #b45309;
   --badge-gold-bg: #fef3c7;
 }
@@ -148,7 +148,7 @@
   border-radius: 10px;
   padding: 24px 26px;
   margin: 28px 0 36px;
-  box-shadow: 0 2px 12px rgba(14, 59, 67, 0.04);
+  box-shadow: 0 2px 12px rgba(15, 41, 66, 0.05);
   position: relative;
 }
 .takeaways-kicker {
@@ -370,8 +370,8 @@
   color: var(--accent-emerald, #0d9488);
 }
 .filter-pill.active, .category-pill.active, .chip-btn.active {
-  background: var(--primary-teal, #0e3b43);
-  border-color: var(--primary-teal, #0e3b43);
+  background: var(--primary-teal, #0f2942);
+  border-color: var(--primary-teal, #0f2942);
   color: #ffffff;
 }
 
