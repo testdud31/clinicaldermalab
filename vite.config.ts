@@ -204,6 +204,8 @@ export default defineConfig(() => {
           'YouthToThePeopleSuperfoodAirWhipMoistureCreamStub': path.resolve(__dirname, 'youth-to-the-people-superfood-air-whip-moisture-cream-review.html'),
           'YouthToThePeopleSupershroomFacialCleanserDir': path.resolve(__dirname, 'reviews/youth-to-the-people-supershroom-facial-cleanser/index.html'),
           'YouthToThePeopleSupershroomFacialCleanserStub': path.resolve(__dirname, 'youth-to-the-people-supershroom-facial-cleanser-review.html'),
+          'AlastinHydraTintSpf36Dir': path.resolve(__dirname, 'reviews/alastin-hydratint-pro-mineral-sunscreen-spf-36/index.html'),
+          'AlastinHydraTintSpf36Stub': path.resolve(__dirname, 'alastin-hydratint-pro-mineral-sunscreen-spf-36-review.html'),
           'JiyuKoreanTonerPadsDir': path.resolve(__dirname, 'reviews/jiyu-korean-snail-mucin-toner-pads/index.html'),
           'JiyuKoreanTonerPadsStub': path.resolve(__dirname, 'jiyu-korean-snail-mucin-toner-pads-review.html'),
           'McestnaKoreanTonerPadsDir': path.resolve(__dirname, 'reviews/mcestna-korean-pdrn-collagen-toner-pads/index.html'),
