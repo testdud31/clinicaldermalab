@@ -273,3 +273,107 @@
     text-align: center;
   }
 }
+
+
+/* Mobile Article Image & Media Optimization */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Hero Product Gallery Image */
+  .gallery-box {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .main-image-container {
+    padding: 16px !important;
+    min-height: 220px !important;
+    max-height: 300px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+  }
+  .main-image-container img,
+  #main-product-img {
+    max-width: 100% !important;
+    max-height: 260px !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+
+  /* Thumbnail Strip */
+  .thumbnail-gallery {
+    gap: 8px !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+  }
+  .gallery-thumb-btn {
+    width: 52px !important;
+    height: 52px !important;
+    padding: 2px !important;
+    flex-shrink: 0 !important;
+  }
+  .gallery-thumb-btn img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+    border-radius: 4px !important;
+  }
+
+  /* Related Review Card Thumbnails */
+  .related-thumb {
+    width: 100% !important;
+    max-width: 140px !important;
+    height: 140px !important;
+    margin: 0 auto 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+    border-radius: 8px !important;
+    background: #ffffff !important;
+  }
+  .related-thumb img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  /* In-Article & Content Section Images */
+  .article-container img,
+  .content-section img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Amazon Affiliate CTA Image */
+  .amazon-affiliate-button {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+  .amazon-affiliate-button img {
+    max-width: 220px !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+  }
+
+  /* Prevent Wide Clinical Tables From Breaking Mobile Viewport */
+  .content-section .spec-table,
+  .content-section table {
+    display: block !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+}
