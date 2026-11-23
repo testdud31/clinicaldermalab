@@ -1143,18 +1143,21 @@
     /* Quick 3-Way Decision Matrix Cards */
     .decision-matrix-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 16px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
       margin-bottom: 24px;
+      align-items: stretch;
     }
     .decision-matrix-card {
       background: #fbfdfc;
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 16px 18px;
+      padding: 18px;
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 8px;
+      min-width: 0;
+      height: 100%;
       border-top: 4px solid var(--accent);
       transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
@@ -1174,19 +1177,29 @@
       color: var(--text-muted);
     }
     .matrix-card-title {
-      font-size: 1.05rem;
+      font-size: 1.02rem;
       font-weight: 700;
       color: var(--primary);
       margin: 0;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
+      gap: 10px;
+      line-height: 1.3;
+    }
+    .matrix-card-title span {
+      flex-shrink: 0;
+      white-space: nowrap;
+      font-size: 0.9rem;
+      color: var(--accent);
+      font-weight: 800;
     }
     .matrix-card-desc {
       font-size: 0.88rem;
       color: #3b5055;
       line-height: 1.5;
       margin: 0;
+      flex: 1;
     }
     .matrix-card-link {
       font-size: 0.82rem;
@@ -1199,6 +1212,11 @@
       gap: 4px;
     }
     .matrix-card-link:hover { text-decoration: underline; }
+    @media (max-width: 960px) {
+      .decision-matrix-grid {
+        grid-template-columns: 1fr;
+      }
+    }
 
     /* Comparison Table Responsive Container */
     .table-scroll-hint {
@@ -1219,44 +1237,51 @@
     }
     .comparison-table {
       width: 100%;
-      min-width: 820px;
+      min-width: 920px;
+      table-layout: fixed;
       border-collapse: collapse;
       text-align: left;
-      font-size: 0.92rem;
+      font-size: 0.9rem;
     }
     .comparison-table th, .comparison-table td {
-      padding: 16px 18px;
+      padding: 14px 12px;
       border-bottom: 1px solid var(--border);
       vertical-align: top;
       line-height: 1.5;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
     }
     .comparison-table th {
       background: #f4f8f6;
       color: var(--primary);
       font-weight: 700;
-      font-size: 0.84rem;
+      font-size: 0.8rem;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
-      white-space: nowrap;
+      letter-spacing: 0.4px;
+      white-space: normal;
+      line-height: 1.35;
     }
     .comparison-table tr:last-child td {
       border-bottom: none;
     }
-    .comparison-table .th-product { width: 230px; }
-    .comparison-table .th-filters { width: 180px; }
-    .comparison-table .th-actives { width: 220px; }
-    .comparison-table .th-skin { width: 210px; }
-    .comparison-table .th-finish { width: 170px; }
-    .comparison-table .th-verdict { width: 240px; }
+    .comparison-table .th-product { width: 24%; }
+    .comparison-table .th-filters { width: 14%; }
+    .comparison-table .th-actives { width: 17%; }
+    .comparison-table .th-skin { width: 15%; }
+    .comparison-table .th-finish { width: 13%; }
+    .comparison-table .th-verdict { width: 17%; }
 
     .compare-product-flex {
       display: flex;
       align-items: flex-start;
-      gap: 12px;
+      gap: 10px;
+      width: 100%;
     }
     .compare-product-img {
-      width: 58px;
-      height: 64px;
+      width: 56px;
+      height: 60px;
+      min-width: 56px;
+      max-width: 56px;
       object-fit: contain;
       background: #ffffff;
       border: 1px solid var(--border);
@@ -1264,8 +1289,12 @@
       padding: 4px;
       flex-shrink: 0;
     }
+    .compare-product-info {
+      min-width: 0;
+      flex: 1;
+    }
     .compare-product-info h4 {
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       font-weight: 700;
       color: var(--primary);
       margin: 0 0 4px;
@@ -1273,20 +1302,22 @@
     }
     .compare-badge-pill {
       display: inline-block;
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       font-weight: 700;
       padding: 2px 7px;
       border-radius: 4px;
       margin-bottom: 4px;
       text-transform: uppercase;
       letter-spacing: 0.3px;
+      max-width: 100%;
+      white-space: normal;
     }
     .pill-eltamd { background: #f0f9ff; color: #1e5c46; border: 1px solid #cce8dd; }
     .pill-bald { background: #e6f4f1; color: #0f766e; border: 1px solid #bce4dc; }
     .pill-lrp { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; }
 
     .compare-rating-line {
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: #e28a00;
       font-weight: 700;
       margin-bottom: 4px;
@@ -1299,12 +1330,16 @@
 
     .table-tag {
       display: inline-block;
-      font-size: 0.76rem;
+      font-size: 0.75rem;
       font-weight: 600;
       padding: 2px 7px;
       border-radius: 4px;
       margin: 2px 4px 3px 0;
       line-height: 1.35;
+      max-width: 100%;
+      white-space: normal;
+      word-break: break-word;
+      box-sizing: border-box;
     }
     .tag-active {
       background: #f0f7f4;
@@ -1506,9 +1541,9 @@
     <!-- Flagship Homepage Hero -->
     <section class="hero-section">
       <div style="margin-bottom: 16px;">
-        <a id="latest-article-link" href="/reviews/alastin-hydratint-pro-mineral-sunscreen-spf-36/" style="display: inline-flex; align-items: center; gap: 8px; background: #0f2942; color: #ffffff; padding: 6px 16px; border-radius: 999px; text-decoration: none; font-size: 0.88rem; font-weight: 600; box-shadow: 0 2px 10px rgba(14,59,67,0.25); transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-1px)'" onmouseout="this.style.transform='none'">
+        <a id="latest-article-link" href="/reviews/color-changing-foundation-for-mature-skin/" style="display: inline-flex; align-items: center; gap: 8px; background: #0f2942; color: #ffffff; padding: 6px 16px; border-radius: 999px; text-decoration: none; font-size: 0.88rem; font-weight: 600; box-shadow: 0 2px 10px rgba(14,59,67,0.25); transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-1px)'" onmouseout="this.style.transform='none'">
           <span style="background: #0284c7; color: #ffffff; padding: 2px 8px; border-radius: 999px; font-size: 0.72rem; text-transform: uppercase; font-weight: 800; letter-spacing: 0.5px;">Latest Article</span>
-          <span id="latest-article-title">ALASTIN HydraTint Pro Mineral Sunscreen SPF 36 Lab Report &rarr;</span>
+          <span id="latest-article-title">Color Changing Foundation for Mature Skin Lab Report &rarr;</span>
         </a>
       </div>
       <span class="hero-eyebrow">Dermatology Lab &amp; Meta-Analysis Portal</span>
@@ -1606,6 +1641,57 @@
 
     <!-- Spotlight Editor's Choice Reviews Grid -->
     <div class="spotlight-grid" id="product-catalog">
+
+      <!-- Product: Color Changing Foundation for Mature Skin, Skin Tone Adapting -->
+      <article class="spotlight-card" data-category="moisturizer antiaging barrier" data-title="color changing foundation for mature skin skin tone adapting micro-encapsulated pigments fine lines anti-aging hydrating emulsion b0hpbbrm42">
+        <span class="spotlight-badge" style="background: #0284c7; color: #ffffff;">New Clinical Review</span>
+        <div class="spotlight-product-top">
+          <div class="spotlight-img-box">
+            <img src="https://m.media-amazon.com/images/I/61mhC+qNFXL._AC_UF1000,1000_QL80_.jpg" alt="Color Changing Foundation for Mature Skin, Skin Tone Adapting" width="160" height="160" loading="lazy" decoding="async" referrerPolicy="no-referrer" />
+          </div>
+          <div class="spotlight-info">
+            <h2>Color Changing Foundation for Mature Skin (Tone Adapting)</h2>
+            <div class="rating-row">
+              <span class="stars">★★★★★</span>
+              <span class="rating-score">4.5 / 5</span>
+              <span class="rating-count">(5.0 ★ Verified Amazon Rating)</span>
+            </div>
+          </div>
+        </div>
+        <p class="spotlight-desc">
+          White-to-skin-tone liquid foundation utilizing shear-activated micro-encapsulated iron oxide pigments in a hydrating emulsion. Lab-evaluated for fine-line crease resistance and smooth mature skin coverage.
+        </p>
+        <div class="actives-list">
+          <span class="active-tag">Encapsulated Pigments</span>
+          <span class="active-tag">Crease-Resistant Film</span>
+          <span class="active-tag">Glycerin + Emollients</span>
+          <span class="active-tag">Natural Satin Glow</span>
+        </div>
+        <div class="card-action-bar">
+          <span class="target-skin">Mature, Dry &amp; Fine-Line-Prone Skin</span>
+          <a href="/reviews/color-changing-foundation-for-mature-skin/" class="btn-review">Read Full Lab Review &rarr;</a>
+        </div>
+        <div class="card-share-toolbar" aria-label="Share clinical review">
+          <span class="share-toolbar-label">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+            Share
+          </span>
+          <div class="share-btn-group">
+            <button type="button" class="share-btn share-x" onclick="shareClinicalReview(event, &#39;x&#39;, &#39;/reviews/color-changing-foundation-for-mature-skin/&#39;, &#39;Color Changing Foundation for Mature Skin (Tone Adapting)&#39;)" title="Share on X (Twitter)" aria-label="Share review on X">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </button>
+            <button type="button" class="share-btn share-fb" onclick="shareClinicalReview(event, &#39;facebook&#39;, &#39;/reviews/color-changing-foundation-for-mature-skin/&#39;, &#39;Color Changing Foundation for Mature Skin (Tone Adapting)&#39;)" title="Share on Facebook" aria-label="Share review on Facebook">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+            </button>
+            <button type="button" class="share-btn share-in" onclick="shareClinicalReview(event, &#39;linkedin&#39;, &#39;/reviews/color-changing-foundation-for-mature-skin/&#39;, &#39;Color Changing Foundation for Mature Skin (Tone Adapting)&#39;)" title="Share on LinkedIn" aria-label="Share review on LinkedIn">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            </button>
+            <button type="button" class="share-btn share-copy" onclick="shareClinicalReview(event, &#39;copy&#39;, &#39;/reviews/color-changing-foundation-for-mature-skin/&#39;, &#39;Color Changing Foundation for Mature Skin (Tone Adapting)&#39;)" title="Copy direct link" aria-label="Copy direct review link">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+            </button>
+          </div>
+        </div>
+      </article>
 
       <!-- Product: ALASTIN Skincare HydraTint Pro Mineral Tinted Sunscreen SPF 36 (3.2 oz) -->
       <article class="spotlight-card" data-category="sunscreen moisturizer acne" data-title="alastin skincare hydratint pro mineral tinted sunscreen spf 36 3.2 oz 2-in-1 daily sunblock moisturizer titanium dioxide zinc oxide iron oxides ectoin fragrance-free water resistant b0gk86vsc7">
@@ -3446,7 +3532,7 @@
             <tr>
               <td>
                 <div class="compare-product-flex">
-                  <img class="compare-product-img" src="https://m.media-amazon.com/images/I/71aXlh7do4L._SL1500_.jpg" alt="EltaMD UV Clear Face Sunscreen with Zinc Oxide SPF 46 bottle" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
+                  <img class="compare-product-img" src="https://m.media-amazon.com/images/I/71aXlh7do4L._SL1500_.jpg" alt="EltaMD UV Clear Face Sunscreen with Zinc Oxide SPF 46 bottle" width="56" height="60" loading="lazy" decoding="async" />
                   <div class="compare-product-info">
                     <span class="compare-badge-pill pill-eltamd">#1 For Acne &amp; Rosacea</span>
                     <h4>EltaMD UV Clear Broad-Spectrum SPF 46</h4>
@@ -3491,7 +3577,7 @@
             <tr>
               <td>
                 <div class="compare-product-flex">
-                  <img class="compare-product-img" src="https://m.media-amazon.com/images/I/71DDybQCppL._SL1500_.jpg" alt="The Bald Brothers Daily SPF50 Invisible Sunscreen Gel tube" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
+                  <img class="compare-product-img" src="https://m.media-amazon.com/images/I/71DDybQCppL._SL1500_.jpg" alt="The Bald Brothers Daily SPF50 Invisible Sunscreen Gel tube" width="56" height="60" loading="lazy" decoding="async" />
                   <div class="compare-product-info">
                     <span class="compare-badge-pill pill-bald">#1 For Scalp &amp; Anti-Glare</span>
                     <h4>The Bald Brothers Daily SPF50 Invisible Gel</h4>
@@ -3538,7 +3624,7 @@
             <tr>
               <td>
                 <div class="compare-product-flex">
-                  <img class="compare-product-img" src="https://m.media-amazon.com/images/I/514C1oU5mVL._SL1086_.jpg" alt="La Roche-Posay Toleriane Double Repair Face Moisturizer UV SPF 30" width="300" height="300" loading="lazy" decoding="async" style="aspect-ratio: 1 / 1; width: 100%; max-width: 300px; height: auto; object-fit: contain;" />
+                  <img class="compare-product-img" src="https://m.media-amazon.com/images/I/514C1oU5mVL._SL1086_.jpg" alt="La Roche-Posay Toleriane Double Repair Face Moisturizer UV SPF 30" width="56" height="60" loading="lazy" decoding="async" />
                   <div class="compare-product-info">
                     <span class="compare-badge-pill pill-lrp">#1 For Barrier Restoration</span>
                     <h4>La Roche-Posay Toleriane Double Repair UV SPF 30</h4>
