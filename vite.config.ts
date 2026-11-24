@@ -125,6 +125,50 @@ export default defineConfig(() => {
       },
       react(),
       tailwindcss(),
+      {
+        name: 'pagespeed-html-optimizer',
+        apply: 'build',
+        transformIndexHtml: {
+          order: 'post',
+          handler(html) {
+            const minifyInlineCss = (css: string) =>
+              css
+                .replace(/\/\*[\s\S]*?\*\//g, '')
+                .replace(/\s*[\r\n]+\s*/g, '')
+                .replace(/\s{2,}/g, ' ')
+                .replace(/\s*([{};])\s*/g, '$1')
+                .replace(/:\s+/g, ':')
+                .replace(/,\s+/g, ',')
+                .replace(/;}/g, '}');
+
+            const gtagLazyReplacement = `<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CJ42JELK21');(function(){var l=false;function g(){if(l)return;l=true;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-CJ42JELK21';document.head.appendChild(s);}window.addEventListener('pointerdown',g,{once:true,passive:true});window.addEventListener('keydown',g,{once:true,passive:true});window.addEventListener('scroll',g,{once:true,passive:true});window.addEventListener('load',function(){if('requestIdleCallback' in window){requestIdleCallback(function(){setTimeout(g,1500);},{timeout:3500});}else{setTimeout(g,2500);}});})();</script>`;
+
+            let out = html.replace(
+              /<script\s+async\s+src="https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-CJ42JELK21"\s*><\/script>\s*<script>\s*window\.dataLayer\s*=\s*window\.dataLayer\s*\|\|\s*\[\];\s*function\s+gtag\(\)\{dataLayer\.push\(arguments\);\}\s*gtag\('js',\s*new Date\(\)\);\s*gtag\('config',\s*'G-CJ42JELK21'\);\s*<\/script>/gi,
+              gtagLazyReplacement
+            );
+
+            const parts = out.split(/(<(?:script|style|pre|textarea|noscript)\b[^>]*>[\s\S]*?<\/(?:script|style|pre|textarea|noscript)>)/gi);
+            return parts
+              .map((part, idx) => {
+                if (idx % 2 === 1) {
+                  if (/^<style\b/i.test(part)) {
+                    return part.replace(/^(<style\b[^>]*>)([\s\S]*?)(<\/style>)$/i, (_, open, css, close) => open + minifyInlineCss(css) + close);
+                  }
+                  return part;
+                }
+                return part
+                  .replace(/<!--(?!\s*\[if\b)[\s\S]*?-->/g, '')
+                  .replace(/<link\s+rel="preload"\s+href="\/clinical-framework\.css"\s+as="style"\s*\/?>\s*/gi, '')
+                  .replace(/<link\s+rel="stylesheet"\s+href="(\/skin-conditions\.css|\/clinical-framework\.css)"\s*\/?>/gi, '<link rel="stylesheet" href="$1" media="print" onload="this.media=\'all\'" /><noscript><link rel="stylesheet" href="$1" /></noscript>')
+                  .replace(/<script\s+src="\/js\/seo-enhancer\.js"\s*><\/script>/gi, '<script defer src="/js/seo-enhancer.js"></script>')
+                  .replace(/^[ \t]+/gm, '')
+                  .replace(/\n{2,}/g, '\n');
+              })
+              .join('');
+          },
+        },
+      },
     ],
     resolve: {
       alias: {
